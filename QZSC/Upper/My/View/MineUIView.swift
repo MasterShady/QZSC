@@ -12,6 +12,20 @@ class UserData: ObservableObject{
     @Published var footPrintCount = 20
     @Published var likeCount = 6
     @Published var billCount = 8
+    @Published var cartItems: [Product] = [Product(name: "产品名称", fee: 10)]
+    
+}
+
+class Product: ObservableObject{
+    let name : String
+    let fee : Double
+    @Published var count = 1
+    
+    init(name: String, fee: Double, count: Int = 1) {
+        self.name = name
+        self.fee = fee
+        self.count = count
+    }
 }
 
 struct MineUIView: View {
@@ -32,28 +46,30 @@ struct MineUIView: View {
     
     
     var body: some View {
-        VStack {
-            Image("mine_top_bg").resizable()
-                .aspectRatio(contentMode: .fit)
-            Spacer()
-        }
-        .overlay(alignment:.topTrailing) {
-            Button(action: {
+        NavigationView {
+            VStack {
+                Image("mine_top_bg").resizable()
+                    .aspectRatio(contentMode: .fit)
+                Spacer()
+            }
+            .overlay(alignment:.topTrailing) {
+                Button(action: {
+                    
+                }, label: {
+                    Image("mine_settings")
+                }).padding(EdgeInsets(top: kStatusBarHeight + 20, leading: 0, bottom: 0, trailing: 24))
+            }
+            .overlay(alignment: .topLeading){
+                VStack(spacing: 12){
+                    MineHeaderView()
+                    MineOrderView()
+                    MineFunctionView()
+                    
+                }.padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                 
-            }, label: {
-                Image("mine_settings")
-            }).padding(EdgeInsets(top: kStatusBarHeight + 20, leading: 0, bottom: 0, trailing: 24))
+            }.ignoresSafeArea().background(Color(hex: 0xF6F8FA)).environmentObject(userData)
+                .onAppear(perform: appearLoad)
         }
-        .overlay(alignment: .topLeading){
-            VStack(spacing: 12){
-                MineHeaderView()
-                MineOrderView()
-                MineFunctionView()
-                
-            }.padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
-            
-        }.ignoresSafeArea().background(Color(hex: 0xF6F8FA)).environmentObject(userData)
-            .onAppear(perform: appearLoad)
     }
     
     func appearLoad(){
@@ -125,6 +141,7 @@ struct MineHeaderView: View {
 
 
 struct MineOrderView: View {
+    
     let items = [
         ("待付款","mine_to_pay"),
         ("租赁中","mine_under_lease"),
@@ -162,6 +179,7 @@ struct MineOrderView: View {
 
 
 struct MineFunctionView: View{
+    @EnvironmentObject var userData: UserData
     let items = [
         ("购物车","mine_cart",{}),
         ("我的客服", "mine_service",{}),
@@ -177,12 +195,11 @@ struct MineFunctionView: View{
             GeometryReader{ geometry in
                 WrappedHStack(geometry: geometry) {
                     ForEach(items, id: \.0) { item in
-                        Button(action: item.2) {
+                        NavigationLink(destination:MyCartView().environmentObject(userData)) {
                             VStack {
                                 Image(item.1)
                                 Text(item.0).font(.system(size: 12)).foregroundColor(.init(hex: 0x000000))
                             }.frame(width:60)
-                            
                         }
                     }
                 }
