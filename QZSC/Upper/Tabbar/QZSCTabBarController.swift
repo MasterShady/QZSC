@@ -11,6 +11,7 @@ import UIKit
 @_exported import RxCocoa
 @_exported import RxSwift
 @_exported import Kingfisher
+import SwiftUI
 
 class QZSCTabBarController: UITabBarController {
     
@@ -48,6 +49,16 @@ class QZSCTabBarController: UITabBarController {
                       (className: "QZSCCheckInController", title: "入住", imageName: "checkin"),
                       (className: "QZSCMyController", title: "我的", imageName: "my")]
         for item in params {
+            if item.className == "QZSCMyController" {
+                
+                let vc = UIHostingController(rootView: MineUIView(userData: UserData()))
+                vc.title = item.title
+                vc.tabBarItem.image = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)
+                vc.tabBarItem.selectedImage = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)
+                addChild(vc)
+                return
+            }
+            
             if let vcClass = NSClassFromString("\(kNameSpace).\(item.className)") as? QZSCBaseController.Type {
                 let vc = vcClass.init()
                 vc.title = item.title

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */; };
+		EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761892A60FB2E00E28FAE /* MineUIView.swift */; };
+		EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618C2A61205F00E28FAE /* Extension.swift */; };
+		EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618F2A61303800E28FAE /* WrappedHStack.swift */; };
 		FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5D02A60E08C0080B928 /* LoginManager.swift */; };
 		FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */; };
 		FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */; };
@@ -91,6 +94,9 @@
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.release.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C648CDA3CA7E4AD02322 /* Pods-QZSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.debug.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.debug.xcconfig"; sourceTree = "<group>"; };
+		EBB761892A60FB2E00E28FAE /* MineUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUIView.swift; sourceTree = "<group>"; };
+		EBB7618C2A61205F00E28FAE /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EBB7618F2A61303800E28FAE /* WrappedHStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedHStack.swift; sourceTree = "<group>"; };
 		FC82E5D02A60E08C0080B928 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeController.swift; sourceTree = "<group>"; };
 		FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderController.swift; sourceTree = "<group>"; };
@@ -204,6 +210,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EBB761882A60FAEA00E28FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBB761892A60FB2E00E28FAE /* MineUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EBB7618B2A61204900E28FAE /* SwiftUIBasic */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7618E2A61302A00E28FAE /* View */,
+				EBB7618C2A61205F00E28FAE /* Extension.swift */,
+			);
+			path = SwiftUIBasic;
+			sourceTree = "<group>";
+		};
+		EBB7618E2A61302A00E28FAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7618F2A61303800E28FAE /* WrappedHStack.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FC82E5CE2A60E0610080B928 /* Upper */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +291,7 @@
 		FC82E5D62A60E2230080B928 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				EBB761882A60FAEA00E28FAE /* View */,
 				FC82E5D82A60E2A50080B928 /* Controller */,
 			);
 			path = My;
@@ -338,6 +370,7 @@
 		FCEFC4282A5FF6D80015EF4E /* QZSC */ = {
 			isa = PBXGroup;
 			children = (
+				EBB7618B2A61204900E28FAE /* SwiftUIBasic */,
 				FC82E5CF2A60E07D0080B928 /* Manager */,
 				FCEFC4E22A5FF9B30015EF4E /* Common */,
 				FCEFC49A2A5FF7EC0015EF4E /* Basic */,
@@ -663,6 +696,7 @@
 				FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */,
 				FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */,
 				FCEFC5312A5FF9B30015EF4E /* QZSCDefine.swift in Sources */,
+				EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */,
 				FCEFC51C2A5FF9B30015EF4E /* UIButton+Extension.swift in Sources */,
 				FCEFC5232A5FF9B30015EF4E /* UITableView+Extension.swift in Sources */,
 				FCEFC5282A5FF9B30015EF4E /* QZSCError.swift in Sources */,
@@ -673,6 +707,7 @@
 				FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */,
 				FCEFC5332A5FF9B30015EF4E /* QZSCDatePickerView.swift in Sources */,
 				FCEFC52D2A5FF9B30015EF4E /* QZSCTarget.swift in Sources */,
+				EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */,
 				FCEFC53F2A5FF9B30015EF4E /* QZSCAlertTool.swift in Sources */,
 				FCEFC5362A5FF9B30015EF4E /* QZSCCustomTextView.swift in Sources */,
 				FCEFC5182A5FF9B30015EF4E /* NSAttributedString+Extension.swift in Sources */,
@@ -687,6 +722,7 @@
 				FCEFC5212A5FF9B30015EF4E /* UIController+Extension.swift in Sources */,
 				FCEFC52F2A5FF9B30015EF4E /* QZSCDecoder.swift in Sources */,
 				FCEFC5272A5FF9B30015EF4E /* BaseRequest.swift in Sources */,
+				EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
@@ -872,6 +908,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6475J8L3PC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -879,6 +916,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -903,6 +941,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6475J8L3PC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -910,6 +949,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
