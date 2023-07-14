@@ -1,0 +1,6 @@
+module Pods_QZSC {
+  umbrella header "Pods-QZSC-umbrella.h"
+
+  export *
+  module * { export * }
+}

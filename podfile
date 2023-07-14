@@ -1,0 +1,25 @@
+platform :ios, '12.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+source 'http://git.zhw.com/mengke/Specs.git'
+
+#use_frameworks!
+use_modular_headers!
+# 忽略第三方库的警告
+inhibit_all_warnings!
+
+target 'QZSC' do
+
+  pod 'SnapKit', '~> 5.6.0'
+  pod 'RxSwift', '~> 6.5.0'
+  pod 'RxCocoa', '~> 6.5.0'
+  pod 'Cache', '~> 6.0.0'
+  pod 'MJRefresh', '~> 3.7.5'
+  pod 'Kingfisher', '~> 7.4.1'
+  pod 'Alamofire','~> 5.2.0'
+  pod 'IQKeyboardManagerSwift', '6.3.0'
+  pod 'MBProgressHUD', '1.1.0'
+  pod 'CLImagePickerTool'
+
+end
