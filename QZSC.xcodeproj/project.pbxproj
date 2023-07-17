@@ -11,6 +11,7 @@
 		EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761892A60FB2E00E28FAE /* MineUIView.swift */; };
 		EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618C2A61205F00E28FAE /* Extension.swift */; };
 		EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618F2A61303800E28FAE /* WrappedHStack.swift */; };
+		EBB761922A61528200E28FAE /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761912A61528200E28FAE /* MyCartView.swift */; };
 		FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5D02A60E08C0080B928 /* LoginManager.swift */; };
 		FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */; };
 		FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */; };
@@ -101,6 +102,7 @@
 		EBB761892A60FB2E00E28FAE /* MineUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUIView.swift; sourceTree = "<group>"; };
 		EBB7618C2A61205F00E28FAE /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EBB7618F2A61303800E28FAE /* WrappedHStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedHStack.swift; sourceTree = "<group>"; };
+		EBB761912A61528200E28FAE /* MyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartView.swift; sourceTree = "<group>"; };
 		FC82E5D02A60E08C0080B928 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeController.swift; sourceTree = "<group>"; };
 		FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB761892A60FB2E00E28FAE /* MineUIView.swift */,
+				EBB761912A61528200E28FAE /* MyCartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				FCEFC5322A5FF9B30015EF4E /* UMProgressManager.swift in Sources */,
 				FCEFC52B2A5FF9B30015EF4E /* QZSCNetPlugin.swift in Sources */,
 				FCEFC52A2A5FF9B30015EF4E /* QZSCServiceObject.swift in Sources */,
+				EBB761922A61528200E28FAE /* MyCartView.swift in Sources */,
 				FCEFC5402A5FF9B30015EF4E /* RC4Tool.m in Sources */,
 				FCEFC5352A5FF9B30015EF4E /* UMToastManager.swift in Sources */,
 				FCEFC5392A5FF9B30015EF4E /* UMToast.swift in Sources */,
