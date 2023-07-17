@@ -12,13 +12,39 @@ class UserData: ObservableObject{
     @Published var footPrintCount = 20
     @Published var likeCount = 6
     @Published var billCount = 8
-    @Published var cartItems: [Product] = [Product(name: "产品名称", fee: 10)]
+    @Published var cartItems: [Product] = [
+        Product(name: "产品名称", fee: 10, count: 3),
+        Product(name: "产品名称2", fee: 22, count: 5),
+        Product(name: "产品名称3", fee: 22, count: 5),
+        Product(name: "产品名称4", fee: 22, count: 5),
+        Product(name: "产品名称5", fee: 22, count: 5),
+        Product(name: "产品名称6", fee: 22, count: 5),
+        Product(name: "产品名称7", fee: 22, count: 5),
+        Product(name: "产品名称8", fee: 22, count: 5),
+        Product(name: "产品名称9", fee: 22, count: 5)
+    ]
     
+    var totalPrice: Double{
+        cartItems.reduce(0) { partialResult, item in
+            return partialResult + item.fee * item.count
+        }
+    }
 }
 
-class Product: ObservableObject{
+class Product: ObservableObject, Equatable{
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
     let name : String
     let fee : Double
+    let type: [String] = ["typeA","typeB","typeC"]
+    @Published var selectedTypeIndex = 0
+    
+    var selectedType: String {
+        type[selectedTypeIndex]
+    }
+    
     @Published var count = 1
     
     init(name: String, fee: Double, count: Int = 1) {
@@ -181,12 +207,12 @@ struct MineOrderView: View {
 struct MineFunctionView: View{
     @EnvironmentObject var userData: UserData
     let items = [
-        ("购物车","mine_cart",{}),
-        ("我的客服", "mine_service",{}),
-        ("意见反馈","mine_feedback",{}),
-        ("我的账单", "mine_bills",{}),
-        ("关于我们", "mine_about_us",{}),
-        ("商家入驻", "mine_join_us",{})
+        ("购物车","mine_cart"),
+        ("我的客服", "mine_service"),
+        ("意见反馈","mine_feedback"),
+        ("我的账单", "mine_bills"),
+        ("关于我们", "mine_about_us"),
+        ("商家入驻", "mine_join_us")
     ]
 
     var body: some View {
