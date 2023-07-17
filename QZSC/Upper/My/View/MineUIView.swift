@@ -138,11 +138,17 @@ struct MineHeaderView: View {
                         Circle()
                             .stroke(Color.white, lineWidth: 2) // 添加边框
                     )
-                
-                VStack {
-                    Text("像林京味的芹菜").font(.system(size: 18,weight: .semibold))
-                    Text("这是一句辅助文案信息").font(.system(size: 12)).foregroundColor(.init(hex: 0x7090A0))
+                Button {
+                    let LoginVC = QZSCLoginController()
+                    QZSCControllerTool.currentNavVC()?.pushViewController(LoginVC, animated: true)
+                } label: {
+                    VStack {
+                        Text("像林京味的芹菜").font(.system(size: 18,weight: .semibold))
+                        Text("这是一句辅助文案信息").font(.system(size: 12)).foregroundColor(.init(hex: 0x7090A0))
+                    }
                 }
+                
+               
             }.padding(.init(top: kStatusBarHeight + 44, leading: 0, bottom: 0, trailing: 0))
             
             HStack {

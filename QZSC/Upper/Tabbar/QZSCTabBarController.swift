@@ -53,7 +53,7 @@ class QZSCTabBarController: UITabBarController {
                 
                 let vc = UIHostingController(rootView: MineUIView(userData: UserData()))
                 vc.title = item.title
-                vc.tabBarItem.image = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)
+                vc.tabBarItem.image = UIImage(named: "tabbar_\(item.imageName)_nor")?.withRenderingMode(.alwaysOriginal)
                 vc.tabBarItem.selectedImage = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)
                 addChild(vc)
                 return
@@ -62,7 +62,7 @@ class QZSCTabBarController: UITabBarController {
             if let vcClass = NSClassFromString("\(kNameSpace).\(item.className)") as? QZSCBaseController.Type {
                 let vc = vcClass.init()
                 vc.title = item.title
-                vc.tabBarItem.image = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)
+                vc.tabBarItem.image = UIImage(named: "tabbar_\(item.imageName)_nor")?.withRenderingMode(.alwaysOriginal)
                 vc.tabBarItem.selectedImage = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)
                 addChild(vc)
             }

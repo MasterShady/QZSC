@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */; };
+		EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */; };
+		EB09C19D2A655A3D007599FA /* QZSCHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */; };
+		EB09C19E2A655A3D007599FA /* QZSCHomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */; };
+		EB09C1A02A655A69007599FA /* QZSCGoodsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19F2A655A69007599FA /* QZSCGoodsListController.swift */; };
+		EB09C1A72A655A94007599FA /* QZSCAccounTnumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A12A655A94007599FA /* QZSCAccounTnumberView.swift */; };
+		EB09C1A82A655A94007599FA /* QZSCPhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A22A655A94007599FA /* QZSCPhoneLoginViewController.swift */; };
+		EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */; };
+		EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */; };
+		EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */; };
 		EB6769CB2A651D0100440541 /* BasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C72A651D0100440541 /* BasePicker.swift */; };
 		EB6769CC2A651D0100440541 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C82A651D0100440541 /* DatePicker.swift */; };
 		EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C92A651D0100440541 /* MultiplePicker.swift */; };
@@ -120,6 +129,15 @@
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.release.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C648CDA3CA7E4AD02322 /* Pods-QZSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.debug.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.debug.xcconfig"; sourceTree = "<group>"; };
+		EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeListCell.swift; sourceTree = "<group>"; };
+		EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeHeaderView.swift; sourceTree = "<group>"; };
+		EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeUIView.swift; sourceTree = "<group>"; };
+		EB09C19F2A655A69007599FA /* QZSCGoodsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCGoodsListController.swift; sourceTree = "<group>"; };
+		EB09C1A12A655A94007599FA /* QZSCAccounTnumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCAccounTnumberView.swift; sourceTree = "<group>"; };
+		EB09C1A22A655A94007599FA /* QZSCPhoneLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCPhoneLoginViewController.swift; sourceTree = "<group>"; };
+		EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeTextView.swift; sourceTree = "<group>"; };
+		EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeView.swift; sourceTree = "<group>"; };
+		EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeNumView.swift; sourceTree = "<group>"; };
 		EB6769C72A651D0100440541 /* BasePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePicker.swift; sourceTree = "<group>"; };
 		EB6769C82A651D0100440541 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		EB6769C92A651D0100440541 /* MultiplePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplePicker.swift; sourceTree = "<group>"; };
@@ -263,6 +281,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EB09C1982A655A3D007599FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */,
+				EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */,
+				EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB09C1A32A655A94007599FA /* loginVerifyCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */,
+				EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */,
+				EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */,
+			);
+			path = loginVerifyCodeView;
+			sourceTree = "<group>";
+		};
 		EB6769C62A651D0100440541 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +417,7 @@
 		FC82E5D32A60E1FA0080B928 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB09C1982A655A3D007599FA /* View */,
 				FC82E5DA2A60E2B40080B928 /* Controller */,
 			);
 			path = Home;
@@ -436,6 +475,7 @@
 		FC82E5DA2A60E2B40080B928 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB09C19F2A655A69007599FA /* QZSCGoodsListController.swift */,
 				FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */,
 			);
 			path = Controller;
@@ -444,6 +484,9 @@
 		FC82E5DB2A60E2B90080B928 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB09C1A32A655A94007599FA /* loginVerifyCodeView */,
+				EB09C1A12A655A94007599FA /* QZSCAccounTnumberView.swift */,
+				EB09C1A22A655A94007599FA /* QZSCPhoneLoginViewController.swift */,
 				FC82E5E12A60E3030080B928 /* QZSCLoginController.swift */,
 			);
 			path = Controller;
@@ -816,6 +859,7 @@
 				EBB761922A61528200E28FAE /* MyCartView.swift in Sources */,
 				FCEFC5402A5FF9B30015EF4E /* RC4Tool.m in Sources */,
 				EB6769FF2A654BA700440541 /* Layout.swift in Sources */,
+				EB09C1A02A655A69007599FA /* QZSCGoodsListController.swift in Sources */,
 				FCEFC5352A5FF9B30015EF4E /* UMToastManager.swift in Sources */,
 				FCEFC5392A5FF9B30015EF4E /* UMToast.swift in Sources */,
 				EB6769EC2A651DC000440541 /* UIImage+Chain.swift in Sources */,
@@ -836,12 +880,14 @@
 				FCEFC5262A5FF9B30015EF4E /* QZSCNetworkConfig.swift in Sources */,
 				EB6769CE2A651D0100440541 /* SinglePicker.swift in Sources */,
 				FCEFC5412A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift in Sources */,
+				EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */,
 				EB6769F22A651DC000440541 /* UITextFiled+Chain.swift in Sources */,
 				EB6769F52A651DC000440541 /* UICollectionView+Chain.swift in Sources */,
 				FC82E5E42A60E3110080B928 /* QZSCMyController.swift in Sources */,
 				FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */,
 				FCEFC5332A5FF9B30015EF4E /* QZSCDatePickerView.swift in Sources */,
 				FCEFC52D2A5FF9B30015EF4E /* QZSCTarget.swift in Sources */,
+				EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */,
 				EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */,
 				FCEFC53F2A5FF9B30015EF4E /* QZSCAlertTool.swift in Sources */,
 				FCEFC5362A5FF9B30015EF4E /* QZSCCustomTextView.swift in Sources */,
@@ -860,21 +906,27 @@
 				FCEFC52E2A5FF9B30015EF4E /* QZSCRspBody.swift in Sources */,
 				EB6769EA2A651DC000440541 /* Associate.swift in Sources */,
 				EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */,
+				EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */,
 				EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */,
 				FCEFC5212A5FF9B30015EF4E /* UIController+Extension.swift in Sources */,
 				EB6769FD2A65223200440541 /* FoundationExtension.swift in Sources */,
+				EB09C1A72A655A94007599FA /* QZSCAccounTnumberView.swift in Sources */,
 				FCEFC52F2A5FF9B30015EF4E /* QZSCDecoder.swift in Sources */,
 				FCEFC5272A5FF9B30015EF4E /* BaseRequest.swift in Sources */,
 				EB6769EF2A651DC000440541 /* UIControl+Chain.swift in Sources */,
 				EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */,
+				EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
 				FCEFC51D2A5FF9B30015EF4E /* UIImage+Extension.swift in Sources */,
+				EB09C1A82A655A94007599FA /* QZSCPhoneLoginViewController.swift in Sources */,
 				FCEFC51B2A5FF9B30015EF4E /* Date+Extension.swift in Sources */,
 				FCEFC52C2A5FF9B30015EF4E /* QZSCParameter.swift in Sources */,
 				FCEFC53A2A5FF9B30015EF4E /* QZSCControllerTool.swift in Sources */,
+				EB09C19E2A655A3D007599FA /* QZSCHomeUIView.swift in Sources */,
 				EB6769CC2A651D0100440541 /* DatePicker.swift in Sources */,
+				EB09C19D2A655A3D007599FA /* QZSCHomeHeaderView.swift in Sources */,
 				EB6769D22A651D2400440541 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
