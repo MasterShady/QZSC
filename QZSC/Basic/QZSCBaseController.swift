@@ -92,7 +92,7 @@ class QZSCBaseController: UIViewController {
         
         if isPushed && !isRootOfNavigation { // ture：是push出来的ctl
             leftBtn = UIButton(type: .custom)
-            leftBtn?.setImage(UIImage(named: "nav_back_black"), for: .normal)
+            leftBtn?.setImage(UIImage(named: "back"), for: .normal)
             if #available(iOS 15.0, *) {
                 var config = UIButton.Configuration.plain()
                 config.imagePlacement = .trailing
@@ -143,7 +143,6 @@ class QZSCBaseController: UIViewController {
     // MARK: - lazy
     lazy var navBar: UIView = {
         let content = UIView()
-        content.backgroundColor = .white
         return content
     }()
 }

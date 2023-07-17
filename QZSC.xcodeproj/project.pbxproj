@@ -71,6 +71,10 @@
 		FCEFC5402A5FF9B30015EF4E /* RC4Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC5142A5FF9B30015EF4E /* RC4Tool.m */; };
 		FCEFC5412A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC5152A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift */; };
 		FCEFC5422A5FF9B30015EF4E /* QZSCColorDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC5162A5FF9B30015EF4E /* QZSCColorDefine.swift */; };
+		FCF31A532A6510E700BC815B /* QZSCHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A522A6510E700BC815B /* QZSCHomeHeaderView.swift */; };
+		FCF31A552A6510FB00BC815B /* QZSCHomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */; };
+		FCF31A572A6520A500BC815B /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */; };
+		FCF31A592A65330400BC815B /* QZSCGoodsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +169,10 @@
 		FCEFC5142A5FF9B30015EF4E /* RC4Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RC4Tool.m; sourceTree = "<group>"; };
 		FCEFC5152A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCNotificationNamesDefines.swift; sourceTree = "<group>"; };
 		FCEFC5162A5FF9B30015EF4E /* QZSCColorDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCColorDefine.swift; sourceTree = "<group>"; };
+		FCF31A522A6510E700BC815B /* QZSCHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeHeaderView.swift; sourceTree = "<group>"; };
+		FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeUIView.swift; sourceTree = "<group>"; };
+		FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeListCell.swift; sourceTree = "<group>"; };
+		FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCGoodsListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +275,7 @@
 		FC82E5D32A60E1FA0080B928 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FCF31A512A650F2900BC815B /* View */,
 				FC82E5DA2A60E2B40080B928 /* Controller */,
 			);
 			path = Home;
@@ -325,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */,
+				FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -495,6 +505,16 @@
 				FCEFC5152A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		FCF31A512A650F2900BC815B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCF31A522A6510E700BC815B /* QZSCHomeHeaderView.swift */,
+				FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */,
+				FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -684,6 +704,7 @@
 				FCEFC53E2A5FF9B30015EF4E /* EPRC4Cryptor.m in Sources */,
 				FCEFC5202A5FF9B30015EF4E /* Decodable+Extension.swift in Sources */,
 				FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */,
+				FCF31A532A6510E700BC815B /* QZSCHomeHeaderView.swift in Sources */,
 				FCEFC5322A5FF9B30015EF4E /* UMProgressManager.swift in Sources */,
 				FCEFC52B2A5FF9B30015EF4E /* QZSCNetPlugin.swift in Sources */,
 				FCEFC52A2A5FF9B30015EF4E /* QZSCServiceObject.swift in Sources */,
@@ -691,7 +712,9 @@
 				FCEFC5352A5FF9B30015EF4E /* UMToastManager.swift in Sources */,
 				FCEFC5392A5FF9B30015EF4E /* UMToast.swift in Sources */,
 				FCEFC53C2A5FF9B30015EF4E /* EPRc4CryptorManager.m in Sources */,
+				FCF31A572A6520A500BC815B /* QZSCHomeListCell.swift in Sources */,
 				FCEFC4D52A5FF7EC0015EF4E /* QZSCBaseController.swift in Sources */,
+				FCF31A592A65330400BC815B /* QZSCGoodsListController.swift in Sources */,
 				FCEFC5242A5FF9B30015EF4E /* UILable+Extension.swift in Sources */,
 				FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */,
 				FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */,
@@ -724,6 +747,7 @@
 				FCEFC5272A5FF9B30015EF4E /* BaseRequest.swift in Sources */,
 				EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
+				FCF31A552A6510FB00BC815B /* QZSCHomeUIView.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
 				FCEFC51D2A5FF9B30015EF4E /* UIImage+Extension.swift in Sources */,

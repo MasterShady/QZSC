@@ -19,6 +19,10 @@ let COLORA1A0AB = UIColor.init(hexString: "#A1A0AB")
 let COLORFFFFFF = UIColor.init(hexString: "#FFFFFF")
 let COLOREEEEEE = UIColor.init(hexString: "#EEEEEE")
 
+let COLORB8BED0 = UIColor.init(hexString: "#B8BED0")
+let COLORAFAFAF = UIColor.init(hexString: "#AFAFAF")
+let COLORF6F8FA = UIColor.init(hexString: "#F6F8FA")
+let COLOR97FFF0 = UIColor.init(hexString: "#97FFF0")
 
 
 
