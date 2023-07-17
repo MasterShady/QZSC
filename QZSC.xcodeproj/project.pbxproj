@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A287BC382A65209700C766FD /* QZSCAccounTnumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287BC372A65209700C766FD /* QZSCAccounTnumberView.swift */; };
+		A287BC3A2A6520AE00C766FD /* QZSCPhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287BC392A6520AE00C766FD /* QZSCPhoneLoginViewController.swift */; };
+		A287BC3F2A65244200C766FD /* TDWVerifyCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287BC3C2A65244200C766FD /* TDWVerifyCodeTextView.swift */; };
+		A287BC402A65244200C766FD /* TDWVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287BC3D2A65244200C766FD /* TDWVerifyCodeView.swift */; };
+		A287BC412A65244200C766FD /* TDWVerifyCodeNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287BC3E2A65244200C766FD /* TDWVerifyCodeNumView.swift */; };
 		E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */; };
 		EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761892A60FB2E00E28FAE /* MineUIView.swift */; };
 		EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618C2A61205F00E28FAE /* Extension.swift */; };
@@ -97,6 +102,11 @@
 
 /* Begin PBXFileReference section */
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A287BC372A65209700C766FD /* QZSCAccounTnumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCAccounTnumberView.swift; sourceTree = "<group>"; };
+		A287BC392A6520AE00C766FD /* QZSCPhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCPhoneLoginViewController.swift; sourceTree = "<group>"; };
+		A287BC3C2A65244200C766FD /* TDWVerifyCodeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeTextView.swift; sourceTree = "<group>"; };
+		A287BC3D2A65244200C766FD /* TDWVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeView.swift; sourceTree = "<group>"; };
+		A287BC3E2A65244200C766FD /* TDWVerifyCodeNumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeNumView.swift; sourceTree = "<group>"; };
 		C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.release.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C648CDA3CA7E4AD02322 /* Pods-QZSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.debug.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB761892A60FB2E00E28FAE /* MineUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUIView.swift; sourceTree = "<group>"; };
@@ -218,6 +228,16 @@
 				C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A287BC3B2A65244200C766FD /* loginVerifyCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				A287BC3C2A65244200C766FD /* TDWVerifyCodeTextView.swift */,
+				A287BC3D2A65244200C766FD /* TDWVerifyCodeView.swift */,
+				A287BC3E2A65244200C766FD /* TDWVerifyCodeNumView.swift */,
+			);
+			path = loginVerifyCodeView;
 			sourceTree = "<group>";
 		};
 		EBB761882A60FAEA00E28FAE /* View */ = {
@@ -345,7 +365,10 @@
 		FC82E5DB2A60E2B90080B928 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A287BC3B2A65244200C766FD /* loginVerifyCodeView */,
 				FC82E5E12A60E3030080B928 /* QZSCLoginController.swift */,
+				A287BC372A65209700C766FD /* QZSCAccounTnumberView.swift */,
+				A287BC392A6520AE00C766FD /* QZSCPhoneLoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -700,6 +723,7 @@
 				FCEFC5372A5FF9B30015EF4E /* QZSCStatusView.swift in Sources */,
 				FCEFC5222A5FF9B30015EF4E /* UICollectionView+Extension.swift in Sources */,
 				FCEFC5382A5FF9B30015EF4E /* ProgressHUD.swift in Sources */,
+				A287BC382A65209700C766FD /* QZSCAccounTnumberView.swift in Sources */,
 				FC82E5E22A60E3030080B928 /* QZSCLoginController.swift in Sources */,
 				FCEFC5292A5FF9B30015EF4E /* QZSCNetwork+Alamofire.swift in Sources */,
 				FCEFC5192A5FF9B30015EF4E /* UIFont+Extension.swift in Sources */,
@@ -731,10 +755,13 @@
 				FCEFC5262A5FF9B30015EF4E /* QZSCNetworkConfig.swift in Sources */,
 				FCEFC5412A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift in Sources */,
 				FC82E5E42A60E3110080B928 /* QZSCMyController.swift in Sources */,
+				A287BC412A65244200C766FD /* TDWVerifyCodeNumView.swift in Sources */,
 				FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */,
 				FCEFC5332A5FF9B30015EF4E /* QZSCDatePickerView.swift in Sources */,
 				FCEFC52D2A5FF9B30015EF4E /* QZSCTarget.swift in Sources */,
+				A287BC402A65244200C766FD /* TDWVerifyCodeView.swift in Sources */,
 				EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */,
+				A287BC3F2A65244200C766FD /* TDWVerifyCodeTextView.swift in Sources */,
 				FCEFC53F2A5FF9B30015EF4E /* QZSCAlertTool.swift in Sources */,
 				FCEFC5362A5FF9B30015EF4E /* QZSCCustomTextView.swift in Sources */,
 				FCEFC5182A5FF9B30015EF4E /* NSAttributedString+Extension.swift in Sources */,
@@ -750,6 +777,7 @@
 				FCEFC52F2A5FF9B30015EF4E /* QZSCDecoder.swift in Sources */,
 				FCEFC5272A5FF9B30015EF4E /* BaseRequest.swift in Sources */,
 				EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */,
+				A287BC3A2A6520AE00C766FD /* QZSCPhoneLoginViewController.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
 				FCF31A552A6510FB00BC815B /* QZSCHomeUIView.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
