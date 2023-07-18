@@ -61,5 +61,7 @@ extension QZSCHomeController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ctl = QZSCGoodsDetailsController()
+        QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
     }
 }

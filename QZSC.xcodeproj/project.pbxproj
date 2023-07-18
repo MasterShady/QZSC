@@ -76,6 +76,7 @@
 		FCF31A552A6510FB00BC815B /* QZSCHomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */; };
 		FCF31A572A6520A500BC815B /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */; };
 		FCF31A592A65330400BC815B /* QZSCGoodsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */; };
+		FCF31A5B2A65465200BC815B /* QZSCGoodsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A5A2A65465200BC815B /* QZSCGoodsDetailsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeUIView.swift; sourceTree = "<group>"; };
 		FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeListCell.swift; sourceTree = "<group>"; };
 		FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCGoodsListController.swift; sourceTree = "<group>"; };
+		FCF31A5A2A65465200BC815B /* QZSCGoodsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCGoodsDetailsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 			children = (
 				FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */,
 				FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */,
+				FCF31A5A2A65465200BC815B /* QZSCGoodsDetailsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
 				FCEFC51D2A5FF9B30015EF4E /* UIImage+Extension.swift in Sources */,
+				FCF31A5B2A65465200BC815B /* QZSCGoodsDetailsController.swift in Sources */,
 				FCEFC51B2A5FF9B30015EF4E /* Date+Extension.swift in Sources */,
 				FCEFC52C2A5FF9B30015EF4E /* QZSCParameter.swift in Sources */,
 				FCEFC53A2A5FF9B30015EF4E /* QZSCControllerTool.swift in Sources */,
