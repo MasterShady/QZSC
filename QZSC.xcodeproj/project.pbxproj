@@ -53,6 +53,7 @@
 		FC82E5E42A60E3110080B928 /* QZSCMyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E32A60E3110080B928 /* QZSCMyController.swift */; };
 		FC82E5E62A60E3210080B928 /* QZSCCheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */; };
 		FC82E5E82A60E34F0080B928 /* QZSCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E72A60E34F0080B928 /* QZSCTabBarController.swift */; };
+		FCE23EDB2A665FC900102760 /* QZSCOrderPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */; };
 		FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC4292A5FF6D80015EF4E /* AppDelegate.swift */; };
 		FCEFC4312A5FF6D80015EF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC42F2A5FF6D80015EF4E /* Main.storyboard */; };
 		FCEFC4332A5FF6D90015EF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC4322A5FF6D90015EF4E /* Assets.xcassets */; };
@@ -106,10 +107,6 @@
 		FCEFC5402A5FF9B30015EF4E /* RC4Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC5142A5FF9B30015EF4E /* RC4Tool.m */; };
 		FCEFC5412A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC5152A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift */; };
 		FCEFC5422A5FF9B30015EF4E /* QZSCColorDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC5162A5FF9B30015EF4E /* QZSCColorDefine.swift */; };
-		FCF31A532A6510E700BC815B /* QZSCHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A522A6510E700BC815B /* QZSCHomeHeaderView.swift */; };
-		FCF31A552A6510FB00BC815B /* QZSCHomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */; };
-		FCF31A572A6520A500BC815B /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */; };
-		FCF31A592A65330400BC815B /* QZSCGoodsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */; };
 		FCF31A5B2A65465200BC815B /* QZSCGoodsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF31A5A2A65465200BC815B /* QZSCGoodsDetailsController.swift */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +177,7 @@
 		FC82E5E32A60E3110080B928 /* QZSCMyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCMyController.swift; sourceTree = "<group>"; };
 		FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCCheckInController.swift; sourceTree = "<group>"; };
 		FC82E5E72A60E34F0080B928 /* QZSCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCTabBarController.swift; sourceTree = "<group>"; };
+		FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderPreviewView.swift; sourceTree = "<group>"; };
 		FCEFC4262A5FF6D80015EF4E /* QZSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QZSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEFC4292A5FF6D80015EF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEFC4302A5FF6D80015EF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -241,9 +239,6 @@
 		FCEFC5142A5FF9B30015EF4E /* RC4Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RC4Tool.m; sourceTree = "<group>"; };
 		FCEFC5152A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCNotificationNamesDefines.swift; sourceTree = "<group>"; };
 		FCEFC5162A5FF9B30015EF4E /* QZSCColorDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCColorDefine.swift; sourceTree = "<group>"; };
-		FCF31A522A6510E700BC815B /* QZSCHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeHeaderView.swift; sourceTree = "<group>"; };
-		FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeUIView.swift; sourceTree = "<group>"; };
-		FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeListCell.swift; sourceTree = "<group>"; };
 		FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCGoodsListController.swift; sourceTree = "<group>"; };
 		FCF31A5A2A65465200BC815B /* QZSCGoodsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCGoodsDetailsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,6 +292,7 @@
 				EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */,
 				EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */,
 				EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */,
+				FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -889,6 +885,7 @@
 				FCEFC53D2A5FF9B30015EF4E /* QZSCCache.swift in Sources */,
 				EB6769EB2A651DC000440541 /* CALayer+Chain.swift in Sources */,
 				EB6769F92A65211500440541 /* Array++.swift in Sources */,
+				FCE23EDB2A665FC900102760 /* QZSCOrderPreviewView.swift in Sources */,
 				FCEFC5262A5FF9B30015EF4E /* QZSCNetworkConfig.swift in Sources */,
 				EB6769CE2A651D0100440541 /* SinglePicker.swift in Sources */,
 				FCEFC5412A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift in Sources */,

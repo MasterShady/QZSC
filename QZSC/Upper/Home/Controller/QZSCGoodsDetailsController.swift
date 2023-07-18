@@ -125,7 +125,9 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.height.equalTo(44)
         }
         buyBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
-            
+            let preview = QZSCOrderPreviewView(frame: UIScreen.main.bounds)
+            self.view.addSubview(preview)
+            preview.showAnimation()
         }.disposed(by: dBag)
         
         let shopCarBtn = UIButton(type: .custom)
@@ -229,7 +231,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         scroll.addSubview(dayLbl)
         dayLbl.snp.makeConstraints { make in
             make.left.equalTo(priceLbl.snp.right)
-            make.bottom.equalTo(priceLbl).offset(-4)
+            make.bottom.equalTo(priceLbl).offset(-12)
         }
         
         let tejiaBgImgView = UIImageView(image: UIImage(named: "home_tejia_bg"))
@@ -293,12 +295,13 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         }
         
         let tagBgImgView = UIImageView(image: UIImage(named: "home_tag_bg"))
-        tagBgImgView.contentMode = .scaleAspectFill
+        let imgWidth = kScreenWidth - 64
+        let imgHeight = (imgWidth / 312) * 32
         scroll.addSubview(tagBgImgView)
         tagBgImgView.snp.makeConstraints { make in
             make.top.equalTo(nameLbl.snp.bottom).offset(12)
             make.left.right.equalTo(nameLbl)
-            make.height.equalTo(32)
+            make.height.equalTo(imgHeight)
         }
         
         let leftLocactionLbl = UILabel.createSameLbl(text: "配送至", color: COLOR868A96, font: UIFont.normal(14))

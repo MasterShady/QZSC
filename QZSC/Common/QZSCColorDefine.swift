@@ -26,6 +26,6 @@ let COLOR97FFF0 = UIColor.init(hexString: "#97FFF0")
 let COLORD48600 = UIColor.init(hexString: "#D48600")
 let COLOR00CDCE = UIColor.init(hexString: "#00CDCE")
 let COLOR868A96 = UIColor.init(hexString: "#868A96")
-
+let COLORF8F9FA = UIColor.init(hexString: "#F8F9FA")
 
 
