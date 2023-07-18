@@ -50,7 +50,7 @@ class QZSCPhoneLoginViewController: UIViewController {
         accounTnumberView.addSubview(phoneTF);
         
         phoneTF.snp.makeConstraints { make in
-            make.height.equalTo(SCALE_HEIGTHS(value: 52))
+            make.height.equalTo(SCALE_HEIGTHS(value: 48))
             make.width.equalTo(SCALE_WIDTHS(value: 263))
             make.centerX.equalToSuperview()
             make.top.equalTo(SCALE_HEIGTHS(value: 41))
@@ -66,7 +66,7 @@ class QZSCPhoneLoginViewController: UIViewController {
         loginBtn.addTarget(self, action: #selector(loginBtnClickAction), for: .touchUpInside)
         accounTnumberView.addSubview(loginBtn);
         loginBtn.snp.makeConstraints { make in
-            make.height.equalTo(SCALE_HEIGTHS(value: 52))
+            make.height.equalTo(SCALE_HEIGTHS(value: 48))
             make.width.equalTo(SCALE_WIDTHS(value: 263))
             make.centerX.equalTo( self.view).offset(SCALE_WIDTHS(value: 0))
             make.top.equalTo(phoneTF.snp.bottom).offset(SCALE_HEIGTHS(value: 50))
@@ -108,17 +108,15 @@ class QZSCPhoneLoginViewController: UIViewController {
             label.customColor[platformType] = UIColor(hexString: "333333")
             label.customColor[privacyType] = UIColor(hexString: "333333")
             label.handleCustomTap(for: platformType) { str in
-//                let MineWKWebVC = HYGMineWKWebView()
-//                MineWKWebVC.TitleString  = "用户协议"
-//                MineWKWebVC.url = "http://app.cywj.info/static/protocol.html"
-//                  self.navigationController?.pushViewController(MineWKWebVC, animated: true)
+                let MineWKWebVC = QZSCWebController()
+                MineWKWebVC.urlStr = "https://cwz.wasawasa.cn/cwz_protocol.html"
+                  self.navigationController?.pushViewController(MineWKWebVC, animated: true)
               
             }
             label.handleCustomTap(for: privacyType) { str in
-//                let MineWKWebVC = HYGMineWKWebView()
-//                MineWKWebVC.url = "http://app.cywj.info/static/privacies.html"
-//                MineWKWebVC.TitleString  = "隐私政策"
-//                  self.navigationController?.pushViewController(MineWKWebVC, animated: true)
+                let MineWKWebVC = QZSCWebController()
+                MineWKWebVC.urlStr = "https://cwz.wasawasa.cn/cwz_privacies.html"
+                  self.navigationController?.pushViewController(MineWKWebVC, animated: true)
             }
         }
         protocolView.addSubview(protocolLB)

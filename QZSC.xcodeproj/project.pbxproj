@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A25E6B5D2A66318400AFB35C /* QZSCRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B5C2A66318400AFB35C /* QZSCRegisterViewController.swift */; };
+		A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B5F2A66614900AFB35C /* OrderCell.swift */; };
+		A25E6B622A66768400AFB35C /* QZSCOrderAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */; };
+		A25E6B642A667B1300AFB35C /* QZSCOrderDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B632A667B1300AFB35C /* QZSCOrderDetailController.swift */; };
 		E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */; };
 		EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */; };
 		EB09C19D2A655A3D007599FA /* QZSCHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */; };
@@ -129,6 +133,10 @@
 
 /* Begin PBXFileReference section */
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25E6B5C2A66318400AFB35C /* QZSCRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCRegisterViewController.swift; sourceTree = "<group>"; };
+		A25E6B5F2A66614900AFB35C /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderAllViewController.swift; sourceTree = "<group>"; };
+		A25E6B632A667B1300AFB35C /* QZSCOrderDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderDetailController.swift; sourceTree = "<group>"; };
 		C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.release.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C648CDA3CA7E4AD02322 /* Pods-QZSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.debug.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.debug.xcconfig"; sourceTree = "<group>"; };
 		EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeListCell.swift; sourceTree = "<group>"; };
@@ -286,6 +294,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A25E6B5E2A6660F700AFB35C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A25E6B5F2A66614900AFB35C /* OrderCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		EB09C1982A655A3D007599FA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +448,7 @@
 		FC82E5D42A60E2000080B928 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				A25E6B5E2A6660F700AFB35C /* view */,
 				FC82E5D92A60E2B00080B928 /* Controller */,
 			);
 			path = Order;
@@ -474,6 +491,8 @@
 			isa = PBXGroup;
 			children = (
 				FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */,
+				A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */,
+				A25E6B632A667B1300AFB35C /* QZSCOrderDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -496,6 +515,7 @@
 				EB09C1A12A655A94007599FA /* QZSCAccounTnumberView.swift */,
 				EB09C1A22A655A94007599FA /* QZSCPhoneLoginViewController.swift */,
 				FC82E5E12A60E3030080B928 /* QZSCLoginController.swift */,
+				A25E6B5C2A66318400AFB35C /* QZSCRegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -851,6 +871,7 @@
 				EB6769E92A651DC000440541 /* Chain.swift in Sources */,
 				FCEFC5222A5FF9B30015EF4E /* UICollectionView+Extension.swift in Sources */,
 				FCEFC5382A5FF9B30015EF4E /* ProgressHUD.swift in Sources */,
+				A25E6B622A66768400AFB35C /* QZSCOrderAllViewController.swift in Sources */,
 				EB6769D02A651D1000440541 /* GEPopTool.swift in Sources */,
 				FC82E5E22A60E3030080B928 /* QZSCLoginController.swift in Sources */,
 				FCEFC5292A5FF9B30015EF4E /* QZSCNetwork+Alamofire.swift in Sources */,
@@ -922,10 +943,13 @@
 				EB09C1A72A655A94007599FA /* QZSCAccounTnumberView.swift in Sources */,
 				FCEFC52F2A5FF9B30015EF4E /* QZSCDecoder.swift in Sources */,
 				FCEFC5272A5FF9B30015EF4E /* BaseRequest.swift in Sources */,
+				A25E6B642A667B1300AFB35C /* QZSCOrderDetailController.swift in Sources */,
 				EB6769EF2A651DC000440541 /* UIControl+Chain.swift in Sources */,
 				EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */,
 				EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */,
+				A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
+				A25E6B5D2A66318400AFB35C /* QZSCRegisterViewController.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
 				FCEFC51D2A5FF9B30015EF4E /* UIImage+Extension.swift in Sources */,
