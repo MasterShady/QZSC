@@ -45,6 +45,9 @@ class QZSCLoginController: QZSCBaseController {
     
     @objc private func registerClickAction() {
         
+        
+        let RegisterVC = QZSCRegisterViewController()
+        QZSCControllerTool.currentNavVC()?.pushViewController(RegisterVC, animated: true)
     }
 
     lazy var listContainerView: JXSegmentedListContainerView = {
