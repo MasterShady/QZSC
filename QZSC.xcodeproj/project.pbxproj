@@ -8,6 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */; };
+		EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */; };
+		EB09C19D2A655A3D007599FA /* QZSCHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */; };
+		EB09C19E2A655A3D007599FA /* QZSCHomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */; };
+		EB09C1A02A655A69007599FA /* QZSCGoodsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19F2A655A69007599FA /* QZSCGoodsListController.swift */; };
+		EB09C1A72A655A94007599FA /* QZSCAccounTnumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A12A655A94007599FA /* QZSCAccounTnumberView.swift */; };
+		EB09C1A82A655A94007599FA /* QZSCPhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A22A655A94007599FA /* QZSCPhoneLoginViewController.swift */; };
+		EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */; };
+		EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */; };
+		EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */; };
+		EB6769CB2A651D0100440541 /* BasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C72A651D0100440541 /* BasePicker.swift */; };
+		EB6769CC2A651D0100440541 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C82A651D0100440541 /* DatePicker.swift */; };
+		EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C92A651D0100440541 /* MultiplePicker.swift */; };
+		EB6769CE2A651D0100440541 /* SinglePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769CA2A651D0100440541 /* SinglePicker.swift */; };
+		EB6769D02A651D1000440541 /* GEPopTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769CF2A651D1000440541 /* GEPopTool.swift */; };
+		EB6769D22A651D2400440541 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769D12A651D2400440541 /* BaseView.swift */; };
+		EB6769D52A651D4D00440541 /* UIView+VisualHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6769D32A651D4D00440541 /* UIView+VisualHelper.m */; };
+		EB6769E92A651DC000440541 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769D82A651DC000440541 /* Chain.swift */; };
+		EB6769EA2A651DC000440541 /* Associate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769D92A651DC000440541 /* Associate.swift */; };
+		EB6769EB2A651DC000440541 /* CALayer+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769DB2A651DC000440541 /* CALayer+Chain.swift */; };
+		EB6769EC2A651DC000440541 /* UIImage+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769DD2A651DC000440541 /* UIImage+Chain.swift */; };
+		EB6769ED2A651DC000440541 /* UITableView+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769DE2A651DC000440541 /* UITableView+Chain.swift */; };
+		EB6769EE2A651DC000440541 /* UILabel+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769DF2A651DC000440541 /* UILabel+Chain.swift */; };
+		EB6769EF2A651DC000440541 /* UIControl+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E02A651DC000440541 /* UIControl+Chain.swift */; };
+		EB6769F02A651DC000440541 /* UIButton+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E12A651DC000440541 /* UIButton+Chain.swift */; };
+		EB6769F12A651DC000440541 /* UIView+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E22A651DC000440541 /* UIView+Chain.swift */; };
+		EB6769F22A651DC000440541 /* UITextFiled+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E32A651DC000440541 /* UITextFiled+Chain.swift */; };
+		EB6769F32A651DC000440541 /* UITapGestureRecognizer+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E42A651DC000440541 /* UITapGestureRecognizer+Chain.swift */; };
+		EB6769F42A651DC000440541 /* UIGestureRecognizer+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E52A651DC000440541 /* UIGestureRecognizer+Chain.swift */; };
+		EB6769F52A651DC000440541 /* UICollectionView+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E62A651DC000440541 /* UICollectionView+Chain.swift */; };
+		EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E72A651DC000440541 /* UIScrollView+Chain.swift */; };
+		EB6769F72A651DC000440541 /* UITextView+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769E82A651DC000440541 /* UITextView+Chain.swift */; };
+		EB6769F92A65211500440541 /* Array++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769F82A65211500440541 /* Array++.swift */; };
+		EB6769FD2A65223200440541 /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769FC2A65223200440541 /* FoundationExtension.swift */; };
+		EB6769FF2A654BA700440541 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769FE2A654BA700440541 /* Layout.swift */; };
 		EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761892A60FB2E00E28FAE /* MineUIView.swift */; };
 		EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618C2A61205F00E28FAE /* Extension.swift */; };
 		EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618F2A61303800E28FAE /* WrappedHStack.swift */; };
@@ -100,6 +134,41 @@
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.release.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C648CDA3CA7E4AD02322 /* Pods-QZSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.debug.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.debug.xcconfig"; sourceTree = "<group>"; };
+		EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeListCell.swift; sourceTree = "<group>"; };
+		EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeHeaderView.swift; sourceTree = "<group>"; };
+		EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeUIView.swift; sourceTree = "<group>"; };
+		EB09C19F2A655A69007599FA /* QZSCGoodsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCGoodsListController.swift; sourceTree = "<group>"; };
+		EB09C1A12A655A94007599FA /* QZSCAccounTnumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCAccounTnumberView.swift; sourceTree = "<group>"; };
+		EB09C1A22A655A94007599FA /* QZSCPhoneLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCPhoneLoginViewController.swift; sourceTree = "<group>"; };
+		EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeTextView.swift; sourceTree = "<group>"; };
+		EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeView.swift; sourceTree = "<group>"; };
+		EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeNumView.swift; sourceTree = "<group>"; };
+		EB6769C72A651D0100440541 /* BasePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePicker.swift; sourceTree = "<group>"; };
+		EB6769C82A651D0100440541 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		EB6769C92A651D0100440541 /* MultiplePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplePicker.swift; sourceTree = "<group>"; };
+		EB6769CA2A651D0100440541 /* SinglePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePicker.swift; sourceTree = "<group>"; };
+		EB6769CF2A651D1000440541 /* GEPopTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GEPopTool.swift; sourceTree = "<group>"; };
+		EB6769D12A651D2400440541 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		EB6769D32A651D4D00440541 /* UIView+VisualHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VisualHelper.m"; sourceTree = "<group>"; };
+		EB6769D42A651D4D00440541 /* UIView+VisualHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VisualHelper.h"; sourceTree = "<group>"; };
+		EB6769D82A651DC000440541 /* Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
+		EB6769D92A651DC000440541 /* Associate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Associate.swift; sourceTree = "<group>"; };
+		EB6769DB2A651DC000440541 /* CALayer+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Chain.swift"; sourceTree = "<group>"; };
+		EB6769DD2A651DC000440541 /* UIImage+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Chain.swift"; sourceTree = "<group>"; };
+		EB6769DE2A651DC000440541 /* UITableView+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Chain.swift"; sourceTree = "<group>"; };
+		EB6769DF2A651DC000440541 /* UILabel+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E02A651DC000440541 /* UIControl+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E12A651DC000440541 /* UIButton+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E22A651DC000440541 /* UIView+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E32A651DC000440541 /* UITextFiled+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextFiled+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E42A651DC000440541 /* UITapGestureRecognizer+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E52A651DC000440541 /* UIGestureRecognizer+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E62A651DC000440541 /* UICollectionView+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E72A651DC000440541 /* UIScrollView+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Chain.swift"; sourceTree = "<group>"; };
+		EB6769E82A651DC000440541 /* UITextView+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Chain.swift"; sourceTree = "<group>"; };
+		EB6769F82A65211500440541 /* Array++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array++.swift"; sourceTree = "<group>"; };
+		EB6769FC2A65223200440541 /* FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
+		EB6769FE2A654BA700440541 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		EBB761892A60FB2E00E28FAE /* MineUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUIView.swift; sourceTree = "<group>"; };
 		EBB7618C2A61205F00E28FAE /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EBB7618F2A61303800E28FAE /* WrappedHStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedHStack.swift; sourceTree = "<group>"; };
@@ -222,6 +291,84 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EB09C1982A655A3D007599FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */,
+				EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */,
+				EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB09C1A32A655A94007599FA /* loginVerifyCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */,
+				EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */,
+				EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */,
+			);
+			path = loginVerifyCodeView;
+			sourceTree = "<group>";
+		};
+		EB6769C62A651D0100440541 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				EB6769D12A651D2400440541 /* BaseView.swift */,
+				EB6769C72A651D0100440541 /* BasePicker.swift */,
+				EB6769C82A651D0100440541 /* DatePicker.swift */,
+				EB6769C92A651D0100440541 /* MultiplePicker.swift */,
+				EB6769CA2A651D0100440541 /* SinglePicker.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		EB6769D62A651DC000440541 /* ChainKit */ = {
+			isa = PBXGroup;
+			children = (
+				EB6769D72A651DC000440541 /* Chain */,
+				EB6769DA2A651DC000440541 /* QuartzCore+Chain */,
+				EB6769DC2A651DC000440541 /* UIKit+Chain */,
+			);
+			path = ChainKit;
+			sourceTree = "<group>";
+		};
+		EB6769D72A651DC000440541 /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				EB6769D82A651DC000440541 /* Chain.swift */,
+				EB6769D92A651DC000440541 /* Associate.swift */,
+			);
+			path = Chain;
+			sourceTree = "<group>";
+		};
+		EB6769DA2A651DC000440541 /* QuartzCore+Chain */ = {
+			isa = PBXGroup;
+			children = (
+				EB6769DB2A651DC000440541 /* CALayer+Chain.swift */,
+			);
+			path = "QuartzCore+Chain";
+			sourceTree = "<group>";
+		};
+		EB6769DC2A651DC000440541 /* UIKit+Chain */ = {
+			isa = PBXGroup;
+			children = (
+				EB6769DD2A651DC000440541 /* UIImage+Chain.swift */,
+				EB6769DE2A651DC000440541 /* UITableView+Chain.swift */,
+				EB6769DF2A651DC000440541 /* UILabel+Chain.swift */,
+				EB6769E02A651DC000440541 /* UIControl+Chain.swift */,
+				EB6769E12A651DC000440541 /* UIButton+Chain.swift */,
+				EB6769E22A651DC000440541 /* UIView+Chain.swift */,
+				EB6769E32A651DC000440541 /* UITextFiled+Chain.swift */,
+				EB6769E42A651DC000440541 /* UITapGestureRecognizer+Chain.swift */,
+				EB6769E52A651DC000440541 /* UIGestureRecognizer+Chain.swift */,
+				EB6769E62A651DC000440541 /* UICollectionView+Chain.swift */,
+				EB6769E72A651DC000440541 /* UIScrollView+Chain.swift */,
+				EB6769E82A651DC000440541 /* UITextView+Chain.swift */,
+			);
+			path = "UIKit+Chain";
+			sourceTree = "<group>";
+		};
 		EBB761882A60FAEA00E28FAE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +427,7 @@
 		FC82E5D32A60E1FA0080B928 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FCF31A512A650F2900BC815B /* View */,
+				EB09C1982A655A3D007599FA /* View */,
 				FC82E5DA2A60E2B40080B928 /* Controller */,
 			);
 			path = Home;
@@ -338,6 +485,7 @@
 		FC82E5DA2A60E2B40080B928 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB09C19F2A655A69007599FA /* QZSCGoodsListController.swift */,
 				FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */,
 				FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */,
 				FCF31A5A2A65465200BC815B /* QZSCGoodsDetailsController.swift */,
@@ -348,6 +496,9 @@
 		FC82E5DB2A60E2B90080B928 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB09C1A32A655A94007599FA /* loginVerifyCodeView */,
+				EB09C1A12A655A94007599FA /* QZSCAccounTnumberView.swift */,
+				EB09C1A22A655A94007599FA /* QZSCPhoneLoginViewController.swift */,
 				FC82E5E12A60E3030080B928 /* QZSCLoginController.swift */,
 			);
 			path = Controller;
@@ -435,6 +586,7 @@
 				FCEFC4F32A5FF9B30015EF4E /* Network */,
 				FCEFC5002A5FF9B30015EF4E /* View */,
 				FCEFC5092A5FF9B30015EF4E /* Tool */,
+				EB6769FE2A654BA700440541 /* Layout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -442,6 +594,10 @@
 		FCEFC4E32A5FF9B30015EF4E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EB6769FC2A65223200440541 /* FoundationExtension.swift */,
+				EB6769F82A65211500440541 /* Array++.swift */,
+				EB6769D42A651D4D00440541 /* UIView+VisualHelper.h */,
+				EB6769D32A651D4D00440541 /* UIView+VisualHelper.m */,
 				FCEFC4E42A5FF9B30015EF4E /* UIDevice+Extension.swift */,
 				FCEFC4E52A5FF9B30015EF4E /* NSAttributedString+Extension.swift */,
 				FCEFC4E62A5FF9B30015EF4E /* UIFont+Extension.swift */,
@@ -497,6 +653,9 @@
 		FCEFC5092A5FF9B30015EF4E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				EB6769D62A651DC000440541 /* ChainKit */,
+				EB6769CF2A651D1000440541 /* GEPopTool.swift */,
+				EB6769C62A651D0100440541 /* Picker */,
 				FCEFC50C2A5FF9B30015EF4E /* QZSC-Bridging-Header.h */,
 				FCEFC5102A5FF9B30015EF4E /* EPRc4CryptorManager.m */,
 				FCEFC50B2A5FF9B30015EF4E /* EPRc4CryptorManager.h */,
@@ -511,16 +670,6 @@
 				FCEFC5152A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift */,
 			);
 			path = Tool;
-			sourceTree = "<group>";
-		};
-		FCF31A512A650F2900BC815B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FCF31A522A6510E700BC815B /* QZSCHomeHeaderView.swift */,
-				FCF31A562A6520A500BC815B /* QZSCHomeListCell.swift */,
-				FCF31A542A6510FB00BC815B /* QZSCHomeUIView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -699,30 +848,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6769D52A651D4D00440541 /* UIView+VisualHelper.m in Sources */,
+				EB6769F42A651DC000440541 /* UIGestureRecognizer+Chain.swift in Sources */,
 				FC82E5E62A60E3210080B928 /* QZSCCheckInController.swift in Sources */,
 				FCEFC5372A5FF9B30015EF4E /* QZSCStatusView.swift in Sources */,
+				EB6769E92A651DC000440541 /* Chain.swift in Sources */,
 				FCEFC5222A5FF9B30015EF4E /* UICollectionView+Extension.swift in Sources */,
 				FCEFC5382A5FF9B30015EF4E /* ProgressHUD.swift in Sources */,
+				EB6769D02A651D1000440541 /* GEPopTool.swift in Sources */,
 				FC82E5E22A60E3030080B928 /* QZSCLoginController.swift in Sources */,
 				FCEFC5292A5FF9B30015EF4E /* QZSCNetwork+Alamofire.swift in Sources */,
+				EB6769ED2A651DC000440541 /* UITableView+Chain.swift in Sources */,
 				FCEFC5192A5FF9B30015EF4E /* UIFont+Extension.swift in Sources */,
 				FCEFC5342A5FF9B30015EF4E /* QZSCCustomAlert.swift in Sources */,
 				FCEFC53E2A5FF9B30015EF4E /* EPRC4Cryptor.m in Sources */,
 				FCEFC5202A5FF9B30015EF4E /* Decodable+Extension.swift in Sources */,
 				FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */,
-				FCF31A532A6510E700BC815B /* QZSCHomeHeaderView.swift in Sources */,
 				FCEFC5322A5FF9B30015EF4E /* UMProgressManager.swift in Sources */,
 				FCEFC52B2A5FF9B30015EF4E /* QZSCNetPlugin.swift in Sources */,
 				FCEFC52A2A5FF9B30015EF4E /* QZSCServiceObject.swift in Sources */,
+				EB6769CB2A651D0100440541 /* BasePicker.swift in Sources */,
 				EBB761922A61528200E28FAE /* MyCartView.swift in Sources */,
 				FCEFC5402A5FF9B30015EF4E /* RC4Tool.m in Sources */,
+				EB6769FF2A654BA700440541 /* Layout.swift in Sources */,
+				EB09C1A02A655A69007599FA /* QZSCGoodsListController.swift in Sources */,
 				FCEFC5352A5FF9B30015EF4E /* UMToastManager.swift in Sources */,
 				FCEFC5392A5FF9B30015EF4E /* UMToast.swift in Sources */,
+				EB6769EC2A651DC000440541 /* UIImage+Chain.swift in Sources */,
 				FCEFC53C2A5FF9B30015EF4E /* EPRc4CryptorManager.m in Sources */,
-				FCF31A572A6520A500BC815B /* QZSCHomeListCell.swift in Sources */,
 				FCEFC4D52A5FF7EC0015EF4E /* QZSCBaseController.swift in Sources */,
-				FCF31A592A65330400BC815B /* QZSCGoodsListController.swift in Sources */,
 				FCEFC5242A5FF9B30015EF4E /* UILable+Extension.swift in Sources */,
+				EB6769F02A651DC000440541 /* UIButton+Chain.swift in Sources */,
 				FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */,
 				FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */,
 				FCEFC5312A5FF9B30015EF4E /* QZSCDefine.swift in Sources */,
@@ -731,12 +887,19 @@
 				FCEFC5232A5FF9B30015EF4E /* UITableView+Extension.swift in Sources */,
 				FCEFC5282A5FF9B30015EF4E /* QZSCError.swift in Sources */,
 				FCEFC53D2A5FF9B30015EF4E /* QZSCCache.swift in Sources */,
+				EB6769EB2A651DC000440541 /* CALayer+Chain.swift in Sources */,
+				EB6769F92A65211500440541 /* Array++.swift in Sources */,
 				FCEFC5262A5FF9B30015EF4E /* QZSCNetworkConfig.swift in Sources */,
+				EB6769CE2A651D0100440541 /* SinglePicker.swift in Sources */,
 				FCEFC5412A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift in Sources */,
+				EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */,
+				EB6769F22A651DC000440541 /* UITextFiled+Chain.swift in Sources */,
+				EB6769F52A651DC000440541 /* UICollectionView+Chain.swift in Sources */,
 				FC82E5E42A60E3110080B928 /* QZSCMyController.swift in Sources */,
 				FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */,
 				FCEFC5332A5FF9B30015EF4E /* QZSCDatePickerView.swift in Sources */,
 				FCEFC52D2A5FF9B30015EF4E /* QZSCTarget.swift in Sources */,
+				EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */,
 				EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */,
 				FCEFC53F2A5FF9B30015EF4E /* QZSCAlertTool.swift in Sources */,
 				FCEFC5362A5FF9B30015EF4E /* QZSCCustomTextView.swift in Sources */,
@@ -745,23 +908,39 @@
 				FCEFC5252A5FF9B30015EF4E /* Array+Extension.swift in Sources */,
 				FC82E5E82A60E34F0080B928 /* QZSCTabBarController.swift in Sources */,
 				FCEFC5172A5FF9B30015EF4E /* UIDevice+Extension.swift in Sources */,
+				EB6769F12A651DC000440541 /* UIView+Chain.swift in Sources */,
 				FCEFC4D62A5FF7EC0015EF4E /* QZSCWebController.swift in Sources */,
 				FCEFC51E2A5FF9B30015EF4E /* UIView+Frame.swift in Sources */,
 				FCEFC5422A5FF9B30015EF4E /* QZSCColorDefine.swift in Sources */,
+				EB6769F32A651DC000440541 /* UITapGestureRecognizer+Chain.swift in Sources */,
+				EB6769EE2A651DC000440541 /* UILabel+Chain.swift in Sources */,
+				EB6769F72A651DC000440541 /* UITextView+Chain.swift in Sources */,
 				FCEFC52E2A5FF9B30015EF4E /* QZSCRspBody.swift in Sources */,
+				EB6769EA2A651DC000440541 /* Associate.swift in Sources */,
+				EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */,
+				EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */,
+				EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */,
 				FCEFC5212A5FF9B30015EF4E /* UIController+Extension.swift in Sources */,
+				EB6769FD2A65223200440541 /* FoundationExtension.swift in Sources */,
+				EB09C1A72A655A94007599FA /* QZSCAccounTnumberView.swift in Sources */,
 				FCEFC52F2A5FF9B30015EF4E /* QZSCDecoder.swift in Sources */,
 				FCEFC5272A5FF9B30015EF4E /* BaseRequest.swift in Sources */,
+				EB6769EF2A651DC000440541 /* UIControl+Chain.swift in Sources */,
 				EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */,
+				EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
-				FCF31A552A6510FB00BC815B /* QZSCHomeUIView.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
 				FCEFC51D2A5FF9B30015EF4E /* UIImage+Extension.swift in Sources */,
 				FCF31A5B2A65465200BC815B /* QZSCGoodsDetailsController.swift in Sources */,
+				EB09C1A82A655A94007599FA /* QZSCPhoneLoginViewController.swift in Sources */,
 				FCEFC51B2A5FF9B30015EF4E /* Date+Extension.swift in Sources */,
 				FCEFC52C2A5FF9B30015EF4E /* QZSCParameter.swift in Sources */,
 				FCEFC53A2A5FF9B30015EF4E /* QZSCControllerTool.swift in Sources */,
+				EB09C19E2A655A3D007599FA /* QZSCHomeUIView.swift in Sources */,
+				EB6769CC2A651D0100440541 /* DatePicker.swift in Sources */,
+				EB09C19D2A655A3D007599FA /* QZSCHomeHeaderView.swift in Sources */,
+				EB6769D22A651D2400440541 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -921,7 +921,7 @@ public class ProgressHUD: UIView {
 		let path = UIBezierPath(arcCenter: CGPoint(x: radius/2, y: radius/2), radius: radius/2, startAngle: 0, endAngle: 2 * .pi, clockwise: false)
 
 		for i in 0..<8 {
-			let angle = .pi / 4 * CGFloat(i)
+			let angle = CGFloat.pi / 4 * CGFloat(i)
 
 			let layer = CAShapeLayer()
 			layer.path = path.cgPath
@@ -964,7 +964,7 @@ public class ProgressHUD: UIView {
 		let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: lineWidth, height: lineHeight), cornerRadius: lineWidth/2)
 
 		for i in 0..<8 {
-			let angle = .pi / 4 * CGFloat(i)
+			let angle = CGFloat.pi / 4 * CGFloat(i)
 
 			let line = CAShapeLayer()
 			line.frame = CGRect(x: (containerSize-lineWidth)/2, y: (containerSize-lineHeight)/2, width: lineWidth, height: lineHeight)

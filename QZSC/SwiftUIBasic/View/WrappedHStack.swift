@@ -23,7 +23,7 @@ struct WrappedHStack<Content: View>: View {
                                     containerWidth: geometry.size.width)
         
         let rowViews = rowBuilder.generateRows(views: content)
-        let finalView = ForEach(rowViews.indices) { rowViews[$0] }
+        let finalView = ForEach(rowViews.indices,id: \.self) { rowViews[$0] }
         
         VStack(alignment: .leading, spacing: 20) {
             finalView
@@ -80,7 +80,7 @@ extension WrappedHStack {
         
         private func createRow(for views: [AnyView]) -> AnyView {
             HStack(alignment: .center, spacing: spacing) {
-                ForEach(views.indices) { views[$0] }
+                ForEach(views.indices, id: \.self) { views[$0] }
             }
             .erasedToAnyView()
         }
