@@ -54,6 +54,7 @@
 		FC82E5E62A60E3210080B928 /* QZSCCheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */; };
 		FC82E5E82A60E34F0080B928 /* QZSCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E72A60E34F0080B928 /* QZSCTabBarController.swift */; };
 		FCE23EDB2A665FC900102760 /* QZSCOrderPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */; };
+		FCE23EDF2A66886000102760 /* QZSCChenkInUploadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE23EDE2A66886000102760 /* QZSCChenkInUploadImageCell.m */; };
 		FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC4292A5FF6D80015EF4E /* AppDelegate.swift */; };
 		FCEFC4312A5FF6D80015EF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC42F2A5FF6D80015EF4E /* Main.storyboard */; };
 		FCEFC4332A5FF6D90015EF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC4322A5FF6D90015EF4E /* Assets.xcassets */; };
@@ -178,6 +179,8 @@
 		FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCCheckInController.swift; sourceTree = "<group>"; };
 		FC82E5E72A60E34F0080B928 /* QZSCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCTabBarController.swift; sourceTree = "<group>"; };
 		FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderPreviewView.swift; sourceTree = "<group>"; };
+		FCE23EDD2A66886000102760 /* QZSCChenkInUploadImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCChenkInUploadImageCell.h; sourceTree = "<group>"; };
+		FCE23EDE2A66886000102760 /* QZSCChenkInUploadImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCChenkInUploadImageCell.m; sourceTree = "<group>"; };
 		FCEFC4262A5FF6D80015EF4E /* QZSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QZSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEFC4292A5FF6D80015EF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEFC4302A5FF6D80015EF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -457,6 +460,7 @@
 		FC82E5D72A60E2420080B928 /* CheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				FCE23EDC2A666FA200102760 /* View */,
 				FC82E5DC2A60E2C00080B928 /* Controller */,
 			);
 			path = CheckIn;
@@ -506,6 +510,15 @@
 				FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCE23EDC2A666FA200102760 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCE23EDD2A66886000102760 /* QZSCChenkInUploadImageCell.h */,
+				FCE23EDE2A66886000102760 /* QZSCChenkInUploadImageCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FCEFC41D2A5FF6D80015EF4E = {
@@ -915,6 +928,7 @@
 				FCEFC52E2A5FF9B30015EF4E /* QZSCRspBody.swift in Sources */,
 				EB6769EA2A651DC000440541 /* Associate.swift in Sources */,
 				EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */,
+				FCE23EDF2A66886000102760 /* QZSCChenkInUploadImageCell.m in Sources */,
 				EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */,
 				EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */,
 				FCEFC5212A5FF9B30015EF4E /* UIController+Extension.swift in Sources */,
@@ -1119,6 +1133,9 @@
 				DEVELOPMENT_TEAM = 6475J8L3PC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "商家入驻上传图片, 需要访问您的相机功能!";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1152,6 +1169,9 @@
 				DEVELOPMENT_TEAM = 6475J8L3PC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "商家入驻上传图片, 需要访问您的相机功能!";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
