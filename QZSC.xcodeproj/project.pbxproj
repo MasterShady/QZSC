@@ -11,6 +11,19 @@
 		A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B5F2A66614900AFB35C /* OrderCell.swift */; };
 		A25E6B622A66768400AFB35C /* QZSCOrderAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */; };
 		A25E6B642A667B1300AFB35C /* QZSCOrderDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B632A667B1300AFB35C /* QZSCOrderDetailController.swift */; };
+		A26F54B52A6784080080417F /* MineAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26F54AE2A6784080080417F /* MineAddressCell.swift */; };
+		A26F54B62A6784080080417F /* KLCityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26F54B02A6784080080417F /* KLCityPickerView.swift */; };
+		A26F54B72A6784080080417F /* UIView+KLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26F54B12A6784080080417F /* UIView+KLExtension.swift */; };
+		A26F54B82A6784080080417F /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = A26F54B22A6784080080417F /* city.plist */; };
+		A26F54B92A6784080080417F /* MineAddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26F54B32A6784080080417F /* MineAddressListViewController.swift */; };
+		A26F54BA2A6784080080417F /* MineAddressNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26F54B42A6784080080417F /* MineAddressNewViewController.swift */; };
+		A26F54BD2A6791530080417F /* QZSCfootprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54BC2A6791530080417F /* QZSCfootprintViewController.m */; };
+		A26F54C02A6794570080417F /* QZSCBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54BF2A6794570080417F /* QZSCBaseVC.m */; };
+		A26F54C32A6796D40080417F /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54C22A6796D40080417F /* UIColor+Hex.m */; };
+		A26F54C62A6797440080417F /* UIViewController+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54C42A6797440080417F /* UIViewController+Tool.m */; };
+		A26F54CA2A6799F40080417F /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54C92A6799F40080417F /* UIDevice+Addition.m */; };
+		A26F54CD2A67AF490080417F /* QZSCControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54CC2A67AF490080417F /* QZSCControllerManager.m */; };
+		A2E5A30E2A67B9DA00C17C8E /* QZSCCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E5A30D2A67B9DA00C17C8E /* QZSCCollectViewController.m */; };
 		E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */; };
 		EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */; };
 		EB09C19D2A655A3D007599FA /* QZSCHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */; };
@@ -138,6 +151,27 @@
 		A25E6B5F2A66614900AFB35C /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderAllViewController.swift; sourceTree = "<group>"; };
 		A25E6B632A667B1300AFB35C /* QZSCOrderDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderDetailController.swift; sourceTree = "<group>"; };
+		A26F54AE2A6784080080417F /* MineAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAddressCell.swift; sourceTree = "<group>"; };
+		A26F54B02A6784080080417F /* KLCityPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLCityPickerView.swift; sourceTree = "<group>"; };
+		A26F54B12A6784080080417F /* UIView+KLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+KLExtension.swift"; sourceTree = "<group>"; };
+		A26F54B22A6784080080417F /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		A26F54B32A6784080080417F /* MineAddressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAddressListViewController.swift; sourceTree = "<group>"; };
+		A26F54B42A6784080080417F /* MineAddressNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAddressNewViewController.swift; sourceTree = "<group>"; };
+		A26F54BB2A6791530080417F /* QZSCfootprintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCfootprintViewController.h; sourceTree = "<group>"; };
+		A26F54BC2A6791530080417F /* QZSCfootprintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCfootprintViewController.m; sourceTree = "<group>"; };
+		A26F54BE2A6794570080417F /* QZSCBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCBaseVC.h; sourceTree = "<group>"; };
+		A26F54BF2A6794570080417F /* QZSCBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCBaseVC.m; sourceTree = "<group>"; };
+		A26F54C12A6796D40080417F /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		A26F54C22A6796D40080417F /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		A26F54C42A6797440080417F /* UIViewController+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tool.m"; sourceTree = "<group>"; };
+		A26F54C52A6797440080417F /* UIViewController+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tool.h"; sourceTree = "<group>"; };
+		A26F54C72A6798690080417F /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		A26F54C82A6799F40080417F /* UIDevice+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addition.h"; sourceTree = "<group>"; };
+		A26F54C92A6799F40080417F /* UIDevice+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addition.m"; sourceTree = "<group>"; };
+		A26F54CB2A67AF490080417F /* QZSCControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCControllerManager.h; sourceTree = "<group>"; };
+		A26F54CC2A67AF490080417F /* QZSCControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCControllerManager.m; sourceTree = "<group>"; };
+		A2E5A30C2A67B9DA00C17C8E /* QZSCCollectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCCollectViewController.h; sourceTree = "<group>"; };
+		A2E5A30D2A67B9DA00C17C8E /* QZSCCollectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCCollectViewController.m; sourceTree = "<group>"; };
 		C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.release.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C648CDA3CA7E4AD02322 /* Pods-QZSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QZSC.debug.xcconfig"; path = "Target Support Files/Pods-QZSC/Pods-QZSC.debug.xcconfig"; sourceTree = "<group>"; };
 		EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZSCHomeListCell.swift; sourceTree = "<group>"; };
@@ -305,6 +339,27 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		A26F54AD2A67830E0080417F /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				A26F54AF2A6784080080417F /* cityView */,
+				A26F54AE2A6784080080417F /* MineAddressCell.swift */,
+				A26F54B32A6784080080417F /* MineAddressListViewController.swift */,
+				A26F54B42A6784080080417F /* MineAddressNewViewController.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		A26F54AF2A6784080080417F /* cityView */ = {
+			isa = PBXGroup;
+			children = (
+				A26F54B02A6784080080417F /* KLCityPickerView.swift */,
+				A26F54B12A6784080080417F /* UIView+KLExtension.swift */,
+				A26F54B22A6784080080417F /* city.plist */,
+			);
+			path = cityView;
+			sourceTree = "<group>";
+		};
 		EB09C1982A655A3D007599FA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +468,7 @@
 		FC82E5CE2A60E0610080B928 /* Upper */ = {
 			isa = PBXGroup;
 			children = (
+				A26F54AD2A67830E0080417F /* Address */,
 				FC82E5D72A60E2420080B928 /* CheckIn */,
 				FC82E5D62A60E2230080B928 /* My */,
 				FC82E5D52A60E20A0080B928 /* Login */,
@@ -487,6 +543,10 @@
 			isa = PBXGroup;
 			children = (
 				FC82E5E32A60E3110080B928 /* QZSCMyController.swift */,
+				A26F54BB2A6791530080417F /* QZSCfootprintViewController.h */,
+				A26F54BC2A6791530080417F /* QZSCfootprintViewController.m */,
+				A2E5A30C2A67B9DA00C17C8E /* QZSCCollectViewController.h */,
+				A2E5A30D2A67B9DA00C17C8E /* QZSCCollectViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -602,6 +662,8 @@
 			children = (
 				FCEFC49B2A5FF7EC0015EF4E /* QZSCBaseController.swift */,
 				FCEFC49C2A5FF7EC0015EF4E /* QZSCWebController.swift */,
+				A26F54BE2A6794570080417F /* QZSCBaseVC.h */,
+				A26F54BF2A6794570080417F /* QZSCBaseVC.m */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -682,6 +744,13 @@
 		FCEFC5092A5FF9B30015EF4E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A26F54C82A6799F40080417F /* UIDevice+Addition.h */,
+				A26F54C92A6799F40080417F /* UIDevice+Addition.m */,
+				A26F54C72A6798690080417F /* CommonDefine.h */,
+				A26F54C52A6797440080417F /* UIViewController+Tool.h */,
+				A26F54C42A6797440080417F /* UIViewController+Tool.m */,
+				A26F54C12A6796D40080417F /* UIColor+Hex.h */,
+				A26F54C22A6796D40080417F /* UIColor+Hex.m */,
 				EB6769D62A651DC000440541 /* ChainKit */,
 				EB6769CF2A651D1000440541 /* GEPopTool.swift */,
 				EB6769C62A651D0100440541 /* Picker */,
@@ -697,6 +766,8 @@
 				FCEFC5112A5FF9B30015EF4E /* QZSCCache.swift */,
 				FCEFC5132A5FF9B30015EF4E /* QZSCAlertTool.swift */,
 				FCEFC5152A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift */,
+				A26F54CB2A67AF490080417F /* QZSCControllerManager.h */,
+				A26F54CC2A67AF490080417F /* QZSCControllerManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -809,6 +880,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCEFC4362A5FF6D90015EF4E /* LaunchScreen.storyboard in Resources */,
+				A26F54B82A6784080080417F /* city.plist in Resources */,
 				FCEFC4332A5FF6D90015EF4E /* Assets.xcassets in Resources */,
 				FCEFC4312A5FF6D80015EF4E /* Main.storyboard in Resources */,
 			);
@@ -878,6 +950,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB6769D52A651D4D00440541 /* UIView+VisualHelper.m in Sources */,
+				A26F54BA2A6784080080417F /* MineAddressNewViewController.swift in Sources */,
 				EB6769F42A651DC000440541 /* UIGestureRecognizer+Chain.swift in Sources */,
 				FC82E5E62A60E3210080B928 /* QZSCCheckInController.swift in Sources */,
 				FCEFC5372A5FF9B30015EF4E /* QZSCStatusView.swift in Sources */,
@@ -885,11 +958,14 @@
 				FCEFC5222A5FF9B30015EF4E /* UICollectionView+Extension.swift in Sources */,
 				FCEFC5382A5FF9B30015EF4E /* ProgressHUD.swift in Sources */,
 				A25E6B622A66768400AFB35C /* QZSCOrderAllViewController.swift in Sources */,
+				A26F54BD2A6791530080417F /* QZSCfootprintViewController.m in Sources */,
 				EB6769D02A651D1000440541 /* GEPopTool.swift in Sources */,
 				FC82E5E22A60E3030080B928 /* QZSCLoginController.swift in Sources */,
 				FCEFC5292A5FF9B30015EF4E /* QZSCNetwork+Alamofire.swift in Sources */,
+				A26F54B52A6784080080417F /* MineAddressCell.swift in Sources */,
 				EB6769ED2A651DC000440541 /* UITableView+Chain.swift in Sources */,
 				FCEFC5192A5FF9B30015EF4E /* UIFont+Extension.swift in Sources */,
+				A26F54B92A6784080080417F /* MineAddressListViewController.swift in Sources */,
 				FCEFC5342A5FF9B30015EF4E /* QZSCCustomAlert.swift in Sources */,
 				FCEFC53E2A5FF9B30015EF4E /* EPRC4Cryptor.m in Sources */,
 				FCEFC5202A5FF9B30015EF4E /* Decodable+Extension.swift in Sources */,
@@ -901,6 +977,7 @@
 				EBB761922A61528200E28FAE /* MyCartView.swift in Sources */,
 				FCEFC5402A5FF9B30015EF4E /* RC4Tool.m in Sources */,
 				EB6769FF2A654BA700440541 /* Layout.swift in Sources */,
+				A26F54B72A6784080080417F /* UIView+KLExtension.swift in Sources */,
 				EB09C1A02A655A69007599FA /* QZSCGoodsListController.swift in Sources */,
 				FCEFC5352A5FF9B30015EF4E /* UMToastManager.swift in Sources */,
 				FCEFC5392A5FF9B30015EF4E /* UMToast.swift in Sources */,
@@ -912,11 +989,13 @@
 				FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */,
 				FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */,
 				FCEFC5312A5FF9B30015EF4E /* QZSCDefine.swift in Sources */,
+				A26F54C02A6794570080417F /* QZSCBaseVC.m in Sources */,
 				EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */,
 				FCEFC51C2A5FF9B30015EF4E /* UIButton+Extension.swift in Sources */,
 				FCEFC5232A5FF9B30015EF4E /* UITableView+Extension.swift in Sources */,
 				FCEFC5282A5FF9B30015EF4E /* QZSCError.swift in Sources */,
 				FCEFC53D2A5FF9B30015EF4E /* QZSCCache.swift in Sources */,
+				A26F54B62A6784080080417F /* KLCityPickerView.swift in Sources */,
 				EB6769EB2A651DC000440541 /* CALayer+Chain.swift in Sources */,
 				EB6769F92A65211500440541 /* Array++.swift in Sources */,
 				FCE23EDB2A665FC900102760 /* QZSCOrderPreviewView.swift in Sources */,
@@ -932,6 +1011,7 @@
 				FCEFC52D2A5FF9B30015EF4E /* QZSCTarget.swift in Sources */,
 				EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */,
 				EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */,
+				A2E5A30E2A67B9DA00C17C8E /* QZSCCollectViewController.m in Sources */,
 				FCEFC53F2A5FF9B30015EF4E /* QZSCAlertTool.swift in Sources */,
 				FCEFC5362A5FF9B30015EF4E /* QZSCCustomTextView.swift in Sources */,
 				FCEFC5182A5FF9B30015EF4E /* NSAttributedString+Extension.swift in Sources */,
@@ -942,12 +1022,14 @@
 				EB6769F12A651DC000440541 /* UIView+Chain.swift in Sources */,
 				FCEFC4D62A5FF7EC0015EF4E /* QZSCWebController.swift in Sources */,
 				FCEFC51E2A5FF9B30015EF4E /* UIView+Frame.swift in Sources */,
+				A26F54C62A6797440080417F /* UIViewController+Tool.m in Sources */,
 				FCEFC5422A5FF9B30015EF4E /* QZSCColorDefine.swift in Sources */,
 				EB6769F32A651DC000440541 /* UITapGestureRecognizer+Chain.swift in Sources */,
 				EB6769EE2A651DC000440541 /* UILabel+Chain.swift in Sources */,
 				EB6769F72A651DC000440541 /* UITextView+Chain.swift in Sources */,
 				FCEFC52E2A5FF9B30015EF4E /* QZSCRspBody.swift in Sources */,
 				EB6769EA2A651DC000440541 /* Associate.swift in Sources */,
+				A26F54CA2A6799F40080417F /* UIDevice+Addition.m in Sources */,
 				EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */,
 				FCE23EDF2A66886000102760 /* QZSCChenkInUploadImageCell.m in Sources */,
 				EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */,
@@ -955,6 +1037,7 @@
 				FCEFC5212A5FF9B30015EF4E /* UIController+Extension.swift in Sources */,
 				EB6769FD2A65223200440541 /* FoundationExtension.swift in Sources */,
 				EB09C1A72A655A94007599FA /* QZSCAccounTnumberView.swift in Sources */,
+				A26F54C32A6796D40080417F /* UIColor+Hex.m in Sources */,
 				FCEFC52F2A5FF9B30015EF4E /* QZSCDecoder.swift in Sources */,
 				FCEFC5272A5FF9B30015EF4E /* BaseRequest.swift in Sources */,
 				A25E6B642A667B1300AFB35C /* QZSCOrderDetailController.swift in Sources */,
@@ -967,6 +1050,7 @@
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
 				FCEFC51D2A5FF9B30015EF4E /* UIImage+Extension.swift in Sources */,
+				A26F54CD2A67AF490080417F /* QZSCControllerManager.m in Sources */,
 				FCF31A5B2A65465200BC815B /* QZSCGoodsDetailsController.swift in Sources */,
 				EB09C1A82A655A94007599FA /* QZSCPhoneLoginViewController.swift in Sources */,
 				FCEFC51B2A5FF9B30015EF4E /* Date+Extension.swift in Sources */,
