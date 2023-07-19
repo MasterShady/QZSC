@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 class UserData: ObservableObject{
     @Published var cartCount = 15
     @Published var footPrintCount = 20
@@ -155,7 +154,19 @@ struct MineHeaderView: View {
                 ForEach(0..<4) { idx in
                     let item = items(at: idx)
                     Button {
-                        userData[keyPath: item.2] += 1
+                        if(idx == 1){
+                            let footprintVC = QZSCfootprintViewController()
+                            QZSCControllerTool.currentNavVC()?.pushViewController(footprintVC, animated: true)
+                        }else if(idx == 2){
+                            
+                            let CollectVC = QZSCCollectViewController()
+                            QZSCControllerTool.currentNavVC()?.pushViewController(CollectVC, animated: true)
+                        }
+                        else{
+                            userData[keyPath: item.2] += 1
+                        }
+                        
+                        
                     } label: {
                         VStack(spacing: 2) {
                             Text(String(item.1)).font(.system(size: 24, weight: .bold))
@@ -216,7 +227,7 @@ struct MineFunctionView: View{
         ("购物车","mine_cart"),
         ("我的客服", "mine_service"),
         ("意见反馈","mine_feedback"),
-        ("我的账单", "mine_bills"),
+        ("我的地址", "mine_bills"),
         ("关于我们", "mine_about_us"),
         ("商家入驻", "mine_join_us")
     ]
