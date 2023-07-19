@@ -8,6 +8,8 @@
 import UIKit
 
 class QZSCHomeController: QZSCBaseController {
+    
+    var lists = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,14 @@ class QZSCHomeController: QZSCBaseController {
         table.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(0)
             make.bottom.equalTo(-kTabbarHeight())
+        }
+    }
+    
+    func configNoData() {
+        if self.lists.count > 0 {
+            self.table.hideStatus()
+        } else {
+            self.table.showStatus(.noData, offset: CGPoint(x: 0, y: -100))
         }
     }
 
@@ -61,5 +71,7 @@ extension QZSCHomeController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ctl = QZSCGoodsDetailsController()
+        QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
     }
 }

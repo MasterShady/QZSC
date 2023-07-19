@@ -18,10 +18,7 @@ class QZSCAccounTnumberView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         accounTnumberUI()
-
-        // Do any additional setup after loading the view.
     }
-    
     func accounTnumberUI(){
         phoneTF = UITextField.init(frame: CGRect.zero)
         phoneTF.borderStyle = UITextField.BorderStyle.none
@@ -37,7 +34,7 @@ class QZSCAccounTnumberView: UIViewController {
         view.addSubview(phoneTF);
         
         phoneTF.snp.makeConstraints { make in
-            make.height.equalTo(SCALE_HEIGTHS(value: 52))
+            make.height.equalTo(SCALE_HEIGTHS(value: 48))
             make.width.equalTo(SCALE_WIDTHS(value: 263))
             make.centerX.equalToSuperview()
             make.top.equalTo(SCALE_HEIGTHS(value: 41))
@@ -58,7 +55,7 @@ class QZSCAccounTnumberView: UIViewController {
         view.addSubview(passwordTF);
         
         passwordTF.snp.makeConstraints { make in
-            make.height.equalTo(SCALE_HEIGTHS(value: 52))
+            make.height.equalTo(SCALE_HEIGTHS(value: 48))
             make.width.equalTo(SCALE_WIDTHS(value: 263))
             make.centerX.equalTo( self.view).offset(SCALE_WIDTHS(value: 0))
             make.top.equalTo(phoneTF.snp.bottom).offset(SCALE_HEIGTHS(value: 16))
@@ -83,7 +80,7 @@ class QZSCAccounTnumberView: UIViewController {
         loginBtn.addTarget(self, action: #selector(loginBtnClickAction), for: .touchUpInside)
         view.addSubview(loginBtn);
         loginBtn.snp.makeConstraints { make in
-            make.height.equalTo(SCALE_HEIGTHS(value: 52))
+            make.height.equalTo(SCALE_HEIGTHS(value: 48))
             make.width.equalTo(SCALE_WIDTHS(value: 263))
             make.centerX.equalTo( self.view).offset(SCALE_WIDTHS(value: 0))
             make.top.equalTo(passwordTF.snp.bottom).offset(SCALE_HEIGTHS(value: 50))

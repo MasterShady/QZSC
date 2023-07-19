@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Alamofire
 
 class QZSCGoodsListController: QZSCBaseController {
     
     var isCategory: Bool = true // true 分类; false 专区
+    private let manager = NetworkReachabilityManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,20 @@ class QZSCGoodsListController: QZSCBaseController {
             make.bottom.leading.trailing.equalTo(0)
         }
     }
+    
+    func listenerNetWork() {
+        manager?.startListening(onUpdatePerforming: {[weak self] stute in
+            switch stute {
+            case .unknown:
+                printLog("========= unknown")
+            case .notReachable:
+                break
+            case .reachable(_):
+                break
+                printLog("========= reachable")
+            }
+        })
+    }
 
     // MARK: - lazy
     lazy var table: UITableView = {
@@ -86,5 +102,7 @@ extension QZSCGoodsListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ctl = QZSCGoodsDetailsController()
+        QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
     }
 }

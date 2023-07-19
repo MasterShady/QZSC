@@ -21,7 +21,7 @@ public enum QZSCStatusType {
     public var imageName: String {
         switch self {
         case .noData:
-            return "no_empty"
+            return "nodata_empty"
         }
     }
 }

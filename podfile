@@ -26,6 +26,7 @@ target 'QZSC' do
   pod 'ActiveLabel', '~> 1.1.0'
   pod 'SwiftUIIntrospect'
   #pod 'LookinServer', :configurations => ['Debug']
+  pod 'Masonry', '~> 1.1.0'
 
 end
 
