@@ -163,7 +163,8 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.height.equalTo(64)
         }
         kfBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
-            
+            let ctl = QZSCKfController()
+            QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
         }.disposed(by: dBag)
         
         view.addSubview(scroll)
@@ -320,7 +321,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.width.height.equalTo(16)
         }
         
-        let locationLbl = UILabel.createSameLbl(text: "广州荔湾区", color: COLOR333333, font: UIFont.semibold(14))
+        let locationLbl = UILabel.createSameLbl(text: "全国", color: COLOR333333, font: UIFont.semibold(14))
         scroll.addSubview(locationLbl)
         locationLbl.snp.makeConstraints { make in
             make.left.equalTo(leftLocactionLbl.snp.right).offset(20)

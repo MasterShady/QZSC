@@ -57,6 +57,15 @@
 		FC82E5E42A60E3110080B928 /* QZSCMyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E32A60E3110080B928 /* QZSCMyController.swift */; };
 		FC82E5E62A60E3210080B928 /* QZSCCheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */; };
 		FC82E5E82A60E34F0080B928 /* QZSCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E72A60E34F0080B928 /* QZSCTabBarController.swift */; };
+		FCC5C39B2A6779650083B114 /* QZSCKfManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C39A2A6779650083B114 /* QZSCKfManager.swift */; };
+		FCC5C39D2A6779B00083B114 /* QZSCKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C39C2A6779B00083B114 /* QZSCKeyboardListener.swift */; };
+		FCC5C39F2A6779F30083B114 /* QZSCMessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C39E2A6779F30083B114 /* QZSCMessageInputView.swift */; };
+		FCC5C3A42A677AC80083B114 /* QZSCKfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C3A32A677AC80083B114 /* QZSCKfController.swift */; };
+		FCC5C3A62A677B740083B114 /* QZSCKfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C3A52A677B740083B114 /* QZSCKfCell.swift */; };
+		FCC5C3A92A6780F10083B114 /* QZSCSearchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C3A82A6780F10083B114 /* QZSCSearchListController.m */; };
+		FCC5C3AE2A6784CD0083B114 /* QZSCNormalSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C3AD2A6784CD0083B114 /* QZSCNormalSearchBar.swift */; };
+		FCC5C3B12A6786E80083B114 /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C3B02A6786E80083B114 /* UIDevice+Addition.m */; };
+		FCC5C3B52A67B9750083B114 /* QZSCHomeListUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5C3B42A67B9750083B114 /* QZSCHomeListUIView.swift */; };
 		FCE23EDB2A665FC900102760 /* QZSCOrderPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */; };
 		FCE23EDF2A66886000102760 /* QZSCChenkInUploadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE23EDE2A66886000102760 /* QZSCChenkInUploadImageCell.m */; };
 		FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC4292A5FF6D80015EF4E /* AppDelegate.swift */; };
@@ -186,6 +195,19 @@
 		FC82E5E32A60E3110080B928 /* QZSCMyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCMyController.swift; sourceTree = "<group>"; };
 		FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCCheckInController.swift; sourceTree = "<group>"; };
 		FC82E5E72A60E34F0080B928 /* QZSCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCTabBarController.swift; sourceTree = "<group>"; };
+		FCC5C39A2A6779650083B114 /* QZSCKfManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCKfManager.swift; sourceTree = "<group>"; };
+		FCC5C39C2A6779B00083B114 /* QZSCKeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCKeyboardListener.swift; sourceTree = "<group>"; };
+		FCC5C39E2A6779F30083B114 /* QZSCMessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCMessageInputView.swift; sourceTree = "<group>"; };
+		FCC5C3A32A677AC80083B114 /* QZSCKfController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCKfController.swift; sourceTree = "<group>"; };
+		FCC5C3A52A677B740083B114 /* QZSCKfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCKfCell.swift; sourceTree = "<group>"; };
+		FCC5C3A72A6780F10083B114 /* QZSCSearchListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCSearchListController.h; sourceTree = "<group>"; };
+		FCC5C3A82A6780F10083B114 /* QZSCSearchListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCSearchListController.m; sourceTree = "<group>"; };
+		FCC5C3AD2A6784CD0083B114 /* QZSCNormalSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCNormalSearchBar.swift; sourceTree = "<group>"; };
+		FCC5C3AF2A6786E80083B114 /* UIDevice+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addition.h"; sourceTree = "<group>"; };
+		FCC5C3B02A6786E80083B114 /* UIDevice+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addition.m"; sourceTree = "<group>"; };
+		FCC5C3B22A67872D0083B114 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FCC5C3B32A6787950083B114 /* CommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		FCC5C3B42A67B9750083B114 /* QZSCHomeListUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeListUIView.swift; sourceTree = "<group>"; };
 		FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderPreviewView.swift; sourceTree = "<group>"; };
 		FCE23EDD2A66886000102760 /* QZSCChenkInUploadImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCChenkInUploadImageCell.h; sourceTree = "<group>"; };
 		FCE23EDE2A66886000102760 /* QZSCChenkInUploadImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCChenkInUploadImageCell.m; sourceTree = "<group>"; };
@@ -310,8 +332,11 @@
 			children = (
 				EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */,
 				EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */,
+				FCC5C3B42A67B9750083B114 /* QZSCHomeListUIView.swift */,
 				EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */,
 				FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */,
+				FCC5C39E2A6779F30083B114 /* QZSCMessageInputView.swift */,
+				FCC5C3A52A677B740083B114 /* QZSCKfCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,6 +467,7 @@
 		FC82E5D32A60E1FA0080B928 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FCC5C3992A6779460083B114 /* ViewModel */,
 				EB09C1982A655A3D007599FA /* View */,
 				FC82E5DA2A60E2B40080B928 /* Controller */,
 			);
@@ -508,6 +534,9 @@
 				FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */,
 				FCF31A582A65330400BC815B /* QZSCGoodsListController.swift */,
 				FCF31A5A2A65465200BC815B /* QZSCGoodsDetailsController.swift */,
+				FCC5C3A32A677AC80083B114 /* QZSCKfController.swift */,
+				FCC5C3A72A6780F10083B114 /* QZSCSearchListController.h */,
+				FCC5C3A82A6780F10083B114 /* QZSCSearchListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -530,6 +559,15 @@
 				FC82E5E52A60E3210080B928 /* QZSCCheckInController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCC5C3992A6779460083B114 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCC5C39A2A6779650083B114 /* QZSCKfManager.swift */,
+				FCC5C39C2A6779B00083B114 /* QZSCKeyboardListener.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FCE23EDC2A666FA200102760 /* View */ = {
@@ -611,6 +649,8 @@
 			children = (
 				FCEFC4FF2A5FF9B30015EF4E /* QZSCDefine.swift */,
 				FCEFC5162A5FF9B30015EF4E /* QZSCColorDefine.swift */,
+				FCC5C3B22A67872D0083B114 /* PrefixHeader.pch */,
+				FCC5C3B32A6787950083B114 /* CommonDefine.h */,
 				FCEFC4E32A5FF9B30015EF4E /* Extension */,
 				FCEFC4F32A5FF9B30015EF4E /* Network */,
 				FCEFC5002A5FF9B30015EF4E /* View */,
@@ -623,6 +663,8 @@
 		FCEFC4E32A5FF9B30015EF4E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FCC5C3AF2A6786E80083B114 /* UIDevice+Addition.h */,
+				FCC5C3B02A6786E80083B114 /* UIDevice+Addition.m */,
 				EB6769FC2A65223200440541 /* FoundationExtension.swift */,
 				EB6769F82A65211500440541 /* Array++.swift */,
 				EB6769D42A651D4D00440541 /* UIView+VisualHelper.h */,
@@ -675,6 +717,7 @@
 				FCEFC5012A5FF9B30015EF4E /* UMProgressManager.swift */,
 				FCEFC5072A5FF9B30015EF4E /* ProgressHUD.swift */,
 				FCEFC5082A5FF9B30015EF4E /* UMToast.swift */,
+				FCC5C3AD2A6784CD0083B114 /* QZSCNormalSearchBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -880,6 +923,7 @@
 				EB6769D52A651D4D00440541 /* UIView+VisualHelper.m in Sources */,
 				EB6769F42A651DC000440541 /* UIGestureRecognizer+Chain.swift in Sources */,
 				FC82E5E62A60E3210080B928 /* QZSCCheckInController.swift in Sources */,
+				FCC5C39B2A6779650083B114 /* QZSCKfManager.swift in Sources */,
 				FCEFC5372A5FF9B30015EF4E /* QZSCStatusView.swift in Sources */,
 				EB6769E92A651DC000440541 /* Chain.swift in Sources */,
 				FCEFC5222A5FF9B30015EF4E /* UICollectionView+Extension.swift in Sources */,
@@ -909,20 +953,25 @@
 				FCEFC4D52A5FF7EC0015EF4E /* QZSCBaseController.swift in Sources */,
 				FCEFC5242A5FF9B30015EF4E /* UILable+Extension.swift in Sources */,
 				EB6769F02A651DC000440541 /* UIButton+Chain.swift in Sources */,
+				FCC5C3AE2A6784CD0083B114 /* QZSCNormalSearchBar.swift in Sources */,
+				FCC5C3B52A67B9750083B114 /* QZSCHomeListUIView.swift in Sources */,
 				FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */,
 				FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */,
 				FCEFC5312A5FF9B30015EF4E /* QZSCDefine.swift in Sources */,
 				EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */,
 				FCEFC51C2A5FF9B30015EF4E /* UIButton+Extension.swift in Sources */,
 				FCEFC5232A5FF9B30015EF4E /* UITableView+Extension.swift in Sources */,
+				FCC5C3A92A6780F10083B114 /* QZSCSearchListController.m in Sources */,
 				FCEFC5282A5FF9B30015EF4E /* QZSCError.swift in Sources */,
 				FCEFC53D2A5FF9B30015EF4E /* QZSCCache.swift in Sources */,
 				EB6769EB2A651DC000440541 /* CALayer+Chain.swift in Sources */,
 				EB6769F92A65211500440541 /* Array++.swift in Sources */,
 				FCE23EDB2A665FC900102760 /* QZSCOrderPreviewView.swift in Sources */,
 				FCEFC5262A5FF9B30015EF4E /* QZSCNetworkConfig.swift in Sources */,
+				FCC5C3A62A677B740083B114 /* QZSCKfCell.swift in Sources */,
 				EB6769CE2A651D0100440541 /* SinglePicker.swift in Sources */,
 				FCEFC5412A5FF9B30015EF4E /* QZSCNotificationNamesDefines.swift in Sources */,
+				FCC5C39D2A6779B00083B114 /* QZSCKeyboardListener.swift in Sources */,
 				EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */,
 				EB6769F22A651DC000440541 /* UITextFiled+Chain.swift in Sources */,
 				EB6769F52A651DC000440541 /* UICollectionView+Chain.swift in Sources */,
@@ -944,6 +993,7 @@
 				FCEFC51E2A5FF9B30015EF4E /* UIView+Frame.swift in Sources */,
 				FCEFC5422A5FF9B30015EF4E /* QZSCColorDefine.swift in Sources */,
 				EB6769F32A651DC000440541 /* UITapGestureRecognizer+Chain.swift in Sources */,
+				FCC5C3B12A6786E80083B114 /* UIDevice+Addition.m in Sources */,
 				EB6769EE2A651DC000440541 /* UILabel+Chain.swift in Sources */,
 				EB6769F72A651DC000440541 /* UITextView+Chain.swift in Sources */,
 				FCEFC52E2A5FF9B30015EF4E /* QZSCRspBody.swift in Sources */,
@@ -951,6 +1001,7 @@
 				EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */,
 				FCE23EDF2A66886000102760 /* QZSCChenkInUploadImageCell.m in Sources */,
 				EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */,
+				FCC5C3A42A677AC80083B114 /* QZSCKfController.swift in Sources */,
 				EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */,
 				FCEFC5212A5FF9B30015EF4E /* UIController+Extension.swift in Sources */,
 				EB6769FD2A65223200440541 /* FoundationExtension.swift in Sources */,
@@ -963,6 +1014,7 @@
 				EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */,
 				A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
+				FCC5C39F2A6779F30083B114 /* QZSCMessageInputView.swift in Sources */,
 				A25E6B5D2A66318400AFB35C /* QZSCRegisterViewController.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
@@ -1155,6 +1207,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6475J8L3PC;
+				GCC_PREFIX_HEADER = QZSC/Common/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "商家入驻上传图片, 需要访问您的相机功能!";
@@ -1191,6 +1244,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6475J8L3PC;
+				GCC_PREFIX_HEADER = QZSC/Common/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "商家入驻上传图片, 需要访问您的相机功能!";

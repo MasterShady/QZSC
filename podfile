@@ -24,6 +24,7 @@ target 'QZSC' do
   pod 'JXPagingView', '~> 2.1.2'
   pod 'JXSegmentedView', '~> 1.3.0'
   pod 'ActiveLabel', '~> 1.1.0'
+  pod 'Masonry', '~> 1.1.0'
 
 end
 

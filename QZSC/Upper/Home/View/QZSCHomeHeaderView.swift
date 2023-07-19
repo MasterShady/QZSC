@@ -116,7 +116,8 @@ class QZSCHomeHeaderView: UIView {
         let searchTap = UITapGestureRecognizer()
         searchTF.addGestureRecognizer(searchTap)
         searchTap.rx.event.subscribe { _ in
-            print("tap searchTF")
+            let ctl = QZSCSearchListController()
+            QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
         }.disposed(by: dBag)
         
         let leftImgView = UIImageView(image: UIImage(named: "home_top_msxp"))
