@@ -17,6 +17,9 @@
 		EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */; };
 		EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */; };
 		EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */; };
+		EB16B1192A67802600C79D7F /* FeedBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16B1182A67802600C79D7F /* FeedBackView.swift */; };
+		EB5166362A67D5710023986A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5166352A67D5710023986A /* ImagePicker.swift */; };
+		EB616FFC2A66306600DDFF9E /* TMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB616FFB2A66306600DDFF9E /* TMD.swift */; };
 		EB6769CB2A651D0100440541 /* BasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C72A651D0100440541 /* BasePicker.swift */; };
 		EB6769CC2A651D0100440541 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C82A651D0100440541 /* DatePicker.swift */; };
 		EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C92A651D0100440541 /* MultiplePicker.swift */; };
@@ -42,10 +45,13 @@
 		EB6769F92A65211500440541 /* Array++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769F82A65211500440541 /* Array++.swift */; };
 		EB6769FD2A65223200440541 /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769FC2A65223200440541 /* FoundationExtension.swift */; };
 		EB6769FF2A654BA700440541 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769FE2A654BA700440541 /* Layout.swift */; };
+		EB7410782A668306004ECFD3 /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7410772A668306004ECFD3 /* NavVC.swift */; };
+		EB74107A2A66854E004ECFD3 /* SwiftUI++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7410792A66854E004ECFD3 /* SwiftUI++.swift */; };
 		EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761892A60FB2E00E28FAE /* MineUIView.swift */; };
 		EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618C2A61205F00E28FAE /* Extension.swift */; };
 		EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618F2A61303800E28FAE /* WrappedHStack.swift */; };
 		EBB761922A61528200E28FAE /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761912A61528200E28FAE /* MyCartView.swift */; };
+		EBC232162A66A90900466AD2 /* MineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC232152A66A90900466AD2 /* MineModels.swift */; };
 		FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5D02A60E08C0080B928 /* LoginManager.swift */; };
 		FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */; };
 		FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */; };
@@ -138,6 +144,9 @@
 		EB09C1A42A655A94007599FA /* TDWVerifyCodeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeTextView.swift; sourceTree = "<group>"; };
 		EB09C1A52A655A94007599FA /* TDWVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeView.swift; sourceTree = "<group>"; };
 		EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeNumView.swift; sourceTree = "<group>"; };
+		EB16B1182A67802600C79D7F /* FeedBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackView.swift; sourceTree = "<group>"; };
+		EB5166352A67D5710023986A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EB616FFB2A66306600DDFF9E /* TMD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMD.swift; sourceTree = "<group>"; };
 		EB6769C72A651D0100440541 /* BasePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePicker.swift; sourceTree = "<group>"; };
 		EB6769C82A651D0100440541 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		EB6769C92A651D0100440541 /* MultiplePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplePicker.swift; sourceTree = "<group>"; };
@@ -164,10 +173,13 @@
 		EB6769F82A65211500440541 /* Array++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array++.swift"; sourceTree = "<group>"; };
 		EB6769FC2A65223200440541 /* FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
 		EB6769FE2A654BA700440541 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		EB7410772A668306004ECFD3 /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
+		EB7410792A66854E004ECFD3 /* SwiftUI++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI++.swift"; sourceTree = "<group>"; };
 		EBB761892A60FB2E00E28FAE /* MineUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUIView.swift; sourceTree = "<group>"; };
 		EBB7618C2A61205F00E28FAE /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EBB7618F2A61303800E28FAE /* WrappedHStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedHStack.swift; sourceTree = "<group>"; };
 		EBB761912A61528200E28FAE /* MyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartView.swift; sourceTree = "<group>"; };
+		EBC232152A66A90900466AD2 /* MineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineModels.swift; sourceTree = "<group>"; };
 		FC82E5D02A60E08C0080B928 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeController.swift; sourceTree = "<group>"; };
 		FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderController.swift; sourceTree = "<group>"; };
@@ -364,6 +376,8 @@
 			children = (
 				EBB761892A60FB2E00E28FAE /* MineUIView.swift */,
 				EBB761912A61528200E28FAE /* MyCartView.swift */,
+				EB616FFB2A66306600DDFF9E /* TMD.swift */,
+				EB16B1182A67802600C79D7F /* FeedBackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,8 +395,18 @@
 			isa = PBXGroup;
 			children = (
 				EBB7618F2A61303800E28FAE /* WrappedHStack.swift */,
+				EB7410792A66854E004ECFD3 /* SwiftUI++.swift */,
+				EB5166352A67D5710023986A /* ImagePicker.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EBC232142A66A8EE00466AD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBC232152A66A90900466AD2 /* MineModels.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FC82E5CE2A60E0610080B928 /* Upper */ = {
@@ -442,6 +466,7 @@
 		FC82E5D62A60E2230080B928 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				EBC232142A66A8EE00466AD2 /* Model */,
 				EBB761882A60FAEA00E28FAE /* View */,
 				FC82E5D82A60E2A50080B928 /* Controller */,
 			);
@@ -559,6 +584,7 @@
 		FCEFC49A2A5FF7EC0015EF4E /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				EB7410772A668306004ECFD3 /* NavVC.swift */,
 				FCEFC49B2A5FF7EC0015EF4E /* QZSCBaseController.swift */,
 				FCEFC49C2A5FF7EC0015EF4E /* QZSCWebController.swift */,
 			);
@@ -850,6 +876,7 @@
 				FCEFC5192A5FF9B30015EF4E /* UIFont+Extension.swift in Sources */,
 				FCEFC5342A5FF9B30015EF4E /* QZSCCustomAlert.swift in Sources */,
 				FCEFC53E2A5FF9B30015EF4E /* EPRC4Cryptor.m in Sources */,
+				EB5166362A67D5710023986A /* ImagePicker.swift in Sources */,
 				FCEFC5202A5FF9B30015EF4E /* Decodable+Extension.swift in Sources */,
 				FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */,
 				FCEFC5322A5FF9B30015EF4E /* UMProgressManager.swift in Sources */,
@@ -858,6 +885,7 @@
 				EB6769CB2A651D0100440541 /* BasePicker.swift in Sources */,
 				EBB761922A61528200E28FAE /* MyCartView.swift in Sources */,
 				FCEFC5402A5FF9B30015EF4E /* RC4Tool.m in Sources */,
+				EB616FFC2A66306600DDFF9E /* TMD.swift in Sources */,
 				EB6769FF2A654BA700440541 /* Layout.swift in Sources */,
 				EB09C1A02A655A69007599FA /* QZSCGoodsListController.swift in Sources */,
 				FCEFC5352A5FF9B30015EF4E /* UMToastManager.swift in Sources */,
@@ -875,6 +903,7 @@
 				FCEFC5232A5FF9B30015EF4E /* UITableView+Extension.swift in Sources */,
 				FCEFC5282A5FF9B30015EF4E /* QZSCError.swift in Sources */,
 				FCEFC53D2A5FF9B30015EF4E /* QZSCCache.swift in Sources */,
+				EB16B1192A67802600C79D7F /* FeedBackView.swift in Sources */,
 				EB6769EB2A651DC000440541 /* CALayer+Chain.swift in Sources */,
 				EB6769F92A65211500440541 /* Array++.swift in Sources */,
 				FCEFC5262A5FF9B30015EF4E /* QZSCNetworkConfig.swift in Sources */,
@@ -884,12 +913,14 @@
 				EB6769F22A651DC000440541 /* UITextFiled+Chain.swift in Sources */,
 				EB6769F52A651DC000440541 /* UICollectionView+Chain.swift in Sources */,
 				FC82E5E42A60E3110080B928 /* QZSCMyController.swift in Sources */,
+				EB74107A2A66854E004ECFD3 /* SwiftUI++.swift in Sources */,
 				FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */,
 				FCEFC5332A5FF9B30015EF4E /* QZSCDatePickerView.swift in Sources */,
 				FCEFC52D2A5FF9B30015EF4E /* QZSCTarget.swift in Sources */,
 				EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */,
 				EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */,
 				FCEFC53F2A5FF9B30015EF4E /* QZSCAlertTool.swift in Sources */,
+				EBC232162A66A90900466AD2 /* MineModels.swift in Sources */,
 				FCEFC5362A5FF9B30015EF4E /* QZSCCustomTextView.swift in Sources */,
 				FCEFC5182A5FF9B30015EF4E /* NSAttributedString+Extension.swift in Sources */,
 				FCEFC51F2A5FF9B30015EF4E /* String+Extension.swift in Sources */,
@@ -905,6 +936,7 @@
 				EB6769F72A651DC000440541 /* UITextView+Chain.swift in Sources */,
 				FCEFC52E2A5FF9B30015EF4E /* QZSCRspBody.swift in Sources */,
 				EB6769EA2A651DC000440541 /* Associate.swift in Sources */,
+				EB7410782A668306004ECFD3 /* NavVC.swift in Sources */,
 				EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */,
 				EB09C1A92A655A94007599FA /* TDWVerifyCodeTextView.swift in Sources */,
 				EB6769CD2A651D0100440541 /* MultiplePicker.swift in Sources */,
@@ -1112,8 +1144,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1121,12 +1152,16 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhouc.qzsc.QZSC;
+				PRODUCT_MODULE_NAME = QZSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "QZSC/Common/Tool/QZSC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1145,8 +1180,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1154,11 +1188,15 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhouc.qzsc.QZSC;
+				PRODUCT_MODULE_NAME = QZSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "QZSC/Common/Tool/QZSC-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

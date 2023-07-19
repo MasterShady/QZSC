@@ -50,13 +50,13 @@ class QZSCTabBarController: UITabBarController {
                       (className: "QZSCMyController", title: "我的", imageName: "my")]
         for item in params {
             if item.className == "QZSCMyController" {
-                
-                let vc = UIHostingController(rootView: MineUIView(userData: UserData()))
+                //MineUIView
+                let vc = UIHostingController(rootView: FeedBackView())
                 vc.title = item.title
                 vc.tabBarItem.image = UIImage(named: "tabbar_\(item.imageName)_nor")?.withRenderingMode(.alwaysOriginal)
                 vc.tabBarItem.selectedImage = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)
                 addChild(vc)
-                return
+                continue
             }
             
             if let vcClass = NSClassFromString("\(kNameSpace).\(item.className)") as? QZSCBaseController.Type {

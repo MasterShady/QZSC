@@ -1,4 +1,4 @@
-platform :ios, '12.0'
+platform :ios, '14.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -16,7 +16,7 @@ target 'QZSC' do
   pod 'RxCocoa', '~> 6.5.0'
   pod 'Cache', '~> 6.0.0'
   pod 'MJRefresh', '~> 3.7.5'
-  pod 'Kingfisher', '~> 7.4.1'
+  pod 'Kingfisher', '~> 7.8.1'
   pod 'Alamofire','~> 5.2.0'
   pod 'IQKeyboardManagerSwift', '6.3.0'
   pod 'MBProgressHUD', '1.1.0'
@@ -24,6 +24,8 @@ target 'QZSC' do
   pod 'JXPagingView', '~> 2.1.2'
   pod 'JXSegmentedView', '~> 1.3.0'
   pod 'ActiveLabel', '~> 1.1.0'
+  pod 'SwiftUIIntrospect'
+  #pod 'LookinServer', :configurations => ['Debug']
 
 end
 

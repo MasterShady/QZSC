@@ -14,10 +14,90 @@
             filePath = "QZSC/Upper/My/View/MyCartView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "durationPicker"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9BEF79A0-AB84-436C-A424-A0BA11CE4784 - c836f5381fa541dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; QZSC.SinglePicker&lt;Swift.String&gt; in QZSC.PickerWrapper.durationPicker.getter : QZSC.SinglePicker&lt;Swift.String&gt;"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/QZSC/QZSC/Upper/My/View/MyCartView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "9BEF79A0-AB84-436C-A424-A0BA11CE4784 - c836f5381fa541dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; QZSC.SinglePicker&lt;Swift.String&gt; in QZSC.PickerWrapper.durationPicker.getter : QZSC.SinglePicker&lt;Swift.String&gt;"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/QZSC/QZSC/Upper/My/View/MyCartView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "800">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39FAC3AE-D99B-4752-B576-3E414A71F7E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QZSC/Upper/My/View/TMD.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "totalCount"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "39FAC3AE-D99B-4752-B576-3E414A71F7E5 - ea77d9f38c49ffb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QZSC.Model.totalCount.getter : Swift.Int"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/QZSC/QZSC/Upper/My/View/TMD.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "39FAC3AE-D99B-4752-B576-3E414A71F7E5 - c41029020d1c2783"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, QZSC.Item) -&gt; Swift.Int in QZSC.Model.totalCount.getter : Swift.Int"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/QZSC/QZSC/Upper/My/View/TMD.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
