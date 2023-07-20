@@ -5,16 +5,16 @@ import MJRefresh
 
 class MineAddressListViewController: QZSCBaseController {
   
-//    var dataList:Array<AddressListViewModel> = []
+    var dataList:Array<AddressListModel> = []
     var pageId = 1
     
     var isFromConfirmVC: Bool = false
 //    var didSelectComplete: ((AddressListViewModel) -> Void)?
 //    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.queryAddressList(isMore: true)
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.queryAddressList(isMore: true)
+    }
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,8 @@ class MineAddressListViewController: QZSCBaseController {
         }
         
         let addressBtn = UIButton.init(frame: CGRect.zero)
-        addressBtn.backgroundColor = UIColor(hexString: "FF324B")
-        addressBtn.layer.cornerRadius = SCALE_HEIGTHS(value: 25)
+        addressBtn.backgroundColor = UIColor(hexString: "#000000")
+        addressBtn.layer.cornerRadius = SCALE_HEIGTHS(value: 12)
         addressBtn.layer.masksToBounds = true
         addressBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
         addressBtn.setTitleColor(UIColor(hexString: "#FFFFFF"), for: .normal)
@@ -38,7 +38,7 @@ class MineAddressListViewController: QZSCBaseController {
          
         self.view.addSubview(addressBtn);
         addressBtn.snp.makeConstraints { make in
-             make.height.equalTo(SCALE_HEIGTHS(value: 50))
+             make.height.equalTo(SCALE_HEIGTHS(value: 48))
              make.width.equalTo(SCALE_WIDTHS(value: 263))
             make.bottom.equalTo(-TABLEBAR_HEIGHT)
             make.centerX.equalToSuperview()
@@ -89,10 +89,22 @@ class MineAddressListViewController: QZSCBaseController {
             AddressListTableView.mj_footer?.resetNoMoreData()
         }
         
+        QZSCAddressViewModel.loadAddressList { data in
+            self.dataList = data
+            self.AddressListTableView.reloadData()
+            self.configNoData()
+            self.AddressListTableView.reloadData()
+        }
 
       
     }
-    
+    func configNoData() {
+        if self.dataList.count > 0 {
+            self.AddressListTableView.hideStatus()
+        } else {
+            self.AddressListTableView.showStatus(.noData, offset: CGPoint(x: 0, y: -100))
+        }
+    }
     
   
     
@@ -115,15 +127,15 @@ extension MineAddressListViewController:UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.dataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:MineAddressCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(MineAddressCell.self), for: indexPath) as! MineAddressCell
-//        cell.addressList = dataList[indexPath.row]
-//        cell.selectionStyle = .none
-//        cell.revampImage.tag = indexPath.row
-//        cell.revampImage.addTarget(self, action: #selector(revampBtnAction(btn:)), for: .touchUpInside)
+        cell.addressList = dataList[indexPath.row]
+        cell.selectionStyle = .none
+        cell.revampImage.tag = indexPath.row
+        cell.revampImage.addTarget(self, action: #selector(revampBtnAction(btn:)), for: .touchUpInside)
         
         
         return cell
@@ -131,12 +143,12 @@ extension MineAddressListViewController:UITableViewDelegate, UITableViewDataSour
     
     @objc func revampBtnAction(btn:UIButton){
         let addressVC = MineAddressNewViewController()
-//        addressVC.myCity = dataList[btn.tag].address_area
-//        addressVC.phone = dataList[btn.tag].phone
-//        addressVC.uname = dataList[btn.tag].uname
-//        addressVC.location_desc = dataList[btn.tag].address_area
-//        addressVC.is_default = dataList[btn.tag].is_default
-//        addressVC.uid = dataList[btn.tag].id
+        addressVC.myCity = dataList[btn.tag].address_area
+        addressVC.phone = dataList[btn.tag].phone
+        addressVC.uname = dataList[btn.tag].uname
+        addressVC.location_desc = dataList[btn.tag].address_area
+        addressVC.is_default = dataList[btn.tag].is_default
+        addressVC.uid = dataList[btn.tag].id
         self.navigationController?.pushViewController(addressVC, animated: true)
         
     }
@@ -176,24 +188,26 @@ extension MineAddressListViewController:UITableViewDelegate, UITableViewDataSour
         return true
     }
     
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//
-//            let deleteAction = UIContextualAction(style: .normal, title: "删除") { [weak self] (action, view, resultClosure) in
-//                guard self != nil else {
-//                    return
-//                }
-//                // 在这里实现删除的效果
-//                AddressListViewModel.requestDelAddress(params: ["address_id":self?.dataList[indexPath.row].id]) { Code in
-//                    if(Code == 0){
-//                        self?.queryAddressList(isMore: true)
-//                    }
-//                }
-//            }
-//            deleteAction.backgroundColor = .red
-//            let actions = UISwipeActionsConfiguration(actions: [deleteAction])
-//            actions.performsFirstActionWithFullSwipe = false; // 禁止侧滑到最左边触发删除回调事件
-//            return actions
-//        }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+            let deleteAction = UIContextualAction(style: .normal, title: "删除") { [weak self] (action, view, resultClosure) in
+                guard self != nil else {
+                    return
+                }
+                // 在这里实现删除的效果
+                
+                QZSCAddressViewModel.loadDelAddress(address_id: (self?.dataList[indexPath.row].id)!) { code in
+                    if(code == true){
+                        self?.queryAddressList(isMore: true)
+                    }
+                }
+               
+            }
+            deleteAction.backgroundColor = .red
+            let actions = UISwipeActionsConfiguration(actions: [deleteAction])
+            actions.performsFirstActionWithFullSwipe = false; // 禁止侧滑到最左边触发删除回调事件
+            return actions
+        }
     
     
     

@@ -18,14 +18,14 @@ class MineAddressCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    var addressList:AddressListViewModel?{
-//        didSet{
-//            nameLB.text = addressList?.uname
-//            phoneLB.text = addressList?.phone
-//            addressLB.text = addressList?.address_area
-//                .appending(addressList!.address_detail)
-//        }
-//    }
+    var addressList:AddressListModel?{
+        didSet{
+            nameLB.text = addressList?.uname
+            phoneLB.text = addressList?.phone
+            addressLB.text = addressList?.address_area
+                .appending(addressList!.address_detail)
+        }
+    }
     
     func addressUI(){
         

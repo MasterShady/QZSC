@@ -8,7 +8,6 @@
 import Foundation
 
 struct QZSCAddressListRequest: BaseRequest {
-    let uid: Int
     
     var routerURL: String {
         return "/qzsc/addressList"
@@ -19,7 +18,7 @@ struct QZSCAddressListRequest: BaseRequest {
     }
     
     var optionalParameter: [String : Any]? {
-        var params: [String: Any] = ["uid": uid,
+        var params: [String: Any] = [
                                      "page": 1,
                                      "pageSize": 20]
         return params
@@ -27,7 +26,6 @@ struct QZSCAddressListRequest: BaseRequest {
 }
 
 struct QZSCAddAddressRequest: BaseRequest {
-    let uid: Int
     let uname: String
     let phone: String
     let address_area: String
@@ -43,7 +41,7 @@ struct QZSCAddAddressRequest: BaseRequest {
     }
     
     var optionalParameter: [String : Any]? {
-        let params: [String: Any] = ["uid": uid,
+        let params: [String: Any] = [
                                      "uname": uname,
                                      "phone": phone,
                                      "address_area": address_area,
@@ -55,7 +53,6 @@ struct QZSCAddAddressRequest: BaseRequest {
 }
 
 struct QZSCUpdateAddressRequest: BaseRequest {
-    let uid: Int
     let uname: String
     let phone: String
     let address_area: String
@@ -72,7 +69,7 @@ struct QZSCUpdateAddressRequest: BaseRequest {
     }
     
     var optionalParameter: [String : Any]? {
-        let params: [String: Any] = ["uid": uid,
+        let params: [String: Any] = [
                                      "uname": uname,
                                      "phone": phone,
                                      "address_area": address_area,
@@ -103,9 +100,8 @@ struct QZSCDelAddressRequest: BaseRequest {
 class QZSCAddressViewModel: NSObject {
     
     // 获取地址列表
-    class func loadAddressList(uid: Int = 0,
-                                   complete: @escaping([AddressListModel]) -> Void) {
-        let request = QZSCAddressListRequest(uid: uid)
+    class func loadAddressList(complete: @escaping([AddressListModel]) -> Void) {
+        let request = QZSCAddressListRequest()
         QZSCNetwork.request(request).responseDecodable { (response: QZSCAFDataResponse<[AddressListModel]>) in
             switch response.result {
             case .success(let list):
@@ -118,9 +114,9 @@ class QZSCAddressViewModel: NSObject {
     }
     
     // 新增地址
-    class func loadAddAddress(uid: Int, uname: String, phone: String, address_area: String, address_detail: String, is_default: Int , complete: @escaping(Bool) -> Void) {
+    class func loadAddAddress( uname: String, phone: String, address_area: String, address_detail: String, is_default: Int , complete: @escaping(Bool) -> Void) {
         
-        let request = QZSCAddAddressRequest(uid: uid, uname: uname, phone: phone, address_area: address_area, address_detail: address_detail, is_default: is_default)
+        let request = QZSCAddAddressRequest(uname: uname, phone: phone, address_area: address_area, address_detail: address_detail, is_default: is_default)
         QZSCNetwork.request(request).responseServiceObject { obj in
             if obj.state == .Response_Succ {
                 complete(true)
@@ -131,9 +127,9 @@ class QZSCAddressViewModel: NSObject {
     }
     
     // 更新地址
-    class func loadUpdateAddress(uid: Int, uname: String, phone: String, address_area: String, address_detail: String, is_default: Int , address_id: Int , complete: @escaping(Bool) -> Void) {
+    class func loadUpdateAddress( uname: String, phone: String, address_area: String, address_detail: String, is_default: Int , address_id: Int , complete: @escaping(Bool) -> Void) {
         
-        let request = QZSCUpdateAddressRequest(uid: uid, uname: uname, phone: phone, address_area: address_area, address_detail: address_detail, is_default: is_default, address_id: address_id)
+        let request = QZSCUpdateAddressRequest(uname: uname, phone: phone, address_area: address_area, address_detail: address_detail, is_default: is_default, address_id: address_id)
         QZSCNetwork.request(request).responseServiceObject { obj in
             if obj.state == .Response_Succ {
                 complete(true)

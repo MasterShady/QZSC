@@ -32,7 +32,7 @@ public extension BaseRequest {
     }
 
     var requiredParameter: [String: Any]? {
-        return ["uid": ""]
+        return ["uid": QZSCLoginManager.shared.userInfo?.uid]
     }
 
     var optionalParameter: [String: Any]? {
