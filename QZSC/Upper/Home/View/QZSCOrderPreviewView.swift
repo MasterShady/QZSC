@@ -2,7 +2,7 @@
 //  QZSCOrderPreviewView.swift
 //  QZSC
 //
-//  Created by fanyebo on 2023/7/18.
+//  Created by zzk on 2023/7/18.
 //
 
 import UIKit

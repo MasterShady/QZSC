@@ -2,7 +2,7 @@
 //  GamePicker.swift
 //  ferental
 //
-//  Created by 刘思源 on 2022/12/29.
+//  Created by lsy on 2022/12/29.
 //
 
 import Foundation

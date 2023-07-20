@@ -2,12 +2,23 @@
 //  QZSCHomeListCell.swift
 //  QZSC
 //
-//  Created by fanyebo on 2023/7/17.
+//  Created by zzk on 2023/7/17.
 //
 
 import UIKit
 
 class QZSCHomeListCell: UITableViewCell {
+    
+    var data: QZSCProductListModel? {
+        didSet {
+            if let `data` = data {
+                nameLbl.text = data.name
+                let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: data.price, font: UIFont.semibold(18), textColor: COLOR000000)
+                priceLbl.attributedText = attrText
+                picImgView.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + data.list_pic))
+            }
+        }
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

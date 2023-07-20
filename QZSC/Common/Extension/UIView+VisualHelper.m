@@ -2,7 +2,7 @@
 //  UIView+CornerHelper.m
 //  timingapp
 //
-//  Created by 刘思源 on 2020/9/8.
+//  Created by lsy on 2020/9/8.
 //  Copyright © 2020 huiian. All rights reserved.
 //
 

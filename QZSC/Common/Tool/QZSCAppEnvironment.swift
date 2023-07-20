@@ -19,60 +19,37 @@ class QZSCAppEnvironment: NSObject {
     @objc static let shared = QZSCAppEnvironment()
     
     // 当不可配置环境时，默认的开发环境
-    static let defaultEnv: QZSCAppEnvironmentType = QZSCAppEnvironmentType.development
-    
-    // false 苹果商店app包
-    static let isAppStore: Bool = false
-    
-    // MARK: - Set / Get
-    var environment: QZSCAppEnvironmentType { // 可配置开发环境
-        set {
-            UserDefaults.standard.set(newValue.rawValue, forKey: "QZSCAppEnvironmentType")
-            UserDefaults.standard.synchronize()
-            DispatchQueue.global().asyncAfter(deadline: .now() + 0.3) {
-                exit(0)
-            }
-        }
-        get {
-            guard let type = UserDefaults.standard.object(forKey: "QZSCAppEnvironmentType") as? Int else {
-                return QZSCAppEnvironment.defaultEnv
-            }
-            return QZSCAppEnvironmentType.init(rawValue: type) ?? QZSCAppEnvironment.defaultEnv
-        }
-    }
+    let defaultEnv: QZSCAppEnvironmentType = QZSCAppEnvironmentType.development
     
     @objc var serverApi: String { // 网络请求域名
-        switch self.environment {
+        switch defaultEnv {
         case .distribute:
-            return "https://QZSC.wasawasa.cn/QZSC"
+            return "https://QZSC.uhuhzl.cn.cn"
         case .development:
-            return "https://QZSC.wasawasa.cn/QZSC"
+            return "https://QZSC.uhuhzl.cn.cn"
         }
     }
     
     @objc var imageUrlApi: String { // 网络请求域名
-        switch self.environment {
-        case .distribute:
-            return "https://QZSC.wasawasa.cn/"
-        case .development:
-            return "https://QZSC.wasawasa.cn/"
-        }
+        return serverApi
     }
     
     var privacyUrl: String {
-        return "https://QZSC.wasawasa.cn/QZSC_privacies.html"
+        return "https://QZSC.uhuhzl.cn/QZSC_privacies.html"
     }
     
     var protocolUrl: String {
-        return "https://QZSC.wasawasa.cn//QZSC_protocol.html"
+        return "https://QZSC.uhuhzl.cn//QZSC_protocol.html"
     }
     
     var rc4EncrySecret: String {
-        return "package@dofun.cn"
+        return ""
     }
     
+    @objc let hasSecret: Bool = false
+    
     override var description: String {
-        switch self.environment {
+        switch defaultEnv {
         case .distribute:
             return "正式环境"
         case .development:

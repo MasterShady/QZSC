@@ -32,7 +32,7 @@ public extension BaseRequest {
     }
 
     var requiredParameter: [String: Any]? {
-        return nil
+        return ["uid": ""]
     }
 
     var optionalParameter: [String: Any]? {

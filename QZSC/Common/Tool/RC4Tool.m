@@ -2,7 +2,7 @@
 //  RC4Tool.m
 //  gerental
 //
-//  Created by 刘思源 on 2023/1/30.
+//  Created by lsy on 2023/1/30.
 //
 
 #import "RC4Tool.h"
@@ -57,7 +57,7 @@
 //    NSData *adata = [[NSData alloc] initWithBytes:byteBuffer length:aInput.length];
 //    NSString *resultString = [adata base64EncodedStringWithOptions:0]; // 以base64的加密结果输出
 //    return resultString;
-    
+    return aInput;
     [[EPRc4CryptorManager shareInstance] setEncryptorWithKey: aKey];
     NSData *tempData = [aInput dataUsingEncoding:NSUTF8StringEncoding];
     // 加密
@@ -114,7 +114,7 @@
 //    decipher[cipherLength] = '\0';
 //    return @((char *)decipher);
     
-    
+    return data;
     [[EPRc4CryptorManager shareInstance] setDecoryptorWithKey: secret];
     // 解密
     NSData *raw = [[NSData alloc] initWithBase64EncodedString:data options:0];

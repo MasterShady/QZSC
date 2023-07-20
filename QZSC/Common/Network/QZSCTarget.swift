@@ -33,16 +33,8 @@ extension QZSCTarget {
         let deviceType = QZSCAFHTTPHeader.init(name: "deviceType", value: "ios")
         let appVersion = QZSCAFHTTPHeader.init(name: "appVersion", value: kAppVersion)
         let application = QZSCAFHTTPHeader.init(name: "application", value: kAppName)
-
-        let umerId = QZSCAFHTTPHeader.init(name: "userId", value: "")
-        let network = QZSCAFHTTPHeader.init(name: "network", value: "network")
-        let useragent = QZSCAFHTTPHeader.init(name: "User-Agent", value: "")
-        let deviceInfo = QZSCAFHTTPHeader.init(name: "deviceInfo", value: "")
         
-        /// 预发环境配置字段
-        // let isTest = QZSCAFHTTPHeader.init(name: "istest", value: "true")
-        
-        var defaultHeaders = [deviceType, appVersion, application, umerId, network]
+        var defaultHeaders = [deviceType, appVersion, application]
         
         if let tokenStr = UserDefaults.standard.object(forKey: "savedLogInToken") as? String {
             let tokenHeader = QZSCAFHTTPHeader.authorization(bearerToken: tokenStr)

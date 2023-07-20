@@ -2,7 +2,7 @@
 //  UILable+Extension.swift
 //  QZSC
 //
-//  Created by fanyebo on 2023/6/26.
+//  Created by zzk on 2023/6/26.
 //
 
 import UIKit

@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public class c {
+public class QZSCNetwork {
 
     public static func request(_ request: QZSCRequest, plugins: [QZSCNetPlugin] = [QZSCNetPlugin]()) -> RequestContainer {
         let target = request.target

@@ -2,7 +2,7 @@
 //  QZSCCustomAlert.swift
 //  QZSC
 //
-//  Created by fanyebo on 2023/2/21.
+//  Created by zzk on 2023/2/21.
 //
 
 import UIKit

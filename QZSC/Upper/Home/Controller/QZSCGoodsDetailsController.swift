@@ -2,7 +2,7 @@
 //  QZSCGoodsDetailsController.swift
 //  QZSC
 //
-//  Created by fanyebo on 2023/7/17.
+//  Created by zzk on 2023/7/17.
 //
 
 import UIKit
@@ -11,7 +11,10 @@ import RxSwift
 import WebKit
 
 class QZSCGoodsDetailsController: QZSCBaseController {
+    
+    var produceId: Int = 0
 
+    private var data: QZSCProductDetailsInfoModel?
     let dBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -22,6 +25,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         configNavUI()
         configUI()
         configData()
+        loadData()
     }
     
     func configData() {
@@ -33,6 +37,20 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         nameLbl.text = "越秀集团IP吉祥物-超级越越-古田路9号-品牌创意/版权…"
         
         loadContentHtml()
+    }
+    
+    func loadData() {
+//        UMProgressManager.showLoadingAnimation()
+        QZSCHomeViewModel.loadHomeProductDetails(productId: produceId) { info in
+            UMProgressManager.hide()
+            guard let goods_info = info else { return }
+            self.data = goods_info
+            self.nameLbl.text = goods_info.name
+            self.topBgImgView.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + goods_info.list_pic))
+            let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: goods_info.price, font: UIFont.semibold(18), textColor: COLOR000000)
+            self.priceLbl.attributedText = attrText
+            self.loadContentHtml()
+        }
     }
     
     private func loadContentHtml() {
@@ -79,16 +97,16 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         </html>
         """
         var contentStr = ""
-//        data!.detail_images.forEach { path in
-//            let url = ICSAppEnvironment.shared.imgSeverApi + path
-//            let liTag1 = """
-//                <li><img src="
-//            """
-//            let liTag2 = """
-//                " alt=""></li>
-//            """
-//            contentStr = contentStr + liTag1 + url + liTag2
-//        }
+        data!.content_pics.forEach { path in
+            let url = QZSCAppEnvironment.shared.imageUrlApi + path
+            let liTag1 = """
+                <li><img src="
+            """
+            let liTag2 = """
+                " alt=""></li>
+            """
+            contentStr = contentStr + liTag1 + url + liTag2
+        }
         let resultHtml = htmlString1 + contentStr + htmlString2
         webView.loadHTMLString(resultHtml, baseURL: nil)
     }

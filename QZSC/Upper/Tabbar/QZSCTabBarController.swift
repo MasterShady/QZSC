@@ -2,7 +2,7 @@
 //  QZSCTabBarController.swift
 //  QZSC
 //
-//  Created by fanyebo on 2023/7/14.
+//  Created by zzk on 2023/7/14.
 //
 
 import UIKit
@@ -11,6 +11,7 @@ import UIKit
 @_exported import RxCocoa
 @_exported import RxSwift
 @_exported import Kingfisher
+@_exported import MJRefresh
 import SwiftUI
 
 class QZSCTabBarController: UITabBarController {

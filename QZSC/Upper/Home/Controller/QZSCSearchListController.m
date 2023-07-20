@@ -2,7 +2,7 @@
 //  QZSCSearchListController.m
 //  QZSC
 //
-//  Created by fanyebo on 2023/7/19.
+//  Created by zzk on 2023/7/19.
 //
 
 #import "QZSCSearchListController.h"
@@ -12,6 +12,7 @@
 
 @property(nonatomic, strong) UITableView *table;
 @property(nonatomic, strong) QZSCNormalSearchBar *searchBar;
+@property(nonatomic, strong) QZSCGoodsListController *ctl;
 
 @end
 
@@ -60,21 +61,14 @@
 - (void)setUI {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _table = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    _table.delegate = self;
-    _table.dataSource = self;
-    _table.rowHeight = 128;
-    _table.showsVerticalScrollIndicator = NO;
-    _table.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_table registerClass:[QZSCHomeListCell self] forCellReuseIdentifier:NSStringFromClass([QZSCHomeListCell class])];
-    [self.view addSubview:_table];
-    [_table mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(KNavBarFullHight);
-        make.left.mas_equalTo(0);
-        make.width.mas_equalTo(kScreenWidth);
-        make.height.mas_equalTo(kScreenHeight - KNavBarFullHight);
-    }];
+    _ctl = [[QZSCGoodsListController alloc] init];
+    _ctl.isFromSearch = YES;
+    _ctl.view.frame = CGRectMake(0, KNavBarFullHight, kScreenWidth, kScreenHeight - KNavBarFullHight);
+    [self addChildViewController:_ctl];
+    [self.view addSubview:_ctl.view];
+    [_ctl didMoveToParentViewController:self];
 }
+
 
 - (void)backClick {
     [self.navigationController popViewControllerAnimated:YES];
@@ -82,22 +76,9 @@
 
 - (void)searchBarDidEndEditing:(QZSCNormalSearchBar *)searchBar {
     NSLog(@"%@", searchBar.text);
+    [_ctl loadDataWithKeyWord:searchBar.text];
 }
 
-#pragma mark - UITableViewDelegate, UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    QZSCHomeListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([QZSCHomeListCell class]) forIndexPath:indexPath];
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    QZSCGoodsDetailsController *ctl = [[QZSCGoodsDetailsController alloc] init];
-    [self.navigationController pushViewController:ctl animated:YES];
-}
 
 
 @end
