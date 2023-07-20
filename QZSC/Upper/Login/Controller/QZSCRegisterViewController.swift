@@ -14,7 +14,7 @@ struct QZSCRegisterRequest: BaseRequest {
     let password: String
     
     var routerURL: String {
-        return "register"
+        return "qzsc/register"
     }
     
     var method: QZSCAFHTTPMethod {

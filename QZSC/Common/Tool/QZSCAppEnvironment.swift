@@ -27,6 +27,7 @@ class QZSCAppEnvironment: NSObject {
             return "https://www.uhuhzl.cn"
         case .development:
             return "https://www.uhuhzl.cn"
+
         }
     }
     

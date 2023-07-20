@@ -30,7 +30,7 @@ class QZSCLoginManager {
         }
     }
     
-    private let keyUserInfo = "DFRent_local_userInfo"
+    private let keyUserInfo = "QZSC_local_userInfo"
     
     init() {
     }

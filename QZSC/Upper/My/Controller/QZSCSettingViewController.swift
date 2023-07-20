@@ -226,10 +226,8 @@ class QZSCSettingViewController: QZSCBaseController {
     
     //关于我们
     @objc private func aboutUsViewClickAction() {
-       
-        
+
     }
-    
     //清除缓存
     @objc private func cacheViewClickAction() {
         print("点击清除缓存")
