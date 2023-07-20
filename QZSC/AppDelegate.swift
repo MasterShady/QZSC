@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = NavVC(rootViewController: QZSCTabBarController())
+        window?.rootViewController = UINavigationController(rootViewController: QZSCTabBarController())
         window?.makeKeyAndVisible()
         return true
     }

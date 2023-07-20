@@ -174,13 +174,20 @@ struct MineOrderView: View {
 
 struct MineFunctionView: View{
     @EnvironmentObject var userData: UserData
-    let items = [
-        ("购物车","mine_cart"),
-        ("我的客服", "mine_service"),
-        ("意见反馈","mine_feedback"),
-        ("我的地址", "mine_bills"),
-        ("关于我们", "mine_about_us"),
-        ("商家入驻", "mine_join_us")
+    let items: [(String,String, Any)] = [
+        //("购物车","mine_cart", MyCartView().erasedToAnyView()),
+        //写法1, 用ControllerWrapper去包装一下,通过swiftUI的NavigationLink去跳转.
+        ("我的客服", "mine_service", ControllerWrapper(QZSCKfController()).erasedToAnyView()),
+        ("意见反馈","mine_feedback", FeedBackView().erasedToAnyView()),
+        //写法2, 用block包一下.点击执行block完成跳转.
+        ("我的地址", "mine_bills", {
+            QZSCControllerTool.currentNavVC()?.pushViewController(MineAddressListViewController(), animated: true)
+            
+        }),
+        ("关于我们", "mine_about_us", AboutUsView().erasedToAnyView()),
+        ("商家入驻", "mine_join_us", {
+            QZSCControllerTool.currentNavVC()?.pushViewController(QZSCCheckInController(), animated: true)
+        })
     ]
 
     var body: some View {
@@ -189,12 +196,26 @@ struct MineFunctionView: View{
             GeometryReader{ geometry in
                 WrappedHStack(geometry: geometry) {
                     ForEach(items, id: \.0) { item in
-                        NavigationLink(destination:MyCartView().environmentObject(userData)) {
-                            VStack {
-                                Image(item.1)
-                                Text(item.0).font(.system(size: 12)).foregroundColor(.init(hex: 0x000000))
-                            }.frame(width:60)
+                        if let view = item.2 as? AnyView{
+                            NavigationLink(destination:view.environmentObject(userData)) {
+                                VStack {
+                                    Image(item.1)
+                                    Text(item.0).font(.system(size: 12)).foregroundColor(.init(hex: 0x000000))
+                                }
+                                .frame(width:60)
+                            }
+                        }else {
+                            if let block = item.2 as? (() -> Optional<()>){
+                                VStack {
+                                    Image(item.1)
+                                    Text(item.0).font(.system(size: 12)).foregroundColor(.init(hex: 0x000000))
+                                }.frame(width:60).onTapGesture {
+                                    block()
+                                }
+                            }
+                            
                         }
+
                     }
                 }
             }
