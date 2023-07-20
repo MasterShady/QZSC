@@ -63,11 +63,11 @@ class QZSCMessageInputView: UIView {
             if content.isNil {
                 return
             }
-//            ZHWDMessageViewModel.sendAsk(message: content) { result in
+            QZSCHomeViewModel.sendAsk(message: content) { result in
                 self.inputTF.text = ""
                 QZSCKfManager.shared.addNewHistoryMessage(message: content.removeAllSapce)
                 self.refreshHandle?()
-//            }
+            }
             
         }).disposed(by: dBag)
         return btn

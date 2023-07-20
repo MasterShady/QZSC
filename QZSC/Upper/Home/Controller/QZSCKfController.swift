@@ -32,9 +32,9 @@ class QZSCKfController: QZSCBaseController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        ZHWDMessageViewModel.loadAllMessageList { result in
+        QZSCHomeViewModel.loadAllMessageList { result in
             self.loadData()
-//        }
+        }
     }
     
     private func setNavBar() {

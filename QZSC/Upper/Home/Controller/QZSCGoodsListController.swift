@@ -23,7 +23,7 @@ class QZSCGoodsListController: QZSCBaseController {
         // Do any additional setup after loading the view.
         
         configUI()
-//        UMProgressManager.showLoadingAnimation()
+        UMProgressManager.showLoadingAnimation()
         loadData()
     }
     

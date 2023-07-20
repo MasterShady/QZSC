@@ -21,7 +21,7 @@ class QZSCHomeController: QZSCBaseController {
         
         configUI()
         listenerNetWork()
-//        UMProgressManager.showLoadingAnimation()
+        UMProgressManager.showLoadingAnimation()
         loadData()
     }
     
@@ -61,7 +61,7 @@ class QZSCHomeController: QZSCBaseController {
         if self.dataList.count > 0 {
             self.table.hideStatus()
         } else {
-            self.table.showStatus(.noData, offset: CGPoint(x: 0, y: -100))
+            self.table.showStatus(.noData, offset: CGPoint(x: 0, y: 100))
         }
     }
     

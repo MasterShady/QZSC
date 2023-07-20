@@ -24,9 +24,9 @@ class QZSCAppEnvironment: NSObject {
     @objc var serverApi: String { // 网络请求域名
         switch defaultEnv {
         case .distribute:
-            return "https://uhuhzl.cn/qzsc/"
+            return "https://www.uhuhzl.cn"
         case .development:
-            return "https://uhuhzl.cn/qzsc/"
+            return "https://www.uhuhzl.cn"
         }
     }
     
@@ -43,7 +43,7 @@ class QZSCAppEnvironment: NSObject {
     }
     
     var rc4EncrySecret: String {
-        return ""
+        return "package@dofun.cn"
     }
     
     @objc let hasSecret: Bool = false

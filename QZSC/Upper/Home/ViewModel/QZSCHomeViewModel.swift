@@ -12,7 +12,7 @@ struct QZSCProductListRequest: BaseRequest {
     let keyWord: String
     
     var routerURL: String {
-        return "qzsc/goodsList"
+        return "/qzsc/goodsList"
     }
     
     var method: QZSCAFHTTPMethod {
@@ -34,7 +34,7 @@ struct QZSCProductDetailsRequest: BaseRequest {
     let productId: Int
     
     var routerURL: String {
-        return "qzsc/goodsDetail"
+        return "/qzsc/goodsDetail"
     }
     
     var method: QZSCAFHTTPMethod {
@@ -52,7 +52,7 @@ struct QZSCProductCollectRequest: BaseRequest {
     let status: Int
     
     var routerURL: String {
-        return "qzsc/setCollect"
+        return "/qzsc/setCollect"
     }
     
     var method: QZSCAFHTTPMethod {
@@ -62,6 +62,53 @@ struct QZSCProductCollectRequest: BaseRequest {
     var optionalParameter: [String : Any]? {
         let params: [String: Any] = ["goods_id": productId, "status": status]
         return params
+    }
+}
+
+struct QZSCAddOrderRequest: BaseRequest {
+    let product_id: Int
+    let order_day: Int = 30
+    let start_date: String = Date().dateString(withFormat: "yyyy-MM-dd HH:mm:ss")
+    let end_date: String = Date().getNearDay(offsetMonth: 1)?.dateString(withFormat: "yyyy-MM-dd HH:mm:ss") ?? ""
+    
+    var routerURL: String {
+        return "/qzsc/addOrder"
+    }
+    
+    var method: QZSCAFHTTPMethod {
+        return .post
+    }
+    
+    var optionalParameter: [String : Any]? {
+        var params: [String: Any] = ["order_day": order_day, "start_date": start_date, "end_date": end_date]
+        params["goods_id"] = product_id
+        return params
+    }
+}
+
+struct QZSCKfAllListRequest: BaseRequest {
+    var routerURL: String {
+        return "/qzsc/setParam/kf_allMessage"
+    }
+    
+    var method: QZSCAFHTTPMethod {
+        return .post
+    }
+}
+
+struct QZSCSendAskRequest: BaseRequest {
+    let ask: String
+    
+    var routerURL: String {
+        return "/qzsc/setParam/sendAsk"
+    }
+    
+    var method: QZSCAFHTTPMethod {
+        return .post
+    }
+    
+    var optionalParameter: [String : Any]? {
+        return ["ask": ask] as [String: Any]
     }
 }
 
@@ -107,6 +154,42 @@ class QZSCHomeViewModel: NSObject {
                 complete(true)
             } else {
                 UMToast.show(obj.msg)
+            }
+        }
+    }
+    
+    // 下单
+    class func addOrder(productId: Int, complete: @escaping(Bool) -> Void) {
+        let request = QZSCAddOrderRequest(product_id: productId)
+        QZSCNetwork.request(request).responseServiceObject { obj in
+            if obj.state == .Response_Succ {
+                complete(true)
+            } else {
+                UMToast.show(obj.msg)
+            }
+        }
+    }
+    
+    class func sendAsk(message: String, complete: @escaping(Bool) -> ()) {
+        let request = QZSCSendAskRequest(ask: message)
+        QZSCNetwork.request(request).responseServiceObject { obj in
+            if obj.state == .Response_Succ {
+                complete(true)
+            } else {
+                UMToast.show(obj.msg)
+                complete(false)
+            }
+        }
+    }
+    
+    class func loadAllMessageList(complete: @escaping(Bool) -> ()) {
+        let request = QZSCKfAllListRequest()
+        QZSCNetwork.request(request).responseServiceObject { obj in
+            if obj.state == .Response_Succ {
+                complete(true)
+            } else {
+                UMToast.show(obj.msg)
+                complete(false)
             }
         }
     }

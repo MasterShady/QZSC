@@ -10,7 +10,9 @@ import Foundation
 class QZSCKfManager {
     static let shared = QZSCKfManager()
     
-    private let historyKey = "QZSC_Kf_Message"
+    private var historyKey: String {
+        return "QZSC_Kf_Message_"
+    }
     
     var historyMessages: [String] {
         return QZSCCache.fetchObject(key: historyKey, to: [String].self) ?? []

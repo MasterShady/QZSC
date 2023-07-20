@@ -22,7 +22,6 @@ class QZSCCheckInController: QZSCBaseController {
 
         // Do any additional setup after loading the view.
         
-        configNavUI()
         configUI()
         configData()
     }
@@ -33,7 +32,25 @@ class QZSCCheckInController: QZSCBaseController {
         collection.reloadData()
     }
     
-    func configNavUI() {
+    func configHasUploadUI() {
+        for subView in view.subviews {
+            subView.removeFromSuperview()
+        }
+        
+        setNavBarUI()
+        navTitle = "商家入驻"
+        
+        let lbl = UILabel.createSameLbl(text: "等待审核中", color: COLORA1A0AB, font: UIFont.semibold(18))
+        view.addSubview(lbl)
+        lbl.snp.makeConstraints { make in
+            make.top.equalTo(300)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    func configUI() {
+        navTitle = "商家入驻"
+        
         let topBgImgView = UIImageView(image: UIImage(named: "checkin_top_bg"))
         view.addSubview(topBgImgView)
         var originY = -kStatusBarHeight - 15
@@ -46,10 +63,6 @@ class QZSCCheckInController: QZSCBaseController {
             make.width.equalTo(kScreenWidth)
             make.height.equalTo(342)
         }
-    }
-    
-    func configUI() {
-        navTitle = "商家入驻"
         
         let h = kScreenHeight - kNavBarFullHeight - kTabbarHeight() - 90
         
@@ -205,8 +218,27 @@ class QZSCCheckInController: QZSCBaseController {
             make.width.equalTo(kScreenWidth - 32)
             make.height.equalTo(48)
         }
-        joinBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
-            
+        joinBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
+            guard let `self` = self else { return }
+            guard let phone = self.phoneTF.text else { return }
+            guard let type = self.typeTF.text else { return }
+            if self.applyTV.text.isNil {
+                UMToast.show("申请描述不能为空")
+                return
+            }
+            if phone.isNil {
+                UMToast.show("联系方式不能为空")
+                return
+            }
+            if type.isNil {
+                UMToast.show("商品类别不能为空")
+                return
+            }
+            QZSCCheckInViewModel.uploadBusinessCheckInDetails(desc: self.applyTV.text,
+                                                              contack_num: phone,
+                                                              good_type: type) { result in
+                self.configHasUploadUI()
+            }
         }.disposed(by: dBag)
         
         let tap1 = UITapGestureRecognizer()

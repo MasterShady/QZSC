@@ -15,7 +15,7 @@ struct QZSCCheckInUploadRequest: BaseRequest {
     let business_license: String
     
     var routerURL: String {
-        return "qzsc/merchantSettle"
+        return "/qzsc/merchantSettle"
     }
     
     var method: QZSCAFHTTPMethod {
@@ -38,7 +38,12 @@ struct QZSCCheckInUploadRequest: BaseRequest {
 
 class QZSCCheckInViewModel {
     
-    static func uploadBusinessCheckInDetails(desc: String, contack_num: String, good_type: String, goods_imgs: [String], license_img: String, complete: @escaping(Bool) -> Void) {
+    static func uploadBusinessCheckInDetails(desc: String,
+                                             contack_num: String,
+                                             good_type: String,
+                                             goods_imgs: [String] = [],
+                                             license_img: String = "",
+                                             complete: @escaping(Bool) -> Void) {
         let request = QZSCCheckInUploadRequest(desc: desc,
                                                contack_num: contack_num,
                                                good_type: good_type,

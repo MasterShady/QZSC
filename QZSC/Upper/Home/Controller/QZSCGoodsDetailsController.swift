@@ -40,7 +40,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
     }
     
     func loadData() {
-//        UMProgressManager.showLoadingAnimation()
+        UMProgressManager.showLoadingAnimation()
         QZSCHomeViewModel.loadHomeProductDetails(productId: produceId) { info in
             UMProgressManager.hide()
             guard let goods_info = info else { return }
@@ -49,6 +49,8 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             self.topBgImgView.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + goods_info.list_pic))
             let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: goods_info.price, font: UIFont.semibold(18), textColor: COLOR000000)
             self.priceLbl.attributedText = attrText
+            self.collectBtn.isSelected = goods_info.is_collect
+            self.tejiaBgImgView.isHidden = !goods_info.is_specail_price
             self.loadContentHtml()
         }
     }
@@ -127,7 +129,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.height.equalTo(kHomeIndicatorHeight() + 64)
         }
         
-        let btnWidth = kScaleBasicWidth(144)
+        let btnWidth = kScaleBasicWidth(280)
         let buyBtn = UIButton(type: .custom)
         buyBtn.setTitle("立即购买", for: .normal)
         buyBtn.setTitleColor(COLORFFFFFF, for: .normal)
@@ -144,6 +146,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         }
         buyBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
             let preview = QZSCOrderPreviewView(frame: UIScreen.main.bounds)
+            preview.productInfo = self.data
             self.view.addSubview(preview)
             preview.showAnimation()
         }.disposed(by: dBag)
@@ -156,6 +159,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         shopCarBtn.layer.masksToBounds = true
         shopCarBtn.layer.borderWidth = 1
         shopCarBtn.layer.borderColor = UIColor(hexString: "#868A96").cgColor
+        shopCarBtn.isHidden = true
         bottomBar.addSubview(shopCarBtn)
         shopCarBtn.snp.makeConstraints { make in
             make.right.equalTo(buyBtn.snp.left).offset(-8)
@@ -173,7 +177,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         kfBtn.titleLabel?.font = UIFont.normal(10)
         kfBtn.resizeImagePosition(poistion: .top, space: 5)
         bottomBar.addSubview(kfBtn)
-        let originX = (kScreenWidth - kScaleBasicWidth(144) * 2 - 16 - 8 - 40) / 2
+        let originX = (kScreenWidth - kScaleBasicWidth(280) - 16 - 40) / 2
         kfBtn.snp.makeConstraints { make in
             make.top.equalTo(0)
             make.left.equalTo(originX)
@@ -216,8 +220,13 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.left.equalTo(kScreenWidth - 40)
             make.top.width.height.equalTo(goBackBtn)
         }
-        collectBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
-            
+        collectBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
+            guard let `self` = self else { return }
+            QZSCHomeViewModel.collectProduct(productId: self.produceId, isCollect: !self.collectBtn.isSelected) { result in
+                self.collectBtn.isSelected = !self.collectBtn.isSelected
+                let msg = (self.collectBtn.isSelected ? "收藏成功" : "取消收藏成功")
+                UMToast.show(msg)
+            }
         }.disposed(by: dBag)
         
         let gradientView = UIView()
@@ -253,7 +262,6 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.bottom.equalTo(priceLbl).offset(-12)
         }
         
-        let tejiaBgImgView = UIImageView(image: UIImage(named: "home_tejia_bg"))
         scroll.addSubview(tejiaBgImgView)
         tejiaBgImgView.snp.makeConstraints { make in
             make.centerY.equalTo(priceLbl)
@@ -426,6 +434,11 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         lbl.font = UIFont.normal(10)
         lbl.textColor = COLORB8BED0
         return lbl
+    }()
+    
+    lazy var tejiaBgImgView: UIImageView = {
+        let imgV = UIImageView(image: UIImage(named: "home_tejia_bg"))
+        return imgV
     }()
     
     lazy var nameLbl: UILabel = {

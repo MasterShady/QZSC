@@ -603,9 +603,9 @@
 		FC82E5D72A60E2420080B928 /* CheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				FCD661042A691D0300236CE0 /* ViewModel */,
 				FCE23EDC2A666FA200102760 /* View */,
 				FC82E5DC2A60E2C00080B928 /* Controller */,
-				FCD661002A69078600236CE0 /* QZSCCheckInViewModel.swift */,
 			);
 			path = CheckIn;
 			sourceTree = "<group>";
@@ -682,6 +682,14 @@
 				FCD660FB2A68D9BB00236CE0 /* QZSCHomeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FCD661042A691D0300236CE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCD661002A69078600236CE0 /* QZSCCheckInViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FCE23EDC2A666FA200102760 /* View */ = {

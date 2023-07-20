@@ -114,7 +114,6 @@
 //    decipher[cipherLength] = '\0';
 //    return @((char *)decipher);
     
-    return data;
     [[EPRc4CryptorManager shareInstance] setDecoryptorWithKey: secret];
     // 解密
     NSData *raw = [[NSData alloc] initWithBase64EncodedString:data options:0];

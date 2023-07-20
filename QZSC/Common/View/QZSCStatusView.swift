@@ -14,7 +14,7 @@ public enum QZSCStatusType {
     public var toast: String {
         switch self {
         case .noData:
-            return "暂无管理动态，请先绑定账号"
+            return "暂无数据"
         }
     }
     
@@ -108,7 +108,7 @@ public class QZSCStatusView: UIView {
     
     private lazy var imageV: UIImageView = {
         let imgV = UIImageView()
-        imgV.contentMode = .center
+        imgV.contentMode = .scaleAspectFit
         return imgV
     }()
     

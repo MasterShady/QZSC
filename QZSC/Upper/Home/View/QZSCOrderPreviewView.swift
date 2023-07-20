@@ -10,6 +10,22 @@ import RxCocoa
 import RxSwift
 
 class QZSCOrderPreviewView: UIView {
+    
+    var productInfo: QZSCProductDetailsInfoModel? {
+        didSet {
+            if let `info` = productInfo {
+                let p: Int = Int(info.price) ?? 3
+                let total = p * 30
+                let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: "\(total)", font: UIFont.semibold(28), textColor: COLOR000000)
+                totalPriceLbl.attributedText = attrText
+                
+                let attrText1 = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: info.price, font: UIFont.semibold(18), textColor: COLOR000000)
+                priceLbl.attributedText = attrText1
+                
+                nameLbl.text = info.name
+            }
+        }
+    }
 
     private let dBag = DisposeBag()
     private let contentVH: CGFloat = kHomeIndicatorHeight() + 550
@@ -203,7 +219,7 @@ class QZSCOrderPreviewView: UIView {
             make.top.width.height.equalTo(leftStartDayBgView)
         }
         
-        let endStr = Date().dateString(withFormat: "yyyy/MM/dd")
+        let endStr = Date().getNearDay(offsetMonth: 1)!.dateString(withFormat: "yyyy/MM/dd")
         let rightEndDayLbl = UILabel.createSameLbl(text: endStr, color: COLOR868A96, font: UIFont.semibold(16))
         rightEndDayBgView.addSubview(rightEndDayLbl)
         rightEndDayLbl.snp.makeConstraints { make in
@@ -226,6 +242,8 @@ class QZSCOrderPreviewView: UIView {
         }
         
         addressBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
+            let ctl = MineAddressListViewController()
+            QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
         }
         cancelBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
@@ -233,7 +251,23 @@ class QZSCOrderPreviewView: UIView {
         }.disposed(by: dBag)
         sureBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
-            
+            guard let info = self.productInfo else { return }
+            guard let username = self.usernameLbl.text else {
+                UMToast.show("地址不能为空")
+                return
+            }
+            guard let address = self.addressLbl.text else {
+                UMToast.show("地址不能为空")
+                return
+            }
+            if username.isNil || address.isNil {
+                UMToast.show("地址不能为空")
+                return
+            }
+            QZSCHomeViewModel.addOrder(productId: info.id) { result in
+                UMToast.show("下单成功")
+                QZSCControllerTool.currentNavVC()?.popViewController(animated: true)
+            }
         }.disposed(by: dBag)
 
     }

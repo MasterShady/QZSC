@@ -67,6 +67,7 @@ class QZSCHomeHeaderView: UIView {
     
     func configUI() {
         let bgImgView = UIImageView(image: UIImage(named: "home_top_bg"))
+        bgImgView.isUserInteractionEnabled = true
         addSubview(bgImgView)
         bgImgView.snp.makeConstraints { make in
             make.top.trailing.leading.equalTo(0)
