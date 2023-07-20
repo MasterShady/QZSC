@@ -11,7 +11,7 @@ struct QZSCAddressListRequest: BaseRequest {
     let uid: Int
     
     var routerURL: String {
-        return "qzsc/addressList"
+        return "/qzsc/addressList"
     }
     
     var method: QZSCAFHTTPMethod {
@@ -35,7 +35,7 @@ struct QZSCAddAddressRequest: BaseRequest {
     let is_default: Int
     
     var routerURL: String {
-        return "qzsc/addAddress"
+        return "/qzsc/addAddress"
     }
     
     var method: QZSCAFHTTPMethod {
@@ -64,7 +64,7 @@ struct QZSCUpdateAddressRequest: BaseRequest {
     let address_id: Int
     
     var routerURL: String {
-        return "qzsc/updateAddress"
+        return "/qzsc/updateAddress"
     }
     
     var method: QZSCAFHTTPMethod {
