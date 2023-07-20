@@ -6,21 +6,35 @@
 //
 
 import Foundation
+import Combine
 
-struct QZSCUserInfo: Codable {
+class QZSCUserInfo: Codable, ObservableObject{
     
-    var uid: Int
-    var nickname: String
-    var foot_num: Int
-    var is_sub_merchant: Int
-    var collect_num: Int
-    var bill_num: Int
+    var uid: Int = 0
+    @Published var nickname: String = ""
+    @Published var foot_num: Int = 0
+    @Published var is_sub_merchant: Int = 0
+    @Published var collect_num: Int = 0
+    @Published var bill_num: Int = 0
+    
+    var isLogin : Bool{
+       return uid != 0
+    }
+    
+    
+    init() {
+        
+    }
     
     enum CodingKeys: String, CodingKey {
         case uid, nickname, foot_num, is_sub_merchant, collect_num, bill_num
     }
     
-    init(from decoder: Decoder) throws {
+    func encode(to encoder: Encoder) throws{
+        fatalError("error")
+    }
+    
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         uid = try container.decodeSafe(Int.self, forKey: .uid)
