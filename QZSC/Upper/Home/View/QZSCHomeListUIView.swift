@@ -14,14 +14,23 @@ struct QZSCHomeListUIView: View {
     
     var body: some View {
         ZStack {
-            HStack {
+            Color.red
+            .padding(.init(top: 4, leading: 16, bottom: 4, trailing: 16))
+            .frame(width: kScreenWidth, height: 115)
+            .overlay(alignment: .leading) {
                 Image("")
+                    .resizable()
                     .background(Color.blue)
                     .frame(width: 88, height: 88)
                     .cornerRadius(8)
-                    .padding(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 0))
+                    .padding(EdgeInsets(top: 12, leading: 25, bottom: 12, trailing: 0))
+                    .overlay(alignment: .topLeading) {
+                        Image("home_cell_new_bg")
+                            .resizable()
+                            .frame(width: 36, height: 14)
+                    }
             }
-        }.padding(.init(top: 4, leading: 16, bottom: 4, trailing: 16))
+        }
     }
 }
 
