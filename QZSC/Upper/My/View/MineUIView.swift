@@ -35,6 +35,9 @@ struct MineUIView: View {
             }
             .overlay(alignment:.topTrailing) {
                 Button(action: {
+                    
+                    let SettingVC = QZSCSettingViewController()
+                    QZSCControllerTool.currentNavVC()?.pushViewController(SettingVC, animated: true)
 
                 }, label: {
                     Image("mine_settings")

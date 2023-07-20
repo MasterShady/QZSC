@@ -24,9 +24,9 @@ class QZSCAppEnvironment: NSObject {
     @objc var serverApi: String { // 网络请求域名
         switch defaultEnv {
         case .distribute:
-            return "https://QZSC.uhuhzl.cn.cn"
+            return "https://uhuhzl.cn/qzsc/"
         case .development:
-            return "https://QZSC.uhuhzl.cn.cn"
+            return "https://uhuhzl.cn/qzsc/"
         }
     }
     
@@ -35,11 +35,11 @@ class QZSCAppEnvironment: NSObject {
     }
     
     var privacyUrl: String {
-        return "https://QZSC.uhuhzl.cn/QZSC_privacies.html"
+        return "https://uhuhzl.cn/QZSC_privacies.html"
     }
     
     var protocolUrl: String {
-        return "https://QZSC.uhuhzl.cn//QZSC_protocol.html"
+        return "https://uhuhzl.cn/QZSC_protocol.html"
     }
     
     var rc4EncrySecret: String {
