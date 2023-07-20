@@ -2,7 +2,7 @@
 //  MineUIView.swift
 //  QZSC
 //
-//  Created by 刘思源 on 2023/7/14.
+//  Created by lsy on 2023/7/14.
 //
 
 import SwiftUI
@@ -39,6 +39,9 @@ struct MineUIView: View {
             }
             .overlay(alignment:.topTrailing) {
                 Button(action: {
+                    
+                    let SettingVC = QZSCSettingViewController()
+                    QZSCControllerTool.currentNavVC()?.pushViewController(SettingVC, animated: true)
 
                 }, label: {
                     Image("mine_settings")

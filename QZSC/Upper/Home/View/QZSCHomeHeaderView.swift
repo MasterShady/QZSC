@@ -2,7 +2,7 @@
 //  QZSCHomeHeaderView.swift
 //  QZSC
 //
-//  Created by fanyebo on 2023/7/17.
+//  Created by zzk on 2023/7/17.
 //
 
 import UIKit

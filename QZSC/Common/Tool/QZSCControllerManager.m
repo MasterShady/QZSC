@@ -2,7 +2,7 @@
 //  QZSCControllerManager.m
 //  QZSC
 //
-//  Created by LN C on 2023/7/19.
+//  Created by lsy on 2023/7/19.
 //
 
 #import "QZSCControllerManager.h"

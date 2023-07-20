@@ -2,7 +2,7 @@
 //  OldPhotoPicker.swift
 //  QZSC
 //
-//  Created by 刘思源 on 2023/7/19.
+//  Created by lsy on 2023/7/19.
 //
 
 import SwiftUI
