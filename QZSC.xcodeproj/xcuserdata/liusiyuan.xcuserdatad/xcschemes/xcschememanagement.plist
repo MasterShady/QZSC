@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>QZSC copy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>QZSC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>18</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>EB6D0D772A67C9CD00C7FA9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCEFC4252A5FF6D80015EF4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCEFC43B2A5FF6D90015EF4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCEFC4452A5FF6D90015EF4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
