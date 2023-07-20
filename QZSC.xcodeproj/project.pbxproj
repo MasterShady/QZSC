@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A241F3EC2A6904EF008FBEA2 /* QZSCUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241F3EB2A6904EF008FBEA2 /* QZSCUserInfo.swift */; };
+		A241F3EE2A6913EC008FBEA2 /* QZSCSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241F3ED2A6913EC008FBEA2 /* QZSCSettingViewController.swift */; };
 		A25E6B5D2A66318400AFB35C /* QZSCRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B5C2A66318400AFB35C /* QZSCRegisterViewController.swift */; };
 		A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B5F2A66614900AFB35C /* OrderCell.swift */; };
 		A25E6B622A66768400AFB35C /* QZSCOrderAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */; };
@@ -164,6 +165,7 @@
 /* Begin PBXFileReference section */
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A241F3EB2A6904EF008FBEA2 /* QZSCUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCUserInfo.swift; sourceTree = "<group>"; };
+		A241F3ED2A6913EC008FBEA2 /* QZSCSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCSettingViewController.swift; sourceTree = "<group>"; };
 		A25E6B5C2A66318400AFB35C /* QZSCRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCRegisterViewController.swift; sourceTree = "<group>"; };
 		A25E6B5F2A66614900AFB35C /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderAllViewController.swift; sourceTree = "<group>"; };
@@ -609,6 +611,7 @@
 				A26F54BC2A6791530080417F /* QZSCfootprintViewController.m */,
 				A2E5A30C2A67B9DA00C17C8E /* QZSCCollectViewController.h */,
 				A2E5A30D2A67B9DA00C17C8E /* QZSCCollectViewController.m */,
+				A241F3ED2A6913EC008FBEA2 /* QZSCSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1117,6 +1120,7 @@
 				A26F54C62A6797440080417F /* UIViewController+Tool.m in Sources */,
 				FCEFC5422A5FF9B30015EF4E /* QZSCColorDefine.swift in Sources */,
 				EB6769F32A651DC000440541 /* UITapGestureRecognizer+Chain.swift in Sources */,
+				A241F3EE2A6913EC008FBEA2 /* QZSCSettingViewController.swift in Sources */,
 				FCC5C3B12A6786E80083B114 /* UIDevice+Addition.m in Sources */,
 				EB6769EE2A651DC000440541 /* UILabel+Chain.swift in Sources */,
 				EB6769F72A651DC000440541 /* UITextView+Chain.swift in Sources */,
