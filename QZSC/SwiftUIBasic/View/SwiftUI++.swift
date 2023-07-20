@@ -108,3 +108,25 @@ struct TextArea: View {
         .font(.body)
     }
 }
+
+
+// ControllerWrapper类，使用泛型参数表示要封装的UIViewController类型
+struct ControllerWrapper<ControllerType: UIViewController>: UIViewControllerRepresentable {
+    // 要封装的具体UIViewController对象
+    let viewController: ControllerType
+
+    // 初始化方法，用于传递具体的UIViewController对象
+    init(_ viewController: ControllerType) {
+        self.viewController = viewController
+    }
+
+    // UIViewControllerRepresentable协议方法，创建封装的UIViewController
+    func makeUIViewController(context: Context) -> ControllerType {
+        return viewController
+    }
+
+    // UIViewControllerRepresentable协议方法，更新封装的UIViewController
+    func updateUIViewController(_ uiViewController: ControllerType, context: Context) {
+        // 可以在这里更新视图控制器，根据需要进行处理
+    }
+}

@@ -37,6 +37,7 @@
 		EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */; };
 		EB16B1192A67802600C79D7F /* FeedBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16B1182A67802600C79D7F /* FeedBackView.swift */; };
 		EB5166362A67D5710023986A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5166352A67D5710023986A /* ImagePicker.swift */; };
+		EB5B8FB32A68E6AF0004DC87 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B8FB22A68E6AF0004DC87 /* AboutUsView.swift */; };
 		EB616FFC2A66306600DDFF9E /* TMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB616FFB2A66306600DDFF9E /* TMD.swift */; };
 		EB6769CB2A651D0100440541 /* BasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C72A651D0100440541 /* BasePicker.swift */; };
 		EB6769CC2A651D0100440541 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769C82A651D0100440541 /* DatePicker.swift */; };
@@ -70,6 +71,7 @@
 		EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618F2A61303800E28FAE /* WrappedHStack.swift */; };
 		EBB761922A61528200E28FAE /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761912A61528200E28FAE /* MyCartView.swift */; };
 		EBC232162A66A90900466AD2 /* MineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC232152A66A90900466AD2 /* MineModels.swift */; };
+		EBED8E3B2A690DDE00E59783 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = EBED8E3A2A690DDE00E59783 /* SwiftUIX */; };
 		FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5D02A60E08C0080B928 /* LoginManager.swift */; };
 		FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */; };
 		FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */; };
@@ -206,6 +208,7 @@
 		EB09C1A62A655A94007599FA /* TDWVerifyCodeNumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDWVerifyCodeNumView.swift; sourceTree = "<group>"; };
 		EB16B1182A67802600C79D7F /* FeedBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackView.swift; sourceTree = "<group>"; };
 		EB5166352A67D5710023986A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EB5B8FB22A68E6AF0004DC87 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		EB616FFB2A66306600DDFF9E /* TMD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMD.swift; sourceTree = "<group>"; };
 		EB6769C72A651D0100440541 /* BasePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePicker.swift; sourceTree = "<group>"; };
 		EB6769C82A651D0100440541 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */,
+				EBED8E3B2A690DDE00E59783 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +504,7 @@
 				EBB761912A61528200E28FAE /* MyCartView.swift */,
 				EB616FFB2A66306600DDFF9E /* TMD.swift */,
 				EB16B1182A67802600C79D7F /* FeedBackView.swift */,
+				EB5B8FB22A68E6AF0004DC87 /* AboutUsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -896,6 +901,9 @@
 			dependencies = (
 			);
 			name = QZSC;
+			packageProductDependencies = (
+				EBED8E3A2A690DDE00E59783 /* SwiftUIX */,
+			);
 			productName = QZSC;
 			productReference = FCEFC4262A5FF6D80015EF4E /* QZSC.app */;
 			productType = "com.apple.product-type.application";
@@ -969,6 +977,9 @@
 				Base,
 			);
 			mainGroup = FCEFC41D2A5FF6D80015EF4E;
+			packageReferences = (
+				EBED8E392A690DDE00E59783 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = FCEFC4272A5FF6D80015EF4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1170,6 +1181,7 @@
 				A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
 				FCC5C39F2A6779F30083B114 /* QZSCMessageInputView.swift in Sources */,
+				EB5B8FB32A68E6AF0004DC87 /* AboutUsView.swift in Sources */,
 				A25E6B5D2A66318400AFB35C /* QZSCRegisterViewController.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,
@@ -1546,6 +1558,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EBED8E392A690DDE00E59783 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBED8E3A2A690DDE00E59783 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBED8E392A690DDE00E59783 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCEFC41E2A5FF6D80015EF4E /* Project object */;
 }
