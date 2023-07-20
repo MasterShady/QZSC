@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A241F3EC2A6904EF008FBEA2 /* QZSCUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241F3EB2A6904EF008FBEA2 /* QZSCUserInfo.swift */; };
 		A25E6B5D2A66318400AFB35C /* QZSCRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B5C2A66318400AFB35C /* QZSCRegisterViewController.swift */; };
 		A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B5F2A66614900AFB35C /* OrderCell.swift */; };
 		A25E6B622A66768400AFB35C /* QZSCOrderAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */; };
@@ -164,6 +165,7 @@
 
 /* Begin PBXFileReference section */
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A241F3EB2A6904EF008FBEA2 /* QZSCUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCUserInfo.swift; sourceTree = "<group>"; };
 		A25E6B5C2A66318400AFB35C /* QZSCRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCRegisterViewController.swift; sourceTree = "<group>"; };
 		A25E6B5F2A66614900AFB35C /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderAllViewController.swift; sourceTree = "<group>"; };
@@ -369,6 +371,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A241F3EA2A6904C8008FBEA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A241F3EB2A6904EF008FBEA2 /* QZSCUserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A25E6B5E2A6660F700AFB35C /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +581,7 @@
 		FC82E5D52A60E20A0080B928 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A241F3EA2A6904C8008FBEA2 /* Model */,
 				FC82E5DB2A60E2B90080B928 /* Controller */,
 			);
 			path = Login;
@@ -1073,6 +1084,7 @@
 				FCC5C3B52A67B9750083B114 /* QZSCHomeListUIView.swift in Sources */,
 				FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */,
 				FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */,
+				A241F3EC2A6904EF008FBEA2 /* QZSCUserInfo.swift in Sources */,
 				FCEFC5312A5FF9B30015EF4E /* QZSCDefine.swift in Sources */,
 				A26F54C02A6794570080417F /* QZSCBaseVC.m in Sources */,
 				EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */,

@@ -36,6 +36,7 @@ struct QZSCHomeUIView: View {
             List(models) { model in
                 NavigationView {
                     QZSCHomeListUIView(title: model.title, imgName: model.imgName, price: model.price)
+                        .frame(width: kScreenWidth, height: 128)
                 }
             }
         }
