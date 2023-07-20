@@ -8,6 +8,28 @@
 import UIKit
 import ActiveLabel
 import JXSegmentedView
+
+struct QZSCLoginRequest: BaseRequest {
+    let phone: String
+    let password: String
+    
+    
+    var routerURL: String {
+        return "/login"
+    }
+    
+    var method: QZSCAFHTTPMethod {
+        return .post
+    }
+    
+    var requiredParameter: [String : Any]? {
+        return ["phone": phone,
+                "password": password] as [String: Any]
+    }
+}
+
+
+
 class QZSCAccounTnumberView: UIViewController {
 
     var phoneTF:UITextField!
@@ -162,14 +184,31 @@ class QZSCAccounTnumberView: UIViewController {
         }
         
         if (selectedBtn.isSelected == true){
-            
+            loadLoginRequest(phone:self.phoneTF.text ?? "" , password: self.passwordTF.text ?? "") {
+                UMToast.show("登录成功")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
         } else{
             UMToast.show("请先勾选协议")
         }
         
         
     }
-    
+    func loadLoginRequest( phone: String ,password: String, complete: @escaping() -> Void) {
+        
+        let request = QZSCLoginRequest(phone: phone, password: password)
+        QZSCNetwork.request(request).responseDecodable { (response: QZSCAFDataResponse<QZSCUserInfo>) in
+            switch response.result {
+            case .success(let list):
+                QZSCLoginManager.shared.userInfo = list
+                complete()
+            case .failure(let error):
+                UMToast.show(error.localizedDescription)
+            }
+        }
+    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

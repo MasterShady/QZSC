@@ -109,13 +109,13 @@ class QZSCPhoneLoginViewController: UIViewController {
             label.customColor[privacyType] = UIColor(hexString: "333333")
             label.handleCustomTap(for: platformType) { str in
                 let MineWKWebVC = QZSCWebController()
-                MineWKWebVC.urlStr = "https://cwz.wasawasa.cn/cwz_protocol.html"
+                MineWKWebVC.urlStr = QZSCAppEnvironment.shared.protocolUrl
                   self.navigationController?.pushViewController(MineWKWebVC, animated: true)
               
             }
             label.handleCustomTap(for: privacyType) { str in
                 let MineWKWebVC = QZSCWebController()
-                MineWKWebVC.urlStr = "https://cwz.wasawasa.cn/cwz_privacies.html"
+                MineWKWebVC.urlStr = QZSCAppEnvironment.shared.privacyUrl
                   self.navigationController?.pushViewController(MineWKWebVC, animated: true)
             }
         }
