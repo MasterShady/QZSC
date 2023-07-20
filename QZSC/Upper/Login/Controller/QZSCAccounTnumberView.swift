@@ -15,7 +15,7 @@ struct QZSCLoginRequest: BaseRequest {
     
     
     var routerURL: String {
-        return "/login"
+        return "login"
     }
     
     var method: QZSCAFHTTPMethod {
