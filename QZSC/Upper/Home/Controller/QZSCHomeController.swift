@@ -21,8 +21,6 @@ class QZSCHomeController: QZSCBaseController {
         
         configUI()
         listenerNetWork()
-        UMProgressManager.showLoadingAnimation()
-        loadData()
     }
     
     func configUI() {
@@ -73,6 +71,7 @@ class QZSCHomeController: QZSCBaseController {
             case .notReachable:
                 break
             case .reachable(_):
+                UMProgressManager.showLoadingAnimation()
                 self?.loadData()
                 printLog("========= reachable")
             }

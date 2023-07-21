@@ -21,23 +21,44 @@ class QZSCSettingViewController: QZSCBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navTitle = "设置"
+        let stackView = UIStackView(frame: .zero)
+        stackView.axis = .vertical
+        self.view.addSubview(stackView)
+        stackView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(NAV_HEIGHT)
+        }
+        
         cacheViewUI()
         cancelViewUI()
         privacyViewUI()
         aboutUsViewUI()
+        
+        stackView.addArrangedSubview(self.cacheView)
+        stackView.addArrangedSubview(self.cancelView)
+        stackView.addArrangedSubview(self.privacyView)
+        stackView.addArrangedSubview(self.aboutUsView)
+        
+        
+        
+        
+        
         botViewUI()
-
-        // Do any additional setup after loading the view.
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        bottomView.isHidden = !QZSCLoginManager.shared.isLogin
+        cancelView.isHidden = !QZSCLoginManager.shared.isLogin
+        
+    }
+    
     func cacheViewUI(){
          cacheView = UIView.init(frame: CGRect.zero)
-        self.view.addSubview(cacheView)
         cacheView.isUserInteractionEnabled = true
         cacheView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cacheViewClickAction)))
         cacheView.backgroundColor = UIColor(hexString: "FFFFFF")
         cacheView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(NAV_HEIGHT)
             make.height.equalTo(SCALE_HEIGTHS(value: 55))
         }
         
@@ -89,13 +110,10 @@ class QZSCSettingViewController: QZSCBaseController {
     
     func privacyViewUI(){
         privacyView = UIView.init(frame: CGRect.zero)
-        self.view.addSubview(privacyView)
         privacyView.isUserInteractionEnabled = true
         privacyView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(privacyViewClickAction)))
         privacyView.backgroundColor = UIColor(hexString: "FFFFFF")
         privacyView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(cancelView.snp.bottom).offset(SCALE_HEIGTHS(value: 0))
             make.height.equalTo(SCALE_HEIGTHS(value: 55))
         }
         
@@ -133,13 +151,10 @@ class QZSCSettingViewController: QZSCBaseController {
     }
     func cancelViewUI(){
         cancelView = UIView.init(frame: CGRect.zero)
-        self.view.addSubview(cancelView)
         cancelView.isUserInteractionEnabled = true
         cancelView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cancelViewClickAction)))
         cancelView.backgroundColor = UIColor(hexString: "FFFFFF")
         cancelView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(cacheView.snp.bottom).offset(SCALE_HEIGTHS(value: 0))
             make.height.equalTo(SCALE_HEIGTHS(value: 55))
         }
         
@@ -192,13 +207,10 @@ class QZSCSettingViewController: QZSCBaseController {
     
     func aboutUsViewUI(){
         aboutUsView = UIView.init(frame: CGRect.zero)
-        self.view.addSubview(aboutUsView)
         aboutUsView.isUserInteractionEnabled = true
         aboutUsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aboutUsViewClickAction)))
         aboutUsView.backgroundColor = UIColor(hexString: "FFFFFF")
         aboutUsView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(privacyView.snp.bottom).offset(SCALE_HEIGTHS(value: 0))
             make.height.equalTo(SCALE_HEIGTHS(value: 55))
         }
         
@@ -227,7 +239,9 @@ class QZSCSettingViewController: QZSCBaseController {
     
     //关于我们
     @objc private func aboutUsViewClickAction() {
-        let vc = UIHostingController(rootView: AboutUsView())
+        let vc = UIHostingController(rootView: NavigationView(content: {
+            AboutUsView()
+        }))
         self.navigationController?.pushViewController(vc, animated: true)
     }
     //清除缓存

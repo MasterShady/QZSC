@@ -22,8 +22,17 @@ class QZSCCheckInController: QZSCBaseController {
 
         // Do any additional setup after loading the view.
         
-        configUI()
         configData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if QZSCLoginManager.shared.merchant {
+            configHasUploadUI()
+        } else {
+            configUI()
+        }
     }
     
     func configData() {
@@ -49,6 +58,11 @@ class QZSCCheckInController: QZSCBaseController {
     }
     
     func configUI() {
+        for subView in view.subviews {
+            subView.removeFromSuperview()
+        }
+        
+        setNavBarUI()
         navTitle = "商家入驻"
         
         let topBgImgView = UIImageView(image: UIImage(named: "checkin_top_bg"))
@@ -204,13 +218,6 @@ class QZSCCheckInController: QZSCBaseController {
             make.width.height.equalTo(80)
         }
         
-        let joinBtn = UIButton(type: .custom)
-        joinBtn.setTitle("提交申请", for: .normal)
-        joinBtn.setTitleColor(COLORFFFFFF, for: .normal)
-        joinBtn.titleLabel?.font = UIFont.semibold(14)
-        joinBtn.backgroundColor = COLOR333333
-        joinBtn.layer.cornerRadius = 24
-        joinBtn.layer.masksToBounds = true
         view.addSubview(joinBtn)
         joinBtn.snp.makeConstraints { make in
             make.bottom.equalTo(-kTabbarHeight() - 12)
@@ -218,31 +225,6 @@ class QZSCCheckInController: QZSCBaseController {
             make.width.equalTo(kScreenWidth - 32)
             make.height.equalTo(48)
         }
-        joinBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
-            guard let `self` = self else { return }
-            if !QZSCLoginManager.shared.autoOpenLogin() {
-                return
-            }
-            guard let phone = self.phoneTF.text else { return }
-            guard let type = self.typeTF.text else { return }
-            if self.applyTV.text.isNil {
-                UMToast.show("申请描述不能为空")
-                return
-            }
-            if phone.isNil {
-                UMToast.show("联系方式不能为空")
-                return
-            }
-            if type.isNil {
-                UMToast.show("商品类别不能为空")
-                return
-            }
-            QZSCCheckInViewModel.uploadBusinessCheckInDetails(desc: self.applyTV.text,
-                                                              contack_num: phone,
-                                                              good_type: type) { result in
-                self.configHasUploadUI()
-            }
-        }.disposed(by: dBag)
         
         let tap1 = UITapGestureRecognizer()
         cerImgView.addGestureRecognizer(tap1)
@@ -323,6 +305,43 @@ class QZSCCheckInController: QZSCBaseController {
         tool.singleImageChooseType = .singlePicture
         tool.singleModelImageCanEditor = true
         return tool
+    }()
+    
+    lazy var joinBtn: UIButton = {
+        let joinBtn = UIButton(type: .custom)
+        joinBtn.setTitle("提交申请", for: .normal)
+        joinBtn.setTitleColor(COLORFFFFFF, for: .normal)
+        joinBtn.titleLabel?.font = UIFont.semibold(14)
+        joinBtn.backgroundColor = COLOR333333
+        joinBtn.layer.cornerRadius = 24
+        joinBtn.layer.masksToBounds = true
+        joinBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
+            guard let `self` = self else { return }
+            if !QZSCLoginManager.shared.autoOpenLogin() {
+                return
+            }
+            guard let phone = self.phoneTF.text else { return }
+            guard let type = self.typeTF.text else { return }
+            if self.applyTV.text.isNil {
+                UMToast.show("申请描述不能为空")
+                return
+            }
+            if phone.isNil {
+                UMToast.show("联系方式不能为空")
+                return
+            }
+            if type.isNil {
+                UMToast.show("商品类别不能为空")
+                return
+            }
+            QZSCCheckInViewModel.uploadBusinessCheckInDetails(desc: self.applyTV.text,
+                                                              contack_num: phone,
+                                                              good_type: type) { result in
+                QZSCLoginManager.shared.merchant = true
+                self.configHasUploadUI()
+            }
+        }.disposed(by: dBag)
+        return joinBtn
     }()
 }
 

@@ -14,8 +14,8 @@ class QZSCOrderPreviewView: UIView {
     var productInfo: QZSCProductDetailsInfoModel? {
         didSet {
             if let `info` = productInfo {
-                let p: Int = Int(info.price) ?? 3
-                let total = p * 30
+                let p: Double = Double(info.price) ?? 1
+                let total = roundToPlaces(value: p * 30, places: 1)
                 let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: "\(total)", font: UIFont.semibold(28), textColor: COLOR000000)
                 totalPriceLbl.attributedText = attrText
                 
@@ -23,6 +23,15 @@ class QZSCOrderPreviewView: UIView {
                 priceLbl.attributedText = attrText1
                 
                 nameLbl.text = info.name
+                let url = QZSCAppEnvironment.shared.imageUrlApi + info.list_pic
+                picImgView.kf.setImage(with: URL(string: url))
+                
+                if let addressData = QZSCAddressManager.shared.defaultAddressModel {
+                    usernameLbl.text = addressData.uname + "  " + addressData.phone
+                    addressLbl.text = addressData.address_area + " " + addressData.address_detail
+                }
+                
+                addressGoImgView.isHidden = !QZSCAddressManager.shared.hasDefaultAddress
             }
         }
     }
@@ -112,7 +121,7 @@ class QZSCOrderPreviewView: UIView {
         
         addressBGView.addSubview(addressLbl)
         addressLbl.snp.makeConstraints { make in
-            make.top.equalTo(usernameLbl.snp.bottom).offset(8)
+            make.top.equalTo(usernameLbl.snp.bottom).offset(12)
             make.left.equalTo(usernameLbl)
             make.right.equalTo(-40)
         }
@@ -243,8 +252,15 @@ class QZSCOrderPreviewView: UIView {
         
         addressBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
             let ctl = MineAddressListViewController()
+            ctl.isFromConfirmVC = true
+            ctl.didSelectComplete = { [weak self] addressData in
+                guard let `self` = self else { return }
+                self.usernameLbl.text = addressData.uname + "  " + addressData.phone
+                self.addressLbl.text = addressData.address_area + " " + addressData.address_detail
+                self.addressGoImgView.isHidden = false
+            }
             QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
-        }
+        }.disposed(by: dBag)
         cancelBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
             self.dismissAnimation()
@@ -252,18 +268,18 @@ class QZSCOrderPreviewView: UIView {
         sureBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
             guard let info = self.productInfo else { return }
-//            guard let username = self.usernameLbl.text else {
-//                UMToast.show("地址不能为空")
-//                return
-//            }
-//            guard let address = self.addressLbl.text else {
-//                UMToast.show("地址不能为空")
-//                return
-//            }
-//            if username.isNil || address.isNil {
-//                UMToast.show("地址不能为空")
-//                return
-//            }
+            guard let username = self.usernameLbl.text else {
+                UMToast.show("地址不能为空")
+                return
+            }
+            guard let address = self.addressLbl.text else {
+                UMToast.show("地址不能为空")
+                return
+            }
+            if username.isNil || address.isNil {
+                UMToast.show("地址不能为空")
+                return
+            }
             QZSCHomeViewModel.addOrder(productId: info.id) { result in
                 UMToast.show("下单成功")
                 QZSCControllerTool.currentNavVC()?.popViewController(animated: true)

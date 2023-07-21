@@ -24,13 +24,17 @@ struct QZSCCheckInUploadRequest: BaseRequest {
     
     var optionalParameter: [String : Any]? {
         var params: [String: Any] = ["desc": desc,
-                                     "contack_num": contack_num,
+                                     "contact_num": contack_num,
                                      "good_type": good_type]
         if !goods_img_list.isEmpty {
             params["goods_img_list"] = goods_img_list
+        } else {
+            params["goods_img_list"] = "0123456789"
         }
         if !business_license.isEmpty {
             params["business_license"] = business_license
+        } else {
+            params["business_license"] = "0123456789"
         }
         return params
     }

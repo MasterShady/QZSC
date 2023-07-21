@@ -76,9 +76,22 @@
 
 - (void)searchBarDidEndEditing:(QZSCNormalSearchBar *)searchBar {
     NSLog(@"%@", searchBar.text);
+    if kStringIsEmpty(searchBar.text) {
+        [UMToast show:@"关键字不能为空"];
+        return;
+    }
+    [self.view endEditing:YES];
     [_ctl loadDataWithKeyWord:searchBar.text];
 }
 
-
+- (BOOL)searchBarShouldReturn:(QZSCNormalSearchBar *)searchBar {
+    if kStringIsEmpty(searchBar.text) {
+        [UMToast show:@"关键字不能为空"];
+        return YES;
+    }
+    [self.view endEditing:YES];
+    [_ctl loadDataWithKeyWord:searchBar.text];
+    return YES;
+}
 
 @end

@@ -27,11 +27,25 @@ class QZSCLoginManager: NSObject, ObservableObject {
         }
         return "" as NSString
     }
-    
-    
+
         
     var isLogin: Bool{
         return userInfo != nil
+    }
+    
+    var merchant: Bool {
+        set {
+            if let info = self.userInfo {
+                info.is_sub_merchant = (newValue ? 1 : 0)
+                self.userInfo = info
+            }
+        }
+        get {
+            if let info = self.userInfo {
+                return info.is_sub_merchant == 1
+            }
+            return false
+        }
     }
     
     private let keyUserInfo = "QZSC_local_userInfo"

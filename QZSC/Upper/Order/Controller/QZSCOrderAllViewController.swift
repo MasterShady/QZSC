@@ -24,6 +24,15 @@ class QZSCOrderAllViewController: QZSCBaseVC {
     }
     
     func loadData(){
+        if !QZSCLoginManager.shared.isLogin{
+            DispatchQueue.main.async {
+                self.OrderAllTableView.mj_header?.endRefreshing()
+                self.dataList = []
+                self.configNoData()
+                self.OrderAllTableView.reloadData()
+            }
+            return
+        }
         QZSCOrderViewModel.loadOrderList(status: -1) { dataList in
             self.OrderAllTableView.mj_header?.endRefreshing()
             self.dataList = dataList

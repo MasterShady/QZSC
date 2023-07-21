@@ -123,7 +123,6 @@ open class QZSCNormalSearchBar: UIView {
     }
 
     @objc private func searchBtnClick(_ sender: UIButton) {
-        stopEditing()
         delegate?.searchBarDidEndEditing?(self)
     }
 
@@ -212,7 +211,7 @@ extension QZSCNormalSearchBar: UITextFieldDelegate {
     }
 
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        delegate?.searchBarDidEndEditing?(self)
+//        delegate?.searchBarDidEndEditing?(self)
     }
 
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {

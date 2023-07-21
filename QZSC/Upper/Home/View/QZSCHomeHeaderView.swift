@@ -11,7 +11,7 @@ import RxSwift
 
 class QZSCHomeHeaderView: UIView {
     
-    let categoryTitles = ["好物种草·", "好物种草·", "好物种草·", "好物种草·"]
+    let categoryTitles = ["精选聚荟·", "好物种草·", "卡通人物·", "购物指南·"]
     let dBag = DisposeBag()
     
     override init(frame: CGRect) {
@@ -56,6 +56,7 @@ class QZSCHomeHeaderView: UIView {
             view.addGestureRecognizer(tap)
             tap.rx.event.subscribe { _ in
                 let ctl = QZSCGoodsListController()
+                ctl.navTitle = title
                 QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
             }.disposed(by: dBag)
         }

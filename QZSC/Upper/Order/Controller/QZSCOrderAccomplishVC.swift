@@ -23,6 +23,13 @@ class QZSCOrderAccomplishVC: QZSCBaseVC {
      
     }
     func loadData(){
+        if !QZSCLoginManager.shared.isLogin{
+            self.OrderAllTableView.mj_header?.endRefreshing()
+            self.dataList = []
+            self.configNoData()
+            self.OrderAllTableView.reloadData()
+            return
+        }
         QZSCOrderViewModel.loadOrderList(status: 2) { dataList in
             self.OrderAllTableView.mj_header?.endRefreshing()
             self.dataList = dataList

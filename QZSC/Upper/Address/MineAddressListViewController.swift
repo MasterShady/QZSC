@@ -9,8 +9,8 @@ class MineAddressListViewController: QZSCBaseController {
     var pageId = 1
     
     var isFromConfirmVC: Bool = false
-//    var didSelectComplete: ((AddressListViewModel) -> Void)?
-//    
+    var didSelectComplete: ((AddressListModel) -> Void)?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.queryAddressList(isMore: true)
@@ -90,6 +90,8 @@ class MineAddressListViewController: QZSCBaseController {
         }
         
         QZSCAddressViewModel.loadAddressList { data in
+            self.AddressListTableView.mj_header?.endRefreshing()
+            QZSCAddressManager.shared.defaultAddressModel = data.filter { $0.is_default == 1 }.first
             self.dataList = data
             self.AddressListTableView.reloadData()
             self.configNoData()
@@ -162,17 +164,22 @@ extension MineAddressListViewController:UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if isFromConfirmVC {
-//            let data = dataList[indexPath.row]
-//            didSelectComplete?(data)
-//            ControllerUtils.currentNavVC()?.popViewController(animated: true)
+            let data = dataList[indexPath.row]
+            didSelectComplete?(data)
+            QZSCControllerTool.currentNavVC()?.popViewController(animated: true)
             return
         }
         
-//        let DetailVC = DetailViewController()
-//        DetailVC.goodsModel = self.dataList[indexPath.row]
-//
-//          self.navigationController?.pushViewController(DetailVC, animated: true)
-//
+        let data = self.dataList[indexPath.row]
+        let DetailVC = MineAddressNewViewController()
+        DetailVC.uid = data.uid
+        DetailVC.uname = data.uname
+        DetailVC.phone = data.phone
+        DetailVC.address = data.address_area
+        DetailVC.location_desc = data.address_detail
+        DetailVC.is_default = data.is_default
+        DetailVC.address_id = data.id
+        self.navigationController?.pushViewController(DetailVC, animated: true)
         
     }
     

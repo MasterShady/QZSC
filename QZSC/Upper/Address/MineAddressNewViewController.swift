@@ -14,28 +14,29 @@ class MineAddressNewViewController: QZSCBaseController {
     var myProvince: String = ""
     var myArea: String = ""
     
+    var address_id: Int = 0
     var uid: Int = 0
-    
     var uname: String = ""
-    
     var phone: String = ""
-    
     var location_desc: String = ""
-    
+    var address: String = ""
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
        
         AddressNewUI()
-        self.navTitle = "新建地址"
         self.view.backgroundColor = UIColor(hexString: "#FFFFFF")
-        if(myCity.count > 0){
+        
+        if address_id > 0 {
+            self.navTitle = "编辑地址"
             phoneTF.text = phone
             nameTF.text = uname
-            
+            cityLB.text = address
             addressTF.text = location_desc
             
+        } else {
+            self.navTitle = "新建地址"
         }
     }
     func AddressNewUI(){
@@ -299,7 +300,7 @@ class MineAddressNewViewController: QZSCBaseController {
         addressBtn.layer.masksToBounds = true
         addressBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         addressBtn.setTitleColor(UIColor(hexString: "#FFFFFF"), for: .normal)
-        addressBtn.setTitle(self.uid != 0 ? "修改收货地址" : "新增收货地址", for: .normal)
+        addressBtn.setTitle(self.address_id != 0 ? "修改收货地址" : "新增收货地址", for: .normal)
         addressBtn.addTarget(self, action: #selector(addressBtnClickAction), for: .touchUpInside)
          
         self.view.addSubview(addressBtn);
@@ -338,7 +339,7 @@ class MineAddressNewViewController: QZSCBaseController {
             return
         }
         
-        if(self.myCity.count == 0){
+        if(self.cityLB.text?.count == 0){
             UMToastManager.showToast("请选择所在地区")
             return
         }
@@ -349,8 +350,8 @@ class MineAddressNewViewController: QZSCBaseController {
         }
         
         
-        if( self.uid != 0){
-            QZSCAddressViewModel.loadUpdateAddress(uname: nameTF.text!, phone: phoneTF.text!, address_area: self.myCity, address_detail: addressTF.text!, is_default: is_default, address_id: uid) { code in
+        if( self.address_id != 0){
+            QZSCAddressViewModel.loadUpdateAddress(uname: nameTF.text!, phone: phoneTF.text!, address_area: self.cityLB.text!, address_detail: addressTF.text!, is_default: is_default, address_id: address_id) { code in
                 if (code == true){
                     UMToastManager.showToast("修改成功")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -361,7 +362,7 @@ class MineAddressNewViewController: QZSCBaseController {
             }
            
         }else {
-            QZSCAddressViewModel.loadAddAddress(uname: nameTF.text!, phone: phoneTF.text!, address_area: self.myCity, address_detail: addressTF.text!, is_default: is_default) { code in
+            QZSCAddressViewModel.loadAddAddress(uname: nameTF.text!, phone: phoneTF.text!, address_area: self.cityLB.text!, address_detail: addressTF.text!, is_default: is_default) { code in
                 if (code == true){
                     UMToastManager.showToast("添加成功")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

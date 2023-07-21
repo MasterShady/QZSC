@@ -237,20 +237,28 @@ struct MineOrderView: View {
 
 struct MineFunctionView: View{
     //@EnvironmentObject var userData: UserData
+    
+    
+    
     let items: [(String,String, Any)] = [
         //("购物车","mine_cart", MyCartView().erasedToAnyView()),
         //写法1, 用ControllerWrapper去包装一下,通过swiftUI的NavigationLink去跳转.
-        ("我的客服", "mine_service", ControllerWrapper(QZSCKfController()).erasedToAnyView()),
+        ("我的客服", "mine_service",  {
+            QZSCControllerTool.currentNavVC()?.pushViewController(QZSCKfController(), animated: true)
+        } as ()->()),
         ("意见反馈","mine_feedback", FeedBackView().erasedToAnyView()),
         //写法2, 用block包一下.点击执行block完成跳转.
         ("我的地址", "mine_bills", {
+            if !QZSCLoginManager.shared.isLogin{
+                QZSCControllerTool.currentNavVC()?.pushViewController(QZSCLoginController(), animated: true)
+                return
+            }
             QZSCControllerTool.currentNavVC()?.pushViewController(MineAddressListViewController(), animated: true)
-            
-        }),
+        } as ()->()),
         ("关于我们", "mine_about_us", AboutUsView().erasedToAnyView()),
         ("商家入驻", "mine_join_us", {
             QZSCControllerTool.currentNavVC()?.pushViewController(QZSCCheckInController(), animated: true)
-        })
+        } as ()->())
     ]
 
     var body: some View {
@@ -268,7 +276,7 @@ struct MineFunctionView: View{
                                 .frame(width:60)
                             }
                         }else {
-                            if let block = item.2 as? (() -> Optional<()>){
+                            if let block = item.2 as? (() -> ()){
                                 VStack {
                                     Image(item.1)
                                     Text(item.0).font(.system(size: 12)).foregroundColor(.init(hex: 0x000000))
