@@ -14,8 +14,8 @@ class QZSCOrderPreviewView: UIView {
     var productInfo: QZSCProductDetailsInfoModel? {
         didSet {
             if let `info` = productInfo {
-                let p: Int = Int(info.price) ?? 3
-                let total = p * 30
+                let p: Double = Double(info.price) ?? 1
+                let total = roundToPlaces(value: p * 30, places: 1)
                 let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: "\(total)", font: UIFont.semibold(28), textColor: COLOR000000)
                 totalPriceLbl.attributedText = attrText
                 
