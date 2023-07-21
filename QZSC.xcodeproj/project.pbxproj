@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A21DA7662A6A1789005A1FAF /* QZSCFootprintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7652A6A1789005A1FAF /* QZSCFootprintViewModel.swift */; };
+		A21DA76B2A6A1E78005A1FAF /* NetWorkCommonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7682A6A1E78005A1FAF /* NetWorkCommonObject.m */; };
+		A21DA76C2A6A1E78005A1FAF /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7692A6A1E78005A1FAF /* NetWorkManager.m */; };
+		A21DA76F2A6A2E2B005A1FAF /* OrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21DA76E2A6A2E2B005A1FAF /* OrderListModel.swift */; };
+		A21DA7722A6A31A0005A1FAF /* QZSCOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7712A6A31A0005A1FAF /* QZSCOrderViewModel.swift */; };
+		A21DA7742A6A392A005A1FAF /* QZSCOrderAccomplishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7732A6A392A005A1FAF /* QZSCOrderAccomplishVC.swift */; };
 		A241F3EC2A6904EF008FBEA2 /* QZSCUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241F3EB2A6904EF008FBEA2 /* QZSCUserInfo.swift */; };
 		A241F3EE2A6913EC008FBEA2 /* QZSCSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241F3ED2A6913EC008FBEA2 /* QZSCSettingViewController.swift */; };
 		A241F3F12A693376008FBEA2 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241F3F02A693376008FBEA2 /* AddressModel.swift */; };
@@ -171,6 +177,14 @@
 
 /* Begin PBXFileReference section */
 		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21DA7652A6A1789005A1FAF /* QZSCFootprintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCFootprintViewModel.swift; sourceTree = "<group>"; };
+		A21DA7672A6A1E78005A1FAF /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		A21DA7682A6A1E78005A1FAF /* NetWorkCommonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkCommonObject.m; sourceTree = "<group>"; };
+		A21DA7692A6A1E78005A1FAF /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		A21DA76A2A6A1E78005A1FAF /* NetWorkCommonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkCommonObject.h; sourceTree = "<group>"; };
+		A21DA76E2A6A2E2B005A1FAF /* OrderListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListModel.swift; sourceTree = "<group>"; };
+		A21DA7712A6A31A0005A1FAF /* QZSCOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderViewModel.swift; sourceTree = "<group>"; };
+		A21DA7732A6A392A005A1FAF /* QZSCOrderAccomplishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderAccomplishVC.swift; sourceTree = "<group>"; };
 		A241F3EB2A6904EF008FBEA2 /* QZSCUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCUserInfo.swift; sourceTree = "<group>"; };
 		A241F3ED2A6913EC008FBEA2 /* QZSCSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCSettingViewController.swift; sourceTree = "<group>"; };
 		A241F3F02A693376008FBEA2 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
@@ -380,6 +394,30 @@
 				C784E583CA623A90217E246E /* Pods-QZSC.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A21DA7642A6A1719005A1FAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A21DA7652A6A1789005A1FAF /* QZSCFootprintViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A21DA76D2A6A2E12005A1FAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A21DA76E2A6A2E2B005A1FAF /* OrderListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A21DA7702A6A317E005A1FAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A21DA7712A6A31A0005A1FAF /* QZSCOrderViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A241F3EA2A6904C8008FBEA2 /* Model */ = {
@@ -602,6 +640,8 @@
 		FC82E5D42A60E2000080B928 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				A21DA7702A6A317E005A1FAF /* ViewModel */,
+				A21DA76D2A6A2E12005A1FAF /* Model */,
 				A25E6B5E2A6660F700AFB35C /* view */,
 				FC82E5D92A60E2B00080B928 /* Controller */,
 			);
@@ -640,6 +680,7 @@
 		FC82E5D82A60E2A50080B928 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A21DA7642A6A1719005A1FAF /* ViewModel */,
 				FC82E5E32A60E3110080B928 /* QZSCMyController.swift */,
 				A26F54BB2A6791530080417F /* QZSCfootprintViewController.h */,
 				A26F54BC2A6791530080417F /* QZSCfootprintViewController.m */,
@@ -656,6 +697,7 @@
 				FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */,
 				A25E6B612A66768400AFB35C /* QZSCOrderAllViewController.swift */,
 				A25E6B632A667B1300AFB35C /* QZSCOrderDetailController.swift */,
+				A21DA7732A6A392A005A1FAF /* QZSCOrderAccomplishVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -843,6 +885,10 @@
 		FCEFC4F32A5FF9B30015EF4E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A21DA76A2A6A1E78005A1FAF /* NetWorkCommonObject.h */,
+				A21DA7682A6A1E78005A1FAF /* NetWorkCommonObject.m */,
+				A21DA7672A6A1E78005A1FAF /* NetWorkManager.h */,
+				A21DA7692A6A1E78005A1FAF /* NetWorkManager.m */,
 				FCEFC4F42A5FF9B30015EF4E /* QZSCNetworkConfig.swift */,
 				FCEFC4F52A5FF9B30015EF4E /* BaseRequest.swift */,
 				FCEFC4F62A5FF9B30015EF4E /* QZSCError.swift */,
@@ -1102,6 +1148,7 @@
 				EB6769D02A651D1000440541 /* GEPopTool.swift in Sources */,
 				FC82E5E22A60E3030080B928 /* QZSCLoginController.swift in Sources */,
 				FCEFC5292A5FF9B30015EF4E /* QZSCNetwork+Alamofire.swift in Sources */,
+				A21DA76C2A6A1E78005A1FAF /* NetWorkManager.m in Sources */,
 				A26F54B52A6784080080417F /* MineAddressCell.swift in Sources */,
 				EB6769ED2A651DC000440541 /* UITableView+Chain.swift in Sources */,
 				FCEFC5192A5FF9B30015EF4E /* UIFont+Extension.swift in Sources */,
@@ -1159,6 +1206,7 @@
 				EB74107A2A66854E004ECFD3 /* SwiftUI++.swift in Sources */,
 				FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */,
 				FCEFC5332A5FF9B30015EF4E /* QZSCDatePickerView.swift in Sources */,
+				A21DA7722A6A31A0005A1FAF /* QZSCOrderViewModel.swift in Sources */,
 				FCEFC52D2A5FF9B30015EF4E /* QZSCTarget.swift in Sources */,
 				EB09C1AB2A655A94007599FA /* TDWVerifyCodeNumView.swift in Sources */,
 				EBB761902A61303800E28FAE /* WrappedHStack.swift in Sources */,
@@ -1170,10 +1218,12 @@
 				FCEFC51F2A5FF9B30015EF4E /* String+Extension.swift in Sources */,
 				FCEFC5252A5FF9B30015EF4E /* Array+Extension.swift in Sources */,
 				A241F3F42A6935BF008FBEA2 /* AddressViewModel.swift in Sources */,
+				A21DA76B2A6A1E78005A1FAF /* NetWorkCommonObject.m in Sources */,
 				FC82E5E82A60E34F0080B928 /* QZSCTabBarController.swift in Sources */,
 				FCEFC5172A5FF9B30015EF4E /* UIDevice+Extension.swift in Sources */,
 				EB6769F12A651DC000440541 /* UIView+Chain.swift in Sources */,
 				FCEFC4D62A5FF7EC0015EF4E /* QZSCWebController.swift in Sources */,
+				A21DA76F2A6A2E2B005A1FAF /* OrderListModel.swift in Sources */,
 				FCEFC51E2A5FF9B30015EF4E /* UIView+Frame.swift in Sources */,
 				A26F54C62A6797440080417F /* UIViewController+Tool.m in Sources */,
 				FCEFC5422A5FF9B30015EF4E /* QZSCColorDefine.swift in Sources */,
@@ -1201,11 +1251,13 @@
 				EB6769EF2A651DC000440541 /* UIControl+Chain.swift in Sources */,
 				EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */,
 				EB09C1AA2A655A94007599FA /* TDWVerifyCodeView.swift in Sources */,
+				A21DA7662A6A1789005A1FAF /* QZSCFootprintViewModel.swift in Sources */,
 				A25E6B602A66614900AFB35C /* OrderCell.swift in Sources */,
 				FCEFC51A2A5FF9B30015EF4E /* UIColor+Extension.swift in Sources */,
 				FCC5C39F2A6779F30083B114 /* QZSCMessageInputView.swift in Sources */,
 				EB5B8FB32A68E6AF0004DC87 /* AboutUsView.swift in Sources */,
 				A25E6B5D2A66318400AFB35C /* QZSCRegisterViewController.swift in Sources */,
+				A21DA7742A6A392A005A1FAF /* QZSCOrderAccomplishVC.swift in Sources */,
 				A241F3F12A693376008FBEA2 /* AddressModel.swift in Sources */,
 				FCEFC53B2A5FF9B30015EF4E /* QZSCAppEnvironment.swift in Sources */,
 				FCEFC5302A5FF9B30015EF4E /* QZSCNetwork.swift in Sources */,

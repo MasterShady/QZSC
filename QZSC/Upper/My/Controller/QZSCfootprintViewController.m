@@ -12,8 +12,12 @@
 #import "QZSC-Swift.h"
 #import "QZSCControllerManager.h"
 #import "UIDevice+Addition.h"
+#import "NetWorkManager.h"
+#import "YYModel.h"
 @interface QZSCfootprintViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) UITableView *table;
+//@property(nonatomic, strong) NSArray<QZSCProductListModel *> *dataList;
+
 @end
 
 @implementation QZSCfootprintViewController
@@ -22,6 +26,16 @@
     [super viewDidLoad];
     self.navTitle = @"足迹";
     [self setUI];
+    [NetWorkManager postWithUrlString:@"/qzsc/userFootprint" parameters:@{@"day_type":@"0"} complete:^(NetWorkCommonObject * _Nonnull object) {
+        if (object.state == NetWork_Success) {
+            QZSCProductListModel *userInfo = [QZSCProductListModel yy_modelWithJSON:object.data];
+            
+            
+        } else {
+           
+        }
+    }];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -42,9 +56,13 @@
         make.left.right.bottom.mas_equalTo(0);
     }];
     _table.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
        
     }];
 }
+
+
+
 
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource

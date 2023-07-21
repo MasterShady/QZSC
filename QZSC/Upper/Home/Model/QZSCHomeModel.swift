@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
-struct QZSCProductListModel: Codable {
+@objcMembers
+class QZSCProductListModel: NSObject, Codable {
     let id: Int
     let category_id: Int
     let name: String
@@ -21,7 +21,7 @@ struct QZSCProductListModel: Codable {
         case brand_name, is_specail_price
     }
     
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try container.decodeSafe(Int.self, forKey: .id)

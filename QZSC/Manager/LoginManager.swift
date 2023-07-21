@@ -7,7 +7,7 @@
 
 import Foundation
 
-class QZSCLoginManager {
+class QZSCLoginManager : NSObject {
     
     static let shared = QZSCLoginManager()
     
@@ -19,6 +19,12 @@ class QZSCLoginManager {
         }
         return true
     }
+    
+    @objc class func Uid() -> NSString {
+        return String(QZSCLoginManager().userInfo!.uid) as NSString
+    }
+    
+    
     
     var userInfo: QZSCUserInfo? {
         set {
@@ -32,7 +38,7 @@ class QZSCLoginManager {
     
     private let keyUserInfo = "QZSC_local_userInfo"
     
-    init() {
+    override init() {
     }
     
     func autoOpenLogin() -> Bool {

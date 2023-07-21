@@ -16,6 +16,16 @@ class OrderCell: UITableViewCell {
         uiConfigure()
         myAutoLayout()
     }
+    var data: OrderListModel? {
+        didSet {
+            icon.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + data!.goods_info!.list_pic))
+            leftLabel.text = data?.goods_cate_name
+            nameLbl.text = data?.goods_info?.name
+            
+        }
+        
+        
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
