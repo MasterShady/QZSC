@@ -57,7 +57,7 @@ class QZSCGoodsListController: QZSCBaseController {
             topBgImgView.image = UIImage(named: "category_top_bg")
             gradientView.isHidden = true
         } else {
-            navTitle = "专区名称"
+            navTitle = navTitle
             topBgImgView.image = UIImage(named: "topic_top_bg")
         }
         
@@ -86,7 +86,7 @@ class QZSCGoodsListController: QZSCBaseController {
     func loadData() {
         QZSCHomeViewModel.loadHomeProductList(keyWord: key) { list in
             UMProgressManager.hide()
-            self.dataList = list
+            self.dataList = list.shuffled()
             self.table.mj_footer?.isHidden = (list.count != 20)
             self.table.mj_header?.endRefreshing()
             self.table.reloadData()

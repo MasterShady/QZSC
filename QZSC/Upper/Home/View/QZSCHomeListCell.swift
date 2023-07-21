@@ -15,7 +15,8 @@ class QZSCHomeListCell: UITableViewCell {
                 nameLbl.text = data.name
                 let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: data.price, font: UIFont.semibold(18), textColor: COLOR000000)
                 priceLbl.attributedText = attrText
-                picImgView.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + data.list_pic))
+                let url = QZSCAppEnvironment.shared.imageUrlApi + data.list_pic
+                picImgView.kf.setImage(with: URL(string: url))
             }
         }
     }
@@ -32,12 +33,6 @@ class QZSCHomeListCell: UITableViewCell {
     }
     
     func configData() {
-        picImgView.backgroundColor = COLOR999999
-        
-        let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: "29.9", font: UIFont.semibold(18), textColor: COLOR000000)
-        priceLbl.attributedText = attrText
-        
-        nameLbl.text = "越秀集团IP吉祥物-超级越越-古田路9号-品牌创意/版权…"
     }
     
     func configUI() {

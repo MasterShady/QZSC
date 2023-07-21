@@ -22,6 +22,13 @@
 
 @implementation QZSCBaseVC
 
+- (instancetype)init{
+    if (self = [super init]){
+        _hidenBar = false;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -108,6 +115,7 @@
     if (!_customNavBar) {
         _customNavBar = [[UIView alloc] init];
         _customNavBar.backgroundColor = [UIColor colorWithHexString: @"#FFFFFF"];
+        _customNavBar.hidden = _hidenBar;
     }
     return _customNavBar;
 }

@@ -52,8 +52,8 @@ class QZSCHomeController: QZSCBaseController {
             self.dataList = list
             self.table.mj_footer?.isHidden = (list.count != 20)
             self.table.mj_header?.endRefreshing()
-            self.table.reloadData()
             self.configNoData()
+            self.table.reloadData()
         }
     }
     

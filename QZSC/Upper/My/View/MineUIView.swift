@@ -9,9 +9,23 @@ import SwiftUI
 import Combine
 
 
+struct UserInfoRequest: BaseRequest {
+    var routerURL: String {
+        return "/qzsc/userInfo"
+    }
+    
+    var method: QZSCAFHTTPMethod {
+        return .post
+    }
+    
+}
+
+
+
 struct MineUIView: View {
     @ObservedObject var userManager : QZSCLoginManager
     @State var didLoad = false
+    
 
     /**
     swiftUi中的数据绑定, 这里是我粗浅的理解, 不一定对.
@@ -64,9 +78,20 @@ struct MineUIView: View {
     func appearLoad(){
         if (!didLoad){
             didLoad = true
-            print("~~ first appear 处理初始化相关信息 ~~")
         }
-        print("~~ appear ~~")
+        
+        if !userManager.isLogin{
+            return
+        }
+        
+        QZSCNetwork.request(UserInfoRequest()).responseDecodable { (response: QZSCAFDataResponse<QZSCUserInfo>) in
+            switch response.result {
+            case .success(let userInfo):
+                userManager.userInfo = userInfo
+            case .failure(let error):
+                UMToast.show(error.localizedDescription)
+            }
+        }
     }
 }
 
@@ -74,6 +99,7 @@ struct MineUIView: View {
 
 struct MineHeaderView: View {
     @EnvironmentObject var userManager: QZSCLoginManager
+    @State var billAlertShow = false
 
     func items(at idx:Int) -> (String,Int){
         let list = [
@@ -110,14 +136,22 @@ struct MineHeaderView: View {
                     let item = items(at: idx)
                     Button {
                         if(idx == 0){
+                            if !userManager.isLogin{
+                                QZSCControllerTool.currentNavVC()?.pushViewController(QZSCLoginController(), animated: true)
+                                return
+                            }
                             let footprintVC = QZSCfootprintViewController()
                             QZSCControllerTool.currentNavVC()?.pushViewController(footprintVC, animated: true)
                         }else if(idx == 1){
-                            
+                            if !userManager.isLogin{
+                                QZSCControllerTool.currentNavVC()?.pushViewController(QZSCLoginController(), animated: true)
+                                return
+                            }
                             let CollectVC = QZSCCollectViewController()
                             QZSCControllerTool.currentNavVC()?.pushViewController(CollectVC, animated: true)
+                        }else if (idx == 2){
+                            UIAlertView(title: "您没有账单", message: "", delegate: "", cancelButtonTitle: "确定").show()
                         }
-                        
                     } label: {
                         VStack(spacing: 2) {
                             Text(String(item.1)).font(.system(size: 24, weight: .bold))
@@ -147,6 +181,10 @@ struct MineOrderView: View {
                 Text("我的订单").font(.system(size: 16,weight: .bold))
                 Spacer()
                 Button {
+                    if let tabbarVC = QZSCControllerTool.currentVC() as? UITabBarController{
+                        tabbarVC.selectedIndex = 1
+                    }
+                    
                 } label: {
                     HStack (spacing:0){
                         Text("全部").foregroundColor(.init(hex: 0x08C9CA)).font(.system(size: 12))
@@ -155,9 +193,34 @@ struct MineOrderView: View {
                 }
             }
             HStack{
-                ForEach(items, id: \.0) { item in
+                ForEach(0..<3) { index in
+                    let item = items[index]
                     Button {
-
+                        if index == 0{
+                            if !QZSCLoginManager.shared.isLogin{
+                                QZSCControllerTool.currentNavVC()?.pushViewController(QZSCLoginController(), animated: true)
+                                return
+                            }
+                            let vc = QZSCOrderAllViewController()
+                            vc.navTitle = "待付款"
+                            QZSCControllerTool.currentNavVC()?.pushViewController(vc, animated: true)
+                        }else if index == 1{
+                            if !QZSCLoginManager.shared.isLogin{
+                                QZSCControllerTool.currentNavVC()?.pushViewController(QZSCLoginController(), animated: true)
+                                return
+                            }
+                            let vc = QZSCOrderAllViewController()
+                            vc.navTitle = "租赁中"
+                            QZSCControllerTool.currentNavVC()?.pushViewController(vc, animated: true)
+                        }else{
+                            if !QZSCLoginManager.shared.isLogin{
+                                QZSCControllerTool.currentNavVC()?.pushViewController(QZSCLoginController(), animated: true)
+                                return
+                            }
+                            let vc = QZSCOrderAllViewController()
+                            vc.navTitle = "退款/售后"
+                            QZSCControllerTool.currentNavVC()?.pushViewController(vc, animated: true)
+                        }
                     } label: {
                         VStack {
                             Image(item.1)

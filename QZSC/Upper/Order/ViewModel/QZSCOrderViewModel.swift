@@ -42,7 +42,7 @@ struct QZSCOrderCancelRequest: BaseRequest {
 
 class QZSCOrderViewModel: NSObject {
     
-    // 获取订单列表
+    // 获取订单列表 status -1 全部 0=待支付 1=进行中 2=已完成  3/4预留 5=已关闭（支付过期等）
     class func loadOrderList(status: Int,complete: @escaping([OrderListModel]) -> Void) {
         let request = QZSCOrderListRequest(status: status)
         QZSCNetwork.request(request).responseDecodable { (response: QZSCAFDataResponse<[OrderListModel]>) in

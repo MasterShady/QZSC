@@ -135,6 +135,7 @@ class QZSCHomeHeaderView: UIView {
         leftTap.rx.event.subscribe { _ in
             let ctl = QZSCGoodsListController()
             ctl.isCategory = false
+            ctl.navTitle = "秒杀新品"
             QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
         }.disposed(by: dBag)
         
@@ -152,6 +153,7 @@ class QZSCHomeHeaderView: UIView {
         rtImgTap.rx.event.subscribe { _ in
             let ctl = QZSCGoodsListController()
             ctl.isCategory = false
+            ctl.navTitle = "新品爆品"
             QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
         }.disposed(by: dBag)
         
@@ -167,6 +169,7 @@ class QZSCHomeHeaderView: UIView {
         rbImgTap.rx.event.subscribe { _ in
             let ctl = QZSCGoodsListController()
             ctl.isCategory = false
+            ctl.navTitle = "多爆福利"
             QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
         }.disposed(by: dBag)
         

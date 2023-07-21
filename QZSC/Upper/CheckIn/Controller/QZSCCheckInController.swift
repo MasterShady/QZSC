@@ -220,6 +220,9 @@ class QZSCCheckInController: QZSCBaseController {
         }
         joinBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
+            if !QZSCLoginManager.shared.autoOpenLogin() {
+                return
+            }
             guard let phone = self.phoneTF.text else { return }
             guard let type = self.typeTF.text else { return }
             if self.applyTV.text.isNil {

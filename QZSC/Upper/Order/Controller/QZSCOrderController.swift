@@ -79,19 +79,23 @@ extension QZSCOrderController: JXSegmentedListContainerViewDataSource {
 //           return vc as! JXSegmentedListContainerViewListDelegate
            if index == 0 {
                let vc = QZSCOrderAllViewController()
+               vc.hidenBar = true
                return vc
            }
            else if index == 1 {
                let vc = QZSCOrderAccomplishVC()
+               vc.hidenBar = true
                return vc
            }
            else if index == 2 {
                let vc = QZSCOrderAllViewController()
+               vc.hidenBar = true
                return vc
            }
           
            else {
                let vc = QZSCOrderAccomplishVC()
+               vc.hidenBar = true
                return vc
            }
        }

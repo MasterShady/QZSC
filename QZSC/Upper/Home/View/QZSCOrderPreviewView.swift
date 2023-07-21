@@ -252,18 +252,18 @@ class QZSCOrderPreviewView: UIView {
         sureBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
             guard let info = self.productInfo else { return }
-            guard let username = self.usernameLbl.text else {
-                UMToast.show("地址不能为空")
-                return
-            }
-            guard let address = self.addressLbl.text else {
-                UMToast.show("地址不能为空")
-                return
-            }
-            if username.isNil || address.isNil {
-                UMToast.show("地址不能为空")
-                return
-            }
+//            guard let username = self.usernameLbl.text else {
+//                UMToast.show("地址不能为空")
+//                return
+//            }
+//            guard let address = self.addressLbl.text else {
+//                UMToast.show("地址不能为空")
+//                return
+//            }
+//            if username.isNil || address.isNil {
+//                UMToast.show("地址不能为空")
+//                return
+//            }
             QZSCHomeViewModel.addOrder(productId: info.id) { result in
                 UMToast.show("下单成功")
                 QZSCControllerTool.currentNavVC()?.popViewController(animated: true)
@@ -273,17 +273,6 @@ class QZSCOrderPreviewView: UIView {
     }
     
     func loadData() {
-        
-        let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: "299", font: UIFont.semibold(28), textColor: COLOR000000)
-        totalPriceLbl.attributedText = attrText
-        
-        let attrText1 = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: "29.9", font: UIFont.semibold(18), textColor: COLOR000000)
-        priceLbl.attributedText = attrText1
-        
-        usernameLbl.text = "像林京味的芹菜  18602934995"
-        addressLbl.text = "越秀集团IP吉祥物-超级越越-古田路9号-品牌创意/版权…"
-        
-        nameLbl.text = "越秀集团IP吉祥物-超级越越-古田路9号-品牌创意/版权…"
     }
     
     func showAnimation() {

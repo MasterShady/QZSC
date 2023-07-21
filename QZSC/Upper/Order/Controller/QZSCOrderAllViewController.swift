@@ -9,7 +9,7 @@ import UIKit
 import JXPagingView
 import JXSegmentedView
 import MJRefresh
-class QZSCOrderAllViewController: UIViewController {
+class QZSCOrderAllViewController: QZSCBaseVC {
     var scrollCallBack: ((UIScrollView) -> ())?
     var TitleString:String!
     var pageId = 1
@@ -24,7 +24,7 @@ class QZSCOrderAllViewController: UIViewController {
     }
     
     func loadData(){
-        QZSCOrderViewModel.loadOrderList(status: 1) { dataList in
+        QZSCOrderViewModel.loadOrderList(status: -1) { dataList in
             self.OrderAllTableView.mj_header?.endRefreshing()
             self.dataList = dataList
             self.configNoData()
@@ -48,7 +48,8 @@ class QZSCOrderAllViewController: UIViewController {
         OrderAllTableView.register(OrderCell.self, forCellReuseIdentifier: NSStringFromClass(OrderCell.self))
         
         OrderAllTableView.snp.makeConstraints { make in
-            make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+            let topInset = self.hidenBar ? 0 : UIDevice.vg_navigationFullHeight()
+            make.edges.equalTo(UIEdgeInsets(top:topInset , left: 0, bottom: 0, right: 0))
         }
         
     }
