@@ -29,14 +29,6 @@ class QZSCGoodsDetailsController: QZSCBaseController {
     }
     
     func configData() {
-        let attrText = NSAttributedString.configSpecialStyle(normalStr: "¥", specialStr: "29.9", font: UIFont.semibold(18), textColor: COLOR000000)
-        priceLbl.attributedText = attrText
-        
-        topBgImgView.backgroundColor = .yellow
-        
-        nameLbl.text = "越秀集团IP吉祥物-超级越越-古田路9号-品牌创意/版权…"
-        
-        loadContentHtml()
     }
     
     func loadData() {
@@ -145,6 +137,9 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.height.equalTo(44)
         }
         buyBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
+            if !QZSCLoginManager.shared.autoOpenLogin() {
+                return
+            }
             let preview = QZSCOrderPreviewView(frame: UIScreen.main.bounds)
             preview.productInfo = self.data
             self.view.addSubview(preview)
@@ -185,6 +180,9 @@ class QZSCGoodsDetailsController: QZSCBaseController {
             make.height.equalTo(64)
         }
         kfBtn.rx.controlEvent(.touchUpInside).subscribe { _ in
+            if !QZSCLoginManager.shared.autoOpenLogin() {
+                return
+            }
             let ctl = QZSCKfController()
             QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
         }.disposed(by: dBag)
@@ -222,6 +220,9 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         }
         collectBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
+            if !QZSCLoginManager.shared.autoOpenLogin() {
+                return
+            }
             QZSCHomeViewModel.collectProduct(productId: self.produceId, isCollect: !self.collectBtn.isSelected) { result in
                 self.collectBtn.isSelected = !self.collectBtn.isSelected
                 let msg = (self.collectBtn.isSelected ? "收藏成功" : "取消收藏成功")

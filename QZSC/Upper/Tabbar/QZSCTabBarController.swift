@@ -86,12 +86,12 @@ extension QZSCTabBarController: UITabBarControllerDelegate {
         
 //        let index = self.viewControllers?.firstIndex(of: viewController) ?? 0
 //        switch index {
-//        case 1,2: // 订单、收藏、我的, 需要验证登录
+//        case 1,3: // 订单、我的, 需要验证登录
 //            tempIndex = index
-//            if !MSZLoginCenter.shared.isLogin { // 未登录
-//                let ctl = MSZLoginController()
+//            if !QZSCLoginManager.shared.isLogin { // 未登录
+//                let ctl = QZSCLoginController()
 //                ctl.fromMainTab = true
-//                ICSControllerUtil.currentNavVC()?.pushViewController(ctl, animated: true)
+//                QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
 //                return false
 //            }
 //        default :
