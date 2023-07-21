@@ -252,18 +252,18 @@ class QZSCOrderPreviewView: UIView {
         sureBtn.rx.controlEvent(.touchUpInside).subscribe { [weak self] _ in
             guard let `self` = self else { return }
             guard let info = self.productInfo else { return }
-            guard let username = self.usernameLbl.text else {
-                UMToast.show("地址不能为空")
-                return
-            }
-            guard let address = self.addressLbl.text else {
-                UMToast.show("地址不能为空")
-                return
-            }
-            if username.isNil || address.isNil {
-                UMToast.show("地址不能为空")
-                return
-            }
+//            guard let username = self.usernameLbl.text else {
+//                UMToast.show("地址不能为空")
+//                return
+//            }
+//            guard let address = self.addressLbl.text else {
+//                UMToast.show("地址不能为空")
+//                return
+//            }
+//            if username.isNil || address.isNil {
+//                UMToast.show("地址不能为空")
+//                return
+//            }
             QZSCHomeViewModel.addOrder(productId: info.id) { result in
                 UMToast.show("下单成功")
                 QZSCControllerTool.currentNavVC()?.popViewController(animated: true)
