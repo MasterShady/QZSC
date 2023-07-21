@@ -288,14 +288,14 @@ class MineAddressNewViewController: QZSCBaseController {
                 onswitch.transform = CGAffineTransform(scaleX: 0.75, y: 0.75);//可以使用transform修改switch的大小
 //                onswitch.setOn(true, animated: true)
                 onswitch.thumbTintColor = UIColor.white//滑块上小圆点的颜色
-                onswitch.onTintColor = UIColor(hexString: "7549F2")//设置开启状态显示的颜色
+                onswitch.onTintColor = UIColor(hexString: "#000000")//设置开启状态显示的颜色
                 onswitch.tintColor = UIColor(hexString: "999999")//设置关闭状态的颜色
                 
                 onswitch.addTarget(self, action: #selector(switchClick), for: .valueChanged)
         
         let addressBtn = UIButton.init(frame: CGRect.zero)
-        addressBtn.backgroundColor = UIColor(hexString: "FF324B")
-        addressBtn.layer.cornerRadius = SCALE_HEIGTHS(value: 25)
+        addressBtn.backgroundColor = UIColor(hexString: "#000000")
+        addressBtn.layer.cornerRadius = SCALE_HEIGTHS(value: 12)
         addressBtn.layer.masksToBounds = true
         addressBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         addressBtn.setTitleColor(UIColor(hexString: "#FFFFFF"), for: .normal)
@@ -304,7 +304,7 @@ class MineAddressNewViewController: QZSCBaseController {
          
         self.view.addSubview(addressBtn);
         addressBtn.snp.makeConstraints { make in
-             make.height.equalTo(SCALE_HEIGTHS(value: 50))
+             make.height.equalTo(SCALE_HEIGTHS(value: 48))
              make.width.equalTo(SCALE_WIDTHS(value: 263))
             make.bottom.equalTo(-TABLEBAR_HEIGHT)
             make.centerX.equalToSuperview()
@@ -350,26 +350,26 @@ class MineAddressNewViewController: QZSCBaseController {
         
         
         if( self.uid != 0){
-//            AddressListViewModel.requestUpdateAddress(params: ["address_id":uid,"uname":nameTF.text,"phone":phoneTF.text,"address_area":self.myCity,"address_detail":addressTF.text,"is_default":is_default]) { code in
-//                if(code == 0){
-//                    UMToastManager.showToast("修改成功")
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//                        self.navigationController?.popViewController(animated: true)
-//
-//                    }
-//                }
-//            }
+            QZSCAddressViewModel.loadUpdateAddress(uname: nameTF.text!, phone: phoneTF.text!, address_area: self.myCity, address_detail: addressTF.text!, is_default: is_default, address_id: uid) { code in
+                if (code == true){
+                    UMToastManager.showToast("修改成功")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self.navigationController?.popViewController(animated: true)
+
+                    }
+                }
+            }
            
         }else {
-//            AddressListViewModel.requestAddAddress(params: ["uname":nameTF.text,"phone":phoneTF.text,"address_area":self.myCity,"address_detail":addressTF.text,"is_default":is_default]) { code in
-//                if(code == 0){
-//                    UMToastManager.showToast("添加成功")
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//                        self.navigationController?.popViewController(animated: true)
-//
-//                    }
-//                }
-//            }
+            QZSCAddressViewModel.loadAddAddress(uname: nameTF.text!, phone: phoneTF.text!, address_area: self.myCity, address_detail: addressTF.text!, is_default: is_default) { code in
+                if (code == true){
+                    UMToastManager.showToast("添加成功")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self.navigationController?.popViewController(animated: true)
+
+                    }
+                }
+            }
         }
         
     }

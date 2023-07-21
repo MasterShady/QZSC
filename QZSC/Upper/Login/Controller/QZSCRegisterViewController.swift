@@ -7,6 +7,28 @@
 
 import UIKit
 import ActiveLabel
+
+
+struct QZSCRegisterRequest: BaseRequest {
+    let phone: String
+    let password: String
+    
+    var routerURL: String {
+        return "/qzsc/register"
+    }
+    
+    var method: QZSCAFHTTPMethod {
+        return .post
+    }
+    
+    var requiredParameter: [String : Any]? {
+        return ["phone": phone,
+                "password": password,
+                ] as [String: Any]
+    }
+}
+
+
 class QZSCRegisterViewController: QZSCBaseController {
 
     var phoneTF:UITextField!
@@ -245,6 +267,16 @@ class QZSCRegisterViewController: QZSCBaseController {
         }
         
         if (selectedBtn.isSelected == true){
+            loadRegisterRequest(phone:self.phoneTF.text ?? "" , password: self.passwordTF.text ?? "") {
+                UMToast.show("注册成功")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    let ctls = QZSCControllerTool.currentNavVC()?.viewControllers
+                    if let count = ctls?.count, count > 2, let ctl = ctls?[count - 2] {
+                        QZSCControllerTool.currentNavVC()?.popToViewController(ctl, animated: true)
+                    }
+                    
+                }
+            }
             
         } else{
             UMToast.show("请先勾选协议")
@@ -252,6 +284,22 @@ class QZSCRegisterViewController: QZSCBaseController {
         
         
     }
+    
+    func loadRegisterRequest( phone: String ,password: String, complete: @escaping() -> Void) {
+        
+        let request = QZSCRegisterRequest(phone: phone, password: password)
+        QZSCNetwork.request(request).responseDecodable { (response: QZSCAFDataResponse<QZSCUserInfo>) in
+            switch response.result {
+            case .success(let list):
+                printLog("list===== \(list)")
+                QZSCLoginManager.shared.userInfo = list
+                complete()
+            case .failure(let error):
+                UMToast.show(error.localizedDescription)
+            }
+        }
+    }
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
