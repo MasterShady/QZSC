@@ -18,8 +18,30 @@ class QZSCOrderDetailController: QZSCBaseController {
         detailUI()
         messageUI()
 //        serviceViewUI()
+        
+        configData()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func configData(){
+        guard let data = data else {return}
+        nameLbl.text = data.goods_info?.name
+        icon.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + data.goods_info!.list_pic))
+        
+        let row = "¥" + data.price + "/天"
+        let attrStr = NSMutableAttributedString(string: row)
+        attrStr.setAttributes([
+            .foregroundColor: UIColor.init(hexString: "#B8BED0"),
+            .font: UIFont.systemFont(ofSize: 10)
+        ], range: .init(location: 0, length: row.count))
+        
+        attrStr.setAttributes([
+            .foregroundColor: UIColor.black,
+            .font: UIFont.boldSystemFont(ofSize: 18)
+        ], range: (row as NSString).range(of: data.price))
+        
+        priceLbl.attributedText = attrStr
     }
     
     func detailUI(){
@@ -75,7 +97,7 @@ class QZSCOrderDetailController: QZSCBaseController {
         }
         
         let lbl = UILabel()
-        lbl.text = "属性1 | 属性2｜属性3"
+        lbl.text = ""
         lbl.font = UIFont.systemFont(ofSize: 12)
         lbl.textColor = .init(hexString: "#A1A0AB")
         goodsView.addSubview(lbl)
@@ -134,14 +156,19 @@ class QZSCOrderDetailController: QZSCBaseController {
             make.top.equalTo(titleLB.snp.bottom).offset(SCALE_HEIGTHS(value: 12))
             make.left.equalTo(SCALE_WIDTHS(value: 16))
             make.right.equalTo(-SCALE_WIDTHS(value: 16))
-            make.height.equalTo(SCALE_HEIGTHS(value: 187))
+            make.height.equalTo(SCALE_HEIGTHS(value: 152))
         }
         
-        showCellViewUI(rightTitle: "订单编号", contentStr: "78979797977979", top: 0)
-        showCellViewUI(rightTitle: "创建时间", contentStr: "2023/07/03 10:50", top: 35)
-        showCellViewUI(rightTitle: "付款时间", contentStr: "2023/07/03 10:00", top: 70)
-        showCellViewUI(rightTitle: "租赁时长", contentStr: "2023/07/03-2023/08/03", top: 105)
-        showCellViewUI(rightTitle: "需要支付", contentStr: "70", top: 140)
+        showCellViewUI(rightTitle: "订单编号", contentStr: data!.order_sn, top: 0)
+        showCellViewUI(rightTitle: "创建时间", contentStr: data!.create_time, top: 35)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        let startDate = dateFormatter.date(from: data!.start_date)!
+        let endDate = dateFormatter.date(from: data!.end_date)!
+        showCellViewUI(rightTitle: "租赁时长", contentStr: "\(startDate.dateString(withFormat: "YYYY/MM/dd"))-\(endDate.dateString(withFormat: "YYYY/MM/dd"))", top: 70)
+        
+        showCellViewUI(rightTitle: "需要支付", contentStr: String(format: "¥%.2f", data!.amount), top: 105)
         
                 let button =  UIButton()
                 button.backgroundColor = .clear

@@ -16,12 +16,41 @@ class OrderCell: UITableViewCell {
         uiConfigure()
         myAutoLayout()
     }
+    
+    func daysBetweenDates(startDate: Date, endDate: Date) -> Int? {
+        // 创建一个日历对象
+        let calendar = Calendar.current
+
+        // 将日期之间的时间间隔计算为 DateComponents 对象
+        let dateComponents = calendar.dateComponents([.day], from: startDate, to: endDate)
+
+        // 获取计算后的天数差
+        let days = dateComponents.day
+
+        return days
+    }
+    
     var data: OrderListModel? {
         didSet {
-            icon.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + data!.goods_info!.list_pic))
-            leftLabel.text = data?.goods_cate_name
-            nameLbl.text = data?.goods_info?.name
+            guard let data = data else {return}
             
+            icon.kf.setImage(with: URL(string: QZSCAppEnvironment.shared.imageUrlApi + data.goods_info!.list_pic))
+            leftLabel.text = data.goods_cate_name
+            nameLbl.text = data.goods_info!.name
+            propertyLB.text = nil
+            orderTimeLB.text = "订单时间：" + data.create_time
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY-MM-dd"
+            let startDate = dateFormatter.date(from: data.start_date)!
+            let endDate = dateFormatter.date(from: data.end_date)!
+            
+            let dayCount = daysBetweenDates(startDate: startDate, endDate: endDate)!
+            
+            //"租赁时长：07/12-08/03 合计30日"
+            rentTimeLB.text =  "租赁时长：\(startDate.dateString(withFormat: "MM/dd"))-\(endDate.dateString(withFormat: "MM/dd")) 合计\(data.order_day)日"
+            //"合计：¥70.0"
+            priceLabel.text = String(format: "合计：¥%.2f", data.amount)
         }
         
         

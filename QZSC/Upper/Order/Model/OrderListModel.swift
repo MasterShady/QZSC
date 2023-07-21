@@ -14,7 +14,7 @@ class OrderListModel: Codable{
     var goods_id:Int = 0
     var price:String = ""
     var order_day:Int = 0
-    var amount:String = ""
+    var amount:Double = 0
     var start_date:String = ""
     var end_date:String = ""
     var spec_ids:String = ""
@@ -37,7 +37,7 @@ class OrderListModel: Codable{
         goods_id = try container.decodeSafe(Int.self, forKey: .goods_id)
         price = try container.decodeSafe(String.self, forKey: .price)
         order_day = try container.decodeSafe(Int.self, forKey: .order_day)
-        amount = try container.decodeSafe(String.self, forKey: .amount)
+        amount = try container.decodeSafe(Double.self, forKey: .amount)
         start_date = try container.decodeSafe(String.self, forKey: .start_date)
         end_date = try container.decodeSafe(String.self, forKey: .end_date)
         spec_ids = try container.decodeSafe(String.self, forKey: .spec_ids)
