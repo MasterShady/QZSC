@@ -28,4 +28,7 @@
 
 #define kImageName(name) [UIImage imageNamed: name]
 
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
 #endif /* CommonDefine_h */

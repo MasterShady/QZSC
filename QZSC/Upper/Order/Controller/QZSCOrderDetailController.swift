@@ -8,7 +8,7 @@
 import UIKit
 
 class QZSCOrderDetailController: QZSCBaseController {
-
+    var data: OrderListModel?
     var goodsView:UIView!
     var messageView:UIView!
     override func viewDidLoad() {
@@ -165,8 +165,21 @@ class QZSCOrderDetailController: QZSCBaseController {
     
     @objc private func BtnClickAction() {
         
-        UMToast.show("暂时无法取消订单")
-        
+        let alertController = UIAlertController(title: "", message: "确认取消订单?", preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "我再想想", style: UIAlertAction.Style.cancel, handler: nil )
+        let okAction = UIAlertAction(title: "取消", style: UIAlertAction.Style.default) { (ACTION) in
+            QZSCOrderViewModel.loadOrderCancel(order_id: self.data!.id) { code in
+                if(code == true){
+                    UMToast.show("取消成功")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
+        }
+               alertController.addAction(cancelAction);
+               alertController.addAction(okAction);
+        self.present(alertController, animated: true, completion: nil)
         
     }
     

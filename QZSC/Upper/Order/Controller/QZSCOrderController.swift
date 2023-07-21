@@ -82,7 +82,7 @@ extension QZSCOrderController: JXSegmentedListContainerViewDataSource {
                return vc
            }
            else if index == 1 {
-               let vc = QZSCOrderAllViewController()
+               let vc = QZSCOrderAccomplishVC()
                return vc
            }
            else if index == 2 {
@@ -91,7 +91,7 @@ extension QZSCOrderController: JXSegmentedListContainerViewDataSource {
            }
           
            else {
-               let vc = QZSCOrderAllViewController()
+               let vc = QZSCOrderAccomplishVC()
                return vc
            }
        }

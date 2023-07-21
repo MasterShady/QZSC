@@ -6,7 +6,7 @@ SwiftUI Introspect
 
 > **Note**
 >
-> [`SwiftUIIntrospect`](../Package@swift-5.7.swift#L19) is an all-new module based off the original [`Introspect`](../Package.swift#L13) module that improves on stability, predictability, and ergonomics.
+> [`SwiftUIIntrospect`](./Package@swift-5.7.swift#L14) is an all-new module based off the original [`Introspect`](./Package.swift#L13) module that improves on stability, predictability, and ergonomics.
 >
 > Both modules currently live together under this repo, but the plan is to ultimately obsolete `Introspect` in favor of `SwiftUIIntrospect` as part of a 1.0 release.
 >
@@ -65,7 +65,7 @@ Install
 ```swift
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/siteline/swiftui-introspect", from: "0.9.0"),
+        .package(url: "https://github.com/siteline/swiftui-introspect", from: "0.10.0"),
     ],
     targets: [
         .target(name: <#Target Name#>, dependencies: [
@@ -118,6 +118,7 @@ Introspection
 - [`ProgressView` with `.linear` style](https://swiftpackageindex.com/siteline/swiftui-introspect/master/documentation/swiftuiintrospect/progressviewwithlinearstyletype)
 - [`ScrollView`](https://swiftpackageindex.com/siteline/swiftui-introspect/master/documentation/swiftuiintrospect/scrollviewtype)
 - [`.searchable`](https://swiftpackageindex.com/siteline/swiftui-introspect/master/documentation/swiftuiintrospect/searchfieldtype)
+- [`SecureField`](https://swiftpackageindex.com/siteline/swiftui-introspect/master/documentation/swiftuiintrospect/securefieldtype)
 - [`.sheet`](https://swiftpackageindex.com/siteline/swiftui-introspect/master/documentation/swiftuiintrospect/sheettype)
 - [`SignInWithAppleButton`](https://swiftpackageindex.com/siteline/swiftui-introspect/master/documentation/swiftuiintrospect/SignInWithAppleButtonType)
 - [`Slider`](https://swiftpackageindex.com/siteline/swiftui-introspect/master/documentation/swiftuiintrospect/slidertype)
