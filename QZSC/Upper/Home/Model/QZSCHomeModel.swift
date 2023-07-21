@@ -8,17 +8,21 @@
 import Foundation
 @objcMembers
 class QZSCProductListModel: NSObject, Codable {
-    let id: Int
-    let category_id: Int
-    let name: String
-    let price: String
-    let list_pic: String
-    let brand_name: String
-    let is_specail_price: Bool
+    var id: Int = 0
+    var category_id: Int = 0
+    var name: String = ""
+    var price: String = ""
+    var list_pic: String = ""
+    var brand_name: String = ""
+    var is_specail_price: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case id, name, price, list_pic, category_id
         case brand_name, is_specail_price
+    }
+    
+    override init() {
+        
     }
     
     required init(from decoder: Decoder) throws {

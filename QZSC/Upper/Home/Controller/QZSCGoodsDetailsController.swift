@@ -11,9 +11,7 @@ import RxSwift
 import WebKit
 
 class QZSCGoodsDetailsController: QZSCBaseController {
-    
-    var produceId: Int = 0
-
+    @objc var produceId: Int = 0
     private var data: QZSCProductDetailsInfoModel?
     let dBag = DisposeBag()
     
@@ -36,7 +34,7 @@ class QZSCGoodsDetailsController: QZSCBaseController {
         
         nameLbl.text = "越秀集团IP吉祥物-超级越越-古田路9号-品牌创意/版权…"
         
-        loadContentHtml()
+        //loadContentHtml()
     }
     
     func loadData() {

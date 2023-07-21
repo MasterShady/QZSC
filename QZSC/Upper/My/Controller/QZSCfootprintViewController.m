@@ -14,9 +14,11 @@
 #import "UIDevice+Addition.h"
 #import "NetWorkManager.h"
 #import "YYModel.h"
+
+
 @interface QZSCfootprintViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) UITableView *table;
-//@property(nonatomic, strong) NSArray<QZSCProductListModel *> *dataList;
+@property(nonatomic, strong) NSArray<QZSCProductListModel *> *dataList;
 
 @end
 
@@ -26,15 +28,7 @@
     [super viewDidLoad];
     self.navTitle = @"足迹";
     [self setUI];
-    [NetWorkManager postWithUrlString:@"/qzsc/userFootprint" parameters:@{@"day_type":@"0"} complete:^(NetWorkCommonObject * _Nonnull object) {
-        if (object.state == NetWork_Success) {
-            QZSCProductListModel *userInfo = [QZSCProductListModel yy_modelWithJSON:object.data];
-            
-            
-        } else {
-           
-        }
-    }];
+    
     
     // Do any additional setup after loading the view.
 }
@@ -55,9 +49,29 @@
         make.top.mas_equalTo(KNavBarFullHight);
         make.left.right.bottom.mas_equalTo(0);
     }];
+    
+    
+    __weak typeof (self) weakSelf = self;
     _table.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
-       
+        [weakSelf loadFootprint];
+    }];
+    
+    [_table.mj_header beginRefreshing];
+}
+
+
+
+
+- (void)loadFootprint{
+    __weak typeof (self) weakSelf = self;
+    [NetWorkManager postWithUrlString:@"/qzsc/userFootprint" parameters:@{@"day_type":@"0"} complete:^(NetWorkCommonObject * _Nonnull object) {
+        if (object.state == NetWork_Success) {
+            weakSelf.dataList = [NSArray yy_modelArrayWithClass:QZSCProductListModel.class json:object.data];
+            [weakSelf.table reloadData];
+        } else {
+            
+        }
+        [weakSelf.table.mj_header endRefreshing];
     }];
 }
 
@@ -67,27 +81,26 @@
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataList.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    QZSCHomeListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([QZSCHomeListCell class])];
+    QZSCHomeListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([QZSCHomeListCell class]) forIndexPath:indexPath];
+    cell.data = self.dataList[indexPath.row];
    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    QZSCProductListModel *model = self.dataList[indexPath.row];
+    QZSCGoodsDetailsController *vc = [[QZSCGoodsDetailsController alloc] init];
+    vc.produceId = model.id;
+    [self.navigationController pushViewController:vc animated:true];
+    
     
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
+

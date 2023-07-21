@@ -9,7 +9,7 @@ import UIKit
 
 class QZSCHomeListCell: UITableViewCell {
     
-    var data: QZSCProductListModel? {
+    @objc var data: QZSCProductListModel? {
         didSet {
             if let `data` = data {
                 nameLbl.text = data.name

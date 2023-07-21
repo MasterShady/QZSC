@@ -52,7 +52,7 @@ class QZSCTabBarController: UITabBarController {
         for item in params {
             if item.className == "QZSCMyController" {
                 //MineUIView
-                let vc = UIHostingController(rootView: MineUIView(userData: QZSCLoginManager.shared.userInfo))
+                let vc = UIHostingController(rootView: MineUIView(userManager: .shared))
                 vc.title = item.title
                 vc.tabBarItem.image = UIImage(named: "tabbar_\(item.imageName)_nor")?.withRenderingMode(.alwaysOriginal)
                 vc.tabBarItem.selectedImage = UIImage(named: "tabbar_\(item.imageName)_sel")?.withRenderingMode(.alwaysOriginal)

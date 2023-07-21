@@ -14,8 +14,8 @@
             filePath = "QZSC/Upper/My/View/MyCartView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "durationPicker"
             landmarkType = "24">
             <Locations>
@@ -48,6 +48,36 @@
                   startingLineNumber = "29"
                   endingLineNumber = "29"
                   offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "9BEF79A0-AB84-436C-A424-A0BA11CE4784 - c836f5381fa5413e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; QZSC.SinglePicker&lt;Swift.String&gt; in QZSC.PickerWrapper.durationPicker.getter : QZSC.SinglePicker&lt;Swift.String&gt;"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/QZSC/QZSC/Upper/My/View/MyCartView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "9BEF79A0-AB84-436C-A424-A0BA11CE4784 - c836f5381fa5413e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; QZSC.SinglePicker&lt;Swift.String&gt; in QZSC.PickerWrapper.durationPicker.getter : QZSC.SinglePicker&lt;Swift.String&gt;"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/QZSC/QZSC/Upper/My/View/MyCartView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "828">
                </Location>
             </Locations>
          </BreakpointContent>

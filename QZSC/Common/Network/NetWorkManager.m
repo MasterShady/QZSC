@@ -40,75 +40,62 @@
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html", nil];
     NSDictionary *headers = [NetWorkManager getHttpHeader];
-    
     NSString *resultUrl = [NetWorkManager getFullUrl:urlString];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:resultUrl]];
-    [request setHTTPMethod:@"POST"];
-    [request setAllHTTPHeaderFields:headers];
-    
     // body加密
+    NSMutableDictionary *mutParams = [paramers mutableCopy];
     NSString *uid = [QZSCLoginManager Uid];
-    if (!kDictIsEmpty(paramers) || !kStringIsEmpty(uid)) {
+    if (!kStringIsEmpty(uid)) {
+        mutParams[@"uid"] = uid;
+    }
+    
+    
+    NSURLSessionDataTask *task = [manager POST:resultUrl parameters:mutParams headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSHTTPURLResponse *rep = (NSHTTPURLResponse *)task.response;
+        NSInteger statusCode = rep.statusCode;
+        NetWorkCommonObject *object = [[NetWorkCommonObject alloc] init];
+        NSString *encryStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSString *resultStr = [RC4Tool rc4Decode:encryStr key:[NetWorkManager getRC4EncryKey]];
+        NSData *result = [resultStr dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
         NSMutableDictionary *mutParams = [paramers mutableCopy];
-        if (kDictIsEmpty(mutParams)) {
-            mutParams = [NSMutableDictionary dictionary];
-        }
         if (!kStringIsEmpty(uid)) {
             mutParams[@"uid"] = uid;
         }
-        NSData *encryData = [NetWorkManager encryParams:mutParams];
-        [request setHTTPBody:encryData];
-    }
-    
-    NSURLSessionDataTask *task = [manager dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
-    } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
-    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        NSString *urlString = response.URL.absoluteString;
-        NSHTTPURLResponse *rep = (NSHTTPURLResponse *)response;
-        NSInteger code = rep.statusCode;
-        NetWorkCommonObject *object = [[NetWorkCommonObject alloc] init];
-        if (error) {
+        NSLog(@"POST请求接口URL: %@\n 请求头: %@ \n 参数:%@ \n HTTP状态码:%ld \n 返回结果:\n %@", urlString, headers, mutParams, statusCode, dic);
+        NSNumber *code = dic[@"code"];
+        if ( code.intValue == 0) {
+            object.state = NetWork_Success;
+            object.data = dic[@"data"];
+        } else {
             object.state = NetWork_Faliure;
-            if (kStringIsEmpty(error.localizedDescription)) {
+            if (kStringIsEmpty(dic[@"msg"])) {
                 object.msg = @"网络错误!";
             } else {
-                object.msg = error.localizedDescription;
-            }
-            NSMutableDictionary *mutParams = [paramers mutableCopy];
-            if (!kStringIsEmpty(uid)) {
-                mutParams[@"uid"] = uid;
-            }
-            NSLog(@"POST请求接口URL: %@\n 请求头: %@ \n 参数:%@ \n HTTP状态码:%ld \n 返回结果:\n %@", urlString, headers, mutParams, code, error);
-        } else {
-            NSString *encryStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-            NSString *resultStr = [RC4Tool rc4Decode:encryStr key:[NetWorkManager getRC4EncryKey]];
-            NSData *result = [resultStr dataUsingEncoding:NSUTF8StringEncoding];
-            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
-            NSMutableDictionary *mutParams = [paramers mutableCopy];
-            if (!kStringIsEmpty(uid)) {
-                mutParams[@"uid"] = uid;
-            }
-            NSLog(@"POST请求接口URL: %@\n 请求头: %@ \n 参数:%@ \n HTTP状态码:%ld \n 返回结果:\n %@", urlString, headers, mutParams, code, dic);
-            NSNumber *code = dic[@"code"];
-            if ( code.intValue == 0) {
-                object.state = NetWork_Success;
-                object.data = dic[@"data"];
-            } else {
-                object.state = NetWork_Faliure;
-                if (kStringIsEmpty(dic[@"msg"])) {
-                    object.msg = @"网络错误!";
-                } else {
-                    object.msg = dic[@"msg"];
-                }
+                object.msg = dic[@"msg"];
             }
         }
         complete(object);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSHTTPURLResponse *rep = (NSHTTPURLResponse *)task.response;
+        NSInteger statusCode = rep.statusCode;
+        NetWorkCommonObject *object = [[NetWorkCommonObject alloc] init];
+        object.state = NetWork_Faliure;
+        if (kStringIsEmpty(error.localizedDescription)) {
+            object.msg = @"网络错误!";
+        } else {
+            object.msg = error.localizedDescription;
+        }
+        NSMutableDictionary *mutParams = [paramers mutableCopy];
+        if (!kStringIsEmpty(uid)) {
+            mutParams[@"uid"] = uid;
+        }
+        NSLog(@"POST请求接口URL: %@\n 请求头: %@ \n 参数:%@ \n HTTP状态码:%ld \n 返回结果:\n %@", urlString, headers, mutParams, statusCode, error);
     }];
     [task resume];
 }
 
 + (NSData *)encryParams:(NSDictionary *)params {
-    NSData *data = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingFragmentsAllowed error:nil];
     NSString *paramString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSString *encryParam = [RC4Tool rc4Encode:paramString key:[NetWorkManager getRC4EncryKey]];
     NSData *encryData = [encryParam dataUsingEncoding:NSUTF8StringEncoding];

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftUIIntrospect
+import SwiftUIX
 
 
 class PickerWrapper{
@@ -128,7 +129,8 @@ struct CartCell: View{
                     
                 }.buttonStyle(.plain)
                 HStack {
-                    Text(feeValue())
+                    AttributedText(feeValue())
+                    
                     Spacer()
                     HStack{
                         Button {
@@ -165,7 +167,7 @@ struct CartCell: View{
     }
     
     
-    func feeValue() -> AttributedString{
+    func feeValue() -> NSAttributedString{
         let raw = String(format: "¥%.2f/天",userData.cartItems[0].fee)
         
         let attr = NSMutableAttributedString(string: raw, attributes: [
@@ -176,7 +178,7 @@ struct CartCell: View{
             .font: UIFont.boldSystemFont(ofSize: 18),
             .foregroundColor: UIColor(hexString: "111111")
         ], range: (raw as NSString).range(of: String(format: "%.2f", userData.cartItems[0].fee)))
-        return AttributedString(attr)
+        return attr
     }
     
     

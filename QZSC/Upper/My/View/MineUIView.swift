@@ -10,7 +10,7 @@ import Combine
 
 
 struct MineUIView: View {
-    @StateObject var userData : QZSCUserInfo
+    @ObservedObject var userManager : QZSCLoginManager
     @State var didLoad = false
 
     /**
@@ -25,10 +25,11 @@ struct MineUIView: View {
      同时 MineHeaderView 需要访问 UserData, 我们通过environmentObject 来注入. MineHeaderView中用 @EnvironmentObject 来声明
      */
 
-    init(userData: QZSCUserInfo?, didLoad: Bool = false) {
-        _userData = StateObject(wrappedValue: userData ?? QZSCUserInfo())
-        self.didLoad = didLoad
-    }
+//    init(userData: QZSCUserInfo?, didLoad: Bool = false) {
+//        _userData = ObservedObject(wrappedValue: userData ?? QZSCUserInfo())
+//        //StateObject(wrappedValue: userData ?? QZSCUserInfo())
+//        self.didLoad = didLoad
+//    }
 
     var body: some View {
         NavigationView {
@@ -55,7 +56,7 @@ struct MineUIView: View {
 
                 }.padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
 
-            }.ignoresSafeArea().background(Color(hex: 0xF6F8FA)).environmentObject(userData)
+            }.ignoresSafeArea().background(Color(hex: 0xF6F8FA)).environmentObject(userManager)
                 .onAppear(perform: appearLoad).showTabBar().navigationBarHidden(true)
         }
     }
@@ -72,13 +73,14 @@ struct MineUIView: View {
 
 
 struct MineHeaderView: View {
-    @EnvironmentObject var userData: QZSCUserInfo
+    @EnvironmentObject var userManager: QZSCLoginManager
 
-    func items(at idx:Int) -> (String,Int, ReferenceWritableKeyPath<QZSCUserInfo, Int>){
+    func items(at idx:Int) -> (String,Int){
         let list = [
-                    ("足迹",userData.foot_num, \QZSCUserInfo.foot_num),
-                    ("收藏",userData.collect_num, \QZSCUserInfo.collect_num),
-                    ("账单",userData.bill_num, \QZSCUserInfo.bill_num)]
+            ("足迹",userManager.userInfo?.foot_num ?? 0),
+            ("收藏",userManager.userInfo?.collect_num ?? 0),
+            ("账单",userManager.userInfo?.bill_num ?? 0)
+        ]
         return list[idx]
     }
 
@@ -95,35 +97,26 @@ struct MineHeaderView: View {
                         Circle()
                             .stroke(Color.white, lineWidth: 2) // 添加边框
                     )
-                Button {
+                Text(userManager.isLogin ? userManager.userInfo!.nickname : "请登录").font(.system(size: 18,weight: .semibold))
+            }.onTapGesture {
+                if !userManager.isLogin{
                     let LoginVC = QZSCLoginController()
                     QZSCControllerTool.currentNavVC()?.pushViewController(LoginVC, animated: true)
-                } label: {
-                    VStack {
-                        Text(userData.isLogin ? userData.nickname : "请登录").font(.system(size: 18,weight: .semibold))
-                        Text("这是一句辅助文案信息").font(.system(size: 12)).foregroundColor(.init(hex: 0x7090A0))
-                    }
                 }
-
-
             }.padding(.init(top: kStatusBarHeight + 44, leading: 0, bottom: 0, trailing: 0))
 
             HStack {
                 ForEach(0..<3) { idx in
                     let item = items(at: idx)
                     Button {
-                        if(idx == 1){
+                        if(idx == 0){
                             let footprintVC = QZSCfootprintViewController()
                             QZSCControllerTool.currentNavVC()?.pushViewController(footprintVC, animated: true)
-                        }else if(idx == 2){
+                        }else if(idx == 1){
                             
                             let CollectVC = QZSCCollectViewController()
                             QZSCControllerTool.currentNavVC()?.pushViewController(CollectVC, animated: true)
                         }
-                        else{
-                            userData[keyPath: item.2] += 1
-                        }
-                        
                         
                     } label: {
                         VStack(spacing: 2) {
@@ -240,6 +233,6 @@ struct ContentView_Previews: PreviewProvider {
 
 struct MineUIView_Previews: PreviewProvider {
     static var previews: some View {
-        MineUIView(userData: QZSCUserInfo())
+        MineUIView(userManager: QZSCLoginManager.shared)
     }
 }

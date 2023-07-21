@@ -7,38 +7,37 @@
 
 import Foundation
 
-class QZSCLoginManager : NSObject {
+
+class QZSCLoginManager: NSObject, ObservableObject {
     
     static let shared = QZSCLoginManager()
     
     var loginSuccessComplete: (() -> Void)?
     
-    var isLogin: Bool { // 登录状态, true 已登录
-        guard let _ = QZSCCache.fetchObject(key: keyUserInfo, to: QZSCUserInfo.self) else {
-            return false
+    @Published var userInfo: QZSCUserInfo? {
+        didSet{
+            QZSCCache.cache(object: userInfo, key: keyUserInfo)
         }
-        return true
+        
     }
     
     @objc class func Uid() -> NSString {
-        return String(QZSCLoginManager().userInfo!.uid) as NSString
+        if let uid = QZSCLoginManager().userInfo?.uid{
+            return String(uid) as NSString
+        }
+        return "" as NSString
     }
     
     
-    
-    var userInfo: QZSCUserInfo? {
-        set {
-            guard let info = newValue else { return }
-            QZSCCache.cache(object: info, key: keyUserInfo)
-        }
-        get {
-            return QZSCCache.fetchObject(key: keyUserInfo, to: QZSCUserInfo.self)
-        }
+        
+    var isLogin: Bool{
+        return userInfo != nil
     }
     
     private let keyUserInfo = "QZSC_local_userInfo"
     
     override init() {
+        userInfo = QZSCCache.fetchObject(key: keyUserInfo, to: QZSCUserInfo.self)
     }
     
     func autoOpenLogin() -> Bool {
@@ -53,6 +52,7 @@ class QZSCLoginManager : NSObject {
     
     func logOut() { // 退出登录
         QZSCCache.clearAll()
+        self.userInfo = nil
         loginSuccessComplete?()
     }
 }

@@ -29,6 +29,7 @@ target 'QZSC' do
   pod 'Masonry', '~> 1.1.0'
   pod 'AFNetworking', '~> 4.0.1'
   pod 'YYModel', '~> 1.0.4'
+  #pod 'YYKit'
 
 end
 

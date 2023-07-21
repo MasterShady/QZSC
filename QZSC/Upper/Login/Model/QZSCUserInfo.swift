@@ -8,19 +8,14 @@
 import Foundation
 import Combine
 
-class QZSCUserInfo: Codable, ObservableObject{
+class QZSCUserInfo: Codable{
     
     var uid: Int = 0
-    @Published var nickname: String = ""
-    @Published var foot_num: Int = 0
-    @Published var is_sub_merchant: Int = 0
-    @Published var collect_num: Int = 0
-    @Published var bill_num: Int = 0
-    
-    var isLogin : Bool{
-       return uid != 0
-    }
-    
+    var nickname: String = ""
+    var foot_num: Int = 0
+    var is_sub_merchant: Int = 0
+    var collect_num: Int = 0
+    var bill_num: Int = 0
     
     init() {
         
@@ -31,15 +26,15 @@ class QZSCUserInfo: Codable, ObservableObject{
     }
     
     
-    func encode(to encoder: Encoder) throws {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.encode(self.uid, forKey: .uid)
-            try container.encode(self.nickname, forKey: .nickname)
-            try container.encode(self.foot_num, forKey: .foot_num)
-            try container.encode(self.is_sub_merchant, forKey: .is_sub_merchant)
-            try container.encode(self.collect_num, forKey: .collect_num)
-            try container.encode(self.bill_num, forKey: .bill_num)
-        }
+//    func encode(to encoder: Encoder) throws {
+//            var container = encoder.container(keyedBy: CodingKeys.self)
+//            try container.encode(self.uid, forKey: .uid)
+//            try container.encode(self.nickname, forKey: .nickname)
+//            try container.encode(self.foot_num, forKey: .foot_num)
+//            try container.encode(self.is_sub_merchant, forKey: .is_sub_merchant)
+//            try container.encode(self.collect_num, forKey: .collect_num)
+//            try container.encode(self.bill_num, forKey: .bill_num)
+//        }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

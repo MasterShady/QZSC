@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class QZSCSettingViewController: QZSCBaseController {
 
@@ -226,7 +227,8 @@ class QZSCSettingViewController: QZSCBaseController {
     
     //关于我们
     @objc private func aboutUsViewClickAction() {
-
+        let vc = UIHostingController(rootView: AboutUsView())
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     //清除缓存
     @objc private func cacheViewClickAction() {
