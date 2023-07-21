@@ -23,6 +23,7 @@ class QZSCGoodsListController: QZSCBaseController {
         // Do any additional setup after loading the view.
         
         configUI()
+        if isFromSearch { return }
         UMProgressManager.showLoadingAnimation()
         loadData()
     }
@@ -52,12 +53,11 @@ class QZSCGoodsListController: QZSCBaseController {
         gradientLayer.colors = [COLOR97FFF0.cgColor, COLORF6F8FA.cgColor]
         gradientView.layer.addSublayer(gradientLayer)
         
+        navTitle = navTitle
         if isCategory {
-            navTitle = "分类名称"
             topBgImgView.image = UIImage(named: "category_top_bg")
             gradientView.isHidden = true
         } else {
-            navTitle = navTitle
             topBgImgView.image = UIImage(named: "topic_top_bg")
         }
         
@@ -74,6 +74,10 @@ class QZSCGoodsListController: QZSCBaseController {
         
         table.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
             guard let `self` = self else { return }
+            if self.isFromSearch {
+                self.loadDataWith(keyWord: self.key)
+                return
+            }
             self.loadData()
         })
         table.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: { [weak self] in
@@ -84,7 +88,7 @@ class QZSCGoodsListController: QZSCBaseController {
     }
     
     func loadData() {
-        QZSCHomeViewModel.loadHomeProductList(keyWord: key) { list in
+        QZSCHomeViewModel.loadHomeProductList { list in
             UMProgressManager.hide()
             self.dataList = list.shuffled()
             self.table.mj_footer?.isHidden = (list.count != 20)
@@ -98,7 +102,7 @@ class QZSCGoodsListController: QZSCBaseController {
         key = keyWord
         QZSCHomeViewModel.loadHomeProductList(keyWord: keyWord) { list in
             UMProgressManager.hide()
-            self.dataList = list
+            self.dataList = list.filter { $0.name.contains(keyWord) }
             self.table.mj_footer?.isHidden = (list.count != 20)
             self.table.mj_header?.endRefreshing()
             self.table.reloadData()

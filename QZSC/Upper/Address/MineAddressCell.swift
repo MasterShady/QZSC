@@ -8,6 +8,7 @@ class MineAddressCell: UITableViewCell {
     var phoneLB:UILabel!
     var addressLB:UILabel!
     var revampImage:UIButton!
+    var newImgView: UIImageView!
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -20,10 +21,12 @@ class MineAddressCell: UITableViewCell {
     
     var addressList:AddressListModel?{
         didSet{
-            nameLB.text = addressList?.uname
-            phoneLB.text = addressList?.phone
-            addressLB.text = addressList?.address_area
-                .appending(addressList!.address_detail)
+            guard let data = addressList else { return }
+            nameLB.text = data.uname
+            phoneLB.text = data.phone
+            addressLB.text = data.address_area
+                .appending(data.address_detail)
+            newImgView.isHidden = (data.is_default != 1)
         }
     }
     
@@ -72,6 +75,25 @@ class MineAddressCell: UITableViewCell {
             make.height.equalTo(SCALE_WIDTHS(value: 18))
             make.width.equalTo(SCALE_WIDTHS(value: 18))
             make.centerY.equalToSuperview()
+        }
+        
+        newImgView = UIImageView(image: UIImage(named: "home_cell_new_bg"))
+        newImgView.isHidden = true
+        contentView.addSubview(newImgView)
+        newImgView.snp.makeConstraints { make in
+            make.left.equalTo(phoneLB.snp.right).offset(4)
+            make.centerY.equalTo(phoneLB)
+            make.width.equalTo(32)
+            make.height.equalTo(18)
+        }
+        
+        let newLbl = UILabel()
+        newLbl.text = "默认"
+        newLbl.font = UIFont.medium(10)
+        newLbl.textColor = COLOR333333
+        newImgView.addSubview(newLbl)
+        newLbl.snp.makeConstraints { make in
+            make.center.equalToSuperview()
         }
         
         let line = UIView(frame: CGRect.zero)

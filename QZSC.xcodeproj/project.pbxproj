@@ -80,7 +80,7 @@
 		EBB761922A61528200E28FAE /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761912A61528200E28FAE /* MyCartView.swift */; };
 		EBC232162A66A90900466AD2 /* MineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC232152A66A90900466AD2 /* MineModels.swift */; };
 		EBED8E3B2A690DDE00E59783 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = EBED8E3A2A690DDE00E59783 /* SwiftUIX */; };
-		FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5D02A60E08C0080B928 /* LoginManager.swift */; };
+		FC82E5D12A60E08C0080B928 /* QZSCLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5D02A60E08C0080B928 /* QZSCLoginManager.swift */; };
 		FC82E5DE2A60E2EB0080B928 /* QZSCHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */; };
 		FC82E5E02A60E2F70080B928 /* QZSCOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */; };
 		FC82E5E22A60E3030080B928 /* QZSCLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82E5E12A60E3030080B928 /* QZSCLoginController.swift */; };
@@ -102,6 +102,7 @@
 		FCD661032A69104400236CE0 /* QZSCGoodsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD661022A69104400236CE0 /* QZSCGoodsListController.swift */; };
 		FCE23EDB2A665FC900102760 /* QZSCOrderPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */; };
 		FCE23EDF2A66886000102760 /* QZSCChenkInUploadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE23EDE2A66886000102760 /* QZSCChenkInUploadImageCell.m */; };
+		FCE58C582A6A6DC500427867 /* QZSCAddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE58C572A6A6DC500427867 /* QZSCAddressManager.swift */; };
 		FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC4292A5FF6D80015EF4E /* AppDelegate.swift */; };
 		FCEFC4312A5FF6D80015EF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC42F2A5FF6D80015EF4E /* Main.storyboard */; };
 		FCEFC4332A5FF6D90015EF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC4322A5FF6D90015EF4E /* Assets.xcassets */; };
@@ -261,7 +262,7 @@
 		EBB7618F2A61303800E28FAE /* WrappedHStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedHStack.swift; sourceTree = "<group>"; };
 		EBB761912A61528200E28FAE /* MyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartView.swift; sourceTree = "<group>"; };
 		EBC232152A66A90900466AD2 /* MineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineModels.swift; sourceTree = "<group>"; };
-		FC82E5D02A60E08C0080B928 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		FC82E5D02A60E08C0080B928 /* QZSCLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCLoginManager.swift; sourceTree = "<group>"; };
 		FC82E5DD2A60E2EB0080B928 /* QZSCHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCHomeController.swift; sourceTree = "<group>"; };
 		FC82E5DF2A60E2F70080B928 /* QZSCOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderController.swift; sourceTree = "<group>"; };
 		FC82E5E12A60E3030080B928 /* QZSCLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCLoginController.swift; sourceTree = "<group>"; };
@@ -288,6 +289,7 @@
 		FCE23EDA2A665FC900102760 /* QZSCOrderPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCOrderPreviewView.swift; sourceTree = "<group>"; };
 		FCE23EDD2A66886000102760 /* QZSCChenkInUploadImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QZSCChenkInUploadImageCell.h; sourceTree = "<group>"; };
 		FCE23EDE2A66886000102760 /* QZSCChenkInUploadImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QZSCChenkInUploadImageCell.m; sourceTree = "<group>"; };
+		FCE58C572A6A6DC500427867 /* QZSCAddressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCAddressManager.swift; sourceTree = "<group>"; };
 		FCEFC4262A5FF6D80015EF4E /* QZSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QZSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEFC4292A5FF6D80015EF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEFC4302A5FF6D80015EF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -613,7 +615,8 @@
 		FC82E5CF2A60E07D0080B928 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				FC82E5D02A60E08C0080B928 /* LoginManager.swift */,
+				FC82E5D02A60E08C0080B928 /* QZSCLoginManager.swift */,
+				FCE58C572A6A6DC500427867 /* QZSCAddressManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1147,6 +1150,7 @@
 				A26F54BD2A6791530080417F /* QZSCfootprintViewController.m in Sources */,
 				EB6769D02A651D1000440541 /* GEPopTool.swift in Sources */,
 				FC82E5E22A60E3030080B928 /* QZSCLoginController.swift in Sources */,
+				FCE58C582A6A6DC500427867 /* QZSCAddressManager.swift in Sources */,
 				FCEFC5292A5FF9B30015EF4E /* QZSCNetwork+Alamofire.swift in Sources */,
 				A21DA76C2A6A1E78005A1FAF /* NetWorkManager.m in Sources */,
 				A26F54B52A6784080080417F /* MineAddressCell.swift in Sources */,
@@ -1177,7 +1181,7 @@
 				EB6769F02A651DC000440541 /* UIButton+Chain.swift in Sources */,
 				FCC5C3AE2A6784CD0083B114 /* QZSCNormalSearchBar.swift in Sources */,
 				FCC5C3B52A67B9750083B114 /* QZSCHomeListUIView.swift in Sources */,
-				FC82E5D12A60E08C0080B928 /* LoginManager.swift in Sources */,
+				FC82E5D12A60E08C0080B928 /* QZSCLoginManager.swift in Sources */,
 				FCEFC42A2A5FF6D80015EF4E /* AppDelegate.swift in Sources */,
 				A241F3EC2A6904EF008FBEA2 /* QZSCUserInfo.swift in Sources */,
 				FCEFC5312A5FF9B30015EF4E /* QZSCDefine.swift in Sources */,

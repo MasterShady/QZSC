@@ -40,7 +40,7 @@ class UMToast: UIView {
         }
     }
     
-    class func show(_ message: String?) {
+    @objc class func show(_ message: String?) {
         // 空文本信息直接返回
         guard let msg = message else { return }
         

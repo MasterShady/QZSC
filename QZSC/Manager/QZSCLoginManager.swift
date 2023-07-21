@@ -24,8 +24,6 @@ class QZSCLoginManager : NSObject {
         return String(QZSCLoginManager().userInfo!.uid) as NSString
     }
     
-    
-    
     var userInfo: QZSCUserInfo? {
         set {
             guard let info = newValue else { return }
@@ -33,6 +31,21 @@ class QZSCLoginManager : NSObject {
         }
         get {
             return QZSCCache.fetchObject(key: keyUserInfo, to: QZSCUserInfo.self)
+        }
+    }
+    
+    var merchant: Bool {
+        set {
+            if let info = self.userInfo {
+                info.is_sub_merchant = (newValue ? 1 : 0)
+                self.userInfo = info
+            }
+        }
+        get {
+            if let info = self.userInfo {
+                return info.is_sub_merchant == 1
+            }
+            return false
         }
     }
     

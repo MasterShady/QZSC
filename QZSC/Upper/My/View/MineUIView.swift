@@ -184,7 +184,9 @@ struct MineFunctionView: View{
     let items: [(String,String, Any)] = [
         //("购物车","mine_cart", MyCartView().erasedToAnyView()),
         //写法1, 用ControllerWrapper去包装一下,通过swiftUI的NavigationLink去跳转.
-        ("我的客服", "mine_service", ControllerWrapper(QZSCKfController()).erasedToAnyView()),
+        ("我的客服", "mine_service",  {
+            QZSCControllerTool.currentNavVC()?.pushViewController(QZSCKfController(), animated: true)
+        }),
         ("意见反馈","mine_feedback", FeedBackView().erasedToAnyView()),
         //写法2, 用block包一下.点击执行block完成跳转.
         ("我的地址", "mine_bills", {
