@@ -1380,6 +1380,7 @@
 				GCC_PREFIX_HEADER = QZSC/Common/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "租玩商城";
 				INFOPLIST_KEY_NSCameraUsageDescription = "商家入驻上传图片, 需要访问您的相机功能!";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";
@@ -1420,6 +1421,7 @@
 				GCC_PREFIX_HEADER = QZSC/Common/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "租玩商城";
 				INFOPLIST_KEY_NSCameraUsageDescription = "商家入驻上传图片, 需要访问您的相机功能!";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "商家入驻上传图片, 需要访问您的相册功能!";

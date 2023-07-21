@@ -74,7 +74,7 @@ class QZSCHomeHeaderView: UIView {
             make.height.equalTo(342)
         }
         
-        let titleLbl = UILabel.createSameLbl(text: "趣租商城", color: COLOR333333, font: UIFont.semibold(28))
+        let titleLbl = UILabel.createSameLbl(text: kAppName, color: COLOR333333, font: UIFont.semibold(28))
         addSubview(titleLbl)
         titleLbl.snp.makeConstraints { make in
             make.left.equalTo(24)

@@ -35,11 +35,11 @@ class QZSCAppEnvironment: NSObject {
     }
     
     var privacyUrl: String {
-        return "https://uhuhzl.cn/QZSC_privacies.html"
+        return "https://www.freeprivacypolicy.com/live/861a8ede-f38e-4442-8901-cb0d69e0f0a1"
     }
     
     var protocolUrl: String {
-        return "https://uhuhzl.cn/QZSC_protocol.html"
+        return "https://www.freeprivacypolicy.com/live/861a8ede-f38e-4442-8901-cb0d69e0f0a1"
     }
     
     var rc4EncrySecret: String {
