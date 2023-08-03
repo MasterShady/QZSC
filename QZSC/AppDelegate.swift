@@ -16,10 +16,12 @@ class AppDelegate: DFAppDelegate {
     
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
-        //let apiEnv = DF_APIEnv.df_test(withPort: 9799)
-        
+        if (!DF_PKGManager.df_isLoadedBefore){
+            window.rootViewController = DF_PKGManager.df_launchViewController(with: nil)
+        }else{
+            window.rootViewController = UINavigationController(rootViewController: QZSCTabBarController())
+        }
 #if DEBUG
         let apiEnv = DF_APIEnv.df_test(withPort: 9799)
 #else
@@ -43,13 +45,7 @@ class AppDelegate: DFAppDelegate {
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        
-        if (!DF_PKGManager.df_isLoadedBefore){
-            window.rootViewController = DF_PKGManager.df_launchViewController(with: nil)
-        }else{
-            window.rootViewController = UINavigationController(rootViewController: QZSCTabBarController())
-        }
-        
+
         return true
     }
     
