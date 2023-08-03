@@ -1,4 +1,4 @@
-module SwiftUIIntrospect {
+framework module SwiftUIIntrospect {
   umbrella header "SwiftUIIntrospect-umbrella.h"
 
   export *

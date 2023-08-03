@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E1C6A7B1E9BDCB3EB867AADD068634F"
-               BuildableName = "libPods-QZSC.a"
+               BuildableName = "Pods_QZSC.framework"
                BlueprintName = "Pods-QZSC"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

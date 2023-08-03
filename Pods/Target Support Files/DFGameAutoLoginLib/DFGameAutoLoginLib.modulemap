@@ -1,0 +1,6 @@
+framework module DFGameAutoLoginLib {
+  umbrella header "DFGameAutoLoginLib-umbrella.h"
+
+  export *
+  module * { export * }
+}

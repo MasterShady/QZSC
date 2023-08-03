@@ -1,0 +1,11 @@
+framework module PKGModule {
+  umbrella header "PKGModule-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module PKGModule.Swift {
+  header "PKGModule-Swift.h"
+  requires objc
+}

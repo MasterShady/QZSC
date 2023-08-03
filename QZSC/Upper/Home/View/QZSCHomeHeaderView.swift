@@ -54,10 +54,12 @@ class QZSCHomeHeaderView: UIView {
             }
             let tap = UITapGestureRecognizer()
             view.addGestureRecognizer(tap)
-            tap.rx.event.subscribe { _ in
-                let ctl = QZSCGoodsListController()
-                ctl.navTitle = title
-                QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+            tap.rx.event.subscribe { event in
+                if (event.element?.state == .recognized){
+                    let ctl = QZSCGoodsListController()
+                    ctl.navTitle = title
+                    QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)                    
+                }
             }.disposed(by: dBag)
         }
         
@@ -117,9 +119,12 @@ class QZSCHomeHeaderView: UIView {
         }
         let searchTap = UITapGestureRecognizer()
         searchTF.addGestureRecognizer(searchTap)
-        searchTap.rx.event.subscribe { _ in
-            let ctl = QZSCSearchListController()
-            QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+        
+        searchTap.rx.event.subscribe { a in
+            if (a.element?.state == .recognized){
+                let ctl = QZSCSearchListController()
+                QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+            }
         }.disposed(by: dBag)
         
         let leftImgView = UIImageView(image: UIImage(named: "home_top_msxp"))
@@ -133,11 +138,13 @@ class QZSCHomeHeaderView: UIView {
         }
         let leftTap = UITapGestureRecognizer()
         leftImgView.addGestureRecognizer(leftTap)
-        leftTap.rx.event.subscribe { _ in
-            let ctl = QZSCGoodsListController()
-            ctl.isCategory = false
-            ctl.navTitle = "秒杀新品"
-            QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+        leftTap.rx.event.subscribe { event in
+            if (event.element?.state == .recognized){
+                let ctl = QZSCGoodsListController()
+                ctl.isCategory = false
+                ctl.navTitle = "秒杀新品"
+                QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+            }
         }.disposed(by: dBag)
         
         let rtImgView = UIImageView(image: UIImage(named: "home_top_xpbp"))
@@ -151,11 +158,13 @@ class QZSCHomeHeaderView: UIView {
         }
         let rtImgTap = UITapGestureRecognizer()
         rtImgView.addGestureRecognizer(rtImgTap)
-        rtImgTap.rx.event.subscribe { _ in
-            let ctl = QZSCGoodsListController()
-            ctl.isCategory = false
-            ctl.navTitle = "新品爆品"
-            QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+        rtImgTap.rx.event.subscribe { event in
+            if (event.element?.state == .recognized){
+                let ctl = QZSCGoodsListController()
+                ctl.isCategory = false
+                ctl.navTitle = "新品爆品"
+                QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+            }
         }.disposed(by: dBag)
         
         let rbImgView = UIImageView(image: UIImage(named: "home_top_dbfl"))
@@ -167,11 +176,13 @@ class QZSCHomeHeaderView: UIView {
         }
         let rbImgTap = UITapGestureRecognizer()
         rbImgView.addGestureRecognizer(rbImgTap)
-        rbImgTap.rx.event.subscribe { _ in
-            let ctl = QZSCGoodsListController()
-            ctl.isCategory = false
-            ctl.navTitle = "多爆福利"
-            QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+        rbImgTap.rx.event.subscribe { event in
+            if (event.element?.state == .recognized){
+                let ctl = QZSCGoodsListController()
+                ctl.isCategory = false
+                ctl.navTitle = "多爆福利"
+                QZSCControllerTool.currentNavVC()?.pushViewController(ctl, animated: true)
+            }
         }.disposed(by: dBag)
         
         addSubview(scroll)

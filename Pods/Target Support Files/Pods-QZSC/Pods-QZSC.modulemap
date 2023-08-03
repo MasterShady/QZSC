@@ -1,4 +1,4 @@
-module Pods_QZSC {
+framework module Pods_QZSC {
   umbrella header "Pods-QZSC-umbrella.h"
 
   export *

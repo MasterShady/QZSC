@@ -1,0 +1,4 @@
+framework module SmAntiFraud {
+  header "SmAntiFraud.h"
+  export *
+}

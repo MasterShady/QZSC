@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FDEC3E159ED01F89F05D651 /* Pods_QZSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB2C6968570C5374E8E59CD /* Pods_QZSC.framework */; };
 		A21DA7662A6A1789005A1FAF /* QZSCFootprintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7652A6A1789005A1FAF /* QZSCFootprintViewModel.swift */; };
 		A21DA76B2A6A1E78005A1FAF /* NetWorkCommonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7682A6A1E78005A1FAF /* NetWorkCommonObject.m */; };
 		A21DA76C2A6A1E78005A1FAF /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A21DA7692A6A1E78005A1FAF /* NetWorkManager.m */; };
@@ -34,7 +35,6 @@
 		A26F54CA2A6799F40080417F /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54C92A6799F40080417F /* UIDevice+Addition.m */; };
 		A26F54CD2A67AF490080417F /* QZSCControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F54CC2A67AF490080417F /* QZSCControllerManager.m */; };
 		A2E5A30E2A67B9DA00C17C8E /* QZSCCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E5A30D2A67B9DA00C17C8E /* QZSCCollectViewController.m */; };
-		E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */; };
 		EB09C19C2A655A3D007599FA /* QZSCHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C1992A655A3D007599FA /* QZSCHomeListCell.swift */; };
 		EB09C19D2A655A3D007599FA /* QZSCHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19A2A655A3D007599FA /* QZSCHomeHeaderView.swift */; };
 		EB09C19E2A655A3D007599FA /* QZSCHomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C19B2A655A3D007599FA /* QZSCHomeUIView.swift */; };
@@ -72,7 +72,10 @@
 		EB6769F92A65211500440541 /* Array++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769F82A65211500440541 /* Array++.swift */; };
 		EB6769FD2A65223200440541 /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769FC2A65223200440541 /* FoundationExtension.swift */; };
 		EB6769FF2A654BA700440541 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6769FE2A654BA700440541 /* Layout.swift */; };
-		EB7410782A668306004ECFD3 /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7410772A668306004ECFD3 /* NavVC.swift */; };
+		EB6AA60B2A7A2D790042D27C /* jpush-ios-5.0.2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6AA60A2A7A2D790042D27C /* jpush-ios-5.0.2.xcframework */; };
+		EB6AA6112A7A2EDA0042D27C /* SmAntiFraud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6AA6102A7A2EDA0042D27C /* SmAntiFraud.framework */; };
+		EB6AA61A2A7A4E410042D27C /* PKGModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB6AA6182A7A4E410042D27C /* PKGModule.bundle */; };
+		EB6AA6202A7A58590042D27C /* PKGModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6AA61F2A7A58590042D27C /* PKGModule.framework */; };
 		EB74107A2A66854E004ECFD3 /* SwiftUI++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7410792A66854E004ECFD3 /* SwiftUI++.swift */; };
 		EBB7618A2A60FB2E00E28FAE /* MineUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB761892A60FB2E00E28FAE /* MineUIView.swift */; };
 		EBB7618D2A61205F00E28FAE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7618C2A61205F00E28FAE /* Extension.swift */; };
@@ -177,7 +180,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QZSC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB2C6968570C5374E8E59CD /* Pods_QZSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QZSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21DA7652A6A1789005A1FAF /* QZSCFootprintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZSCFootprintViewModel.swift; sourceTree = "<group>"; };
 		A21DA7672A6A1E78005A1FAF /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
 		A21DA7682A6A1E78005A1FAF /* NetWorkCommonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkCommonObject.m; sourceTree = "<group>"; };
@@ -255,7 +258,11 @@
 		EB6769F82A65211500440541 /* Array++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array++.swift"; sourceTree = "<group>"; };
 		EB6769FC2A65223200440541 /* FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
 		EB6769FE2A654BA700440541 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		EB7410772A668306004ECFD3 /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
+		EB6AA60A2A7A2D790042D27C /* jpush-ios-5.0.2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "jpush-ios-5.0.2.xcframework"; sourceTree = "<group>"; };
+		EB6AA6102A7A2EDA0042D27C /* SmAntiFraud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmAntiFraud.framework; sourceTree = "<group>"; };
+		EB6AA6182A7A4E410042D27C /* PKGModule.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PKGModule.bundle; sourceTree = "<group>"; };
+		EB6AA61C2A7A50C70042D27C /* QZSC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QZSC.entitlements; sourceTree = "<group>"; };
+		EB6AA61F2A7A58590042D27C /* PKGModule.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PKGModule.framework; sourceTree = "<group>"; };
 		EB7410792A66854E004ECFD3 /* SwiftUI++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI++.swift"; sourceTree = "<group>"; };
 		EBB761892A60FB2E00E28FAE /* MineUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUIView.swift; sourceTree = "<group>"; };
 		EBB7618C2A61205F00E28FAE /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -359,8 +366,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8589650D874FB120D0209B7 /* libPods-QZSC.a in Frameworks */,
+				EB6AA60B2A7A2D790042D27C /* jpush-ios-5.0.2.xcframework in Frameworks */,
+				EB6AA6202A7A58590042D27C /* PKGModule.framework in Frameworks */,
 				EBED8E3B2A690DDE00E59783 /* SwiftUIX in Frameworks */,
+				EB6AA6112A7A2EDA0042D27C /* SmAntiFraud.framework in Frameworks */,
+				0FDEC3E159ED01F89F05D651 /* Pods_QZSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +394,7 @@
 		26C516F600FE6B016AB0F87C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7442109AA3FD3654A9D51EAA /* libPods-QZSC.a */,
+				5FB2C6968570C5374E8E59CD /* Pods_QZSC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -798,6 +808,11 @@
 		FCEFC4282A5FF6D80015EF4E /* QZSC */ = {
 			isa = PBXGroup;
 			children = (
+				EB6AA61F2A7A58590042D27C /* PKGModule.framework */,
+				EB6AA61C2A7A50C70042D27C /* QZSC.entitlements */,
+				EB6AA6182A7A4E410042D27C /* PKGModule.bundle */,
+				EB6AA6102A7A2EDA0042D27C /* SmAntiFraud.framework */,
+				EB6AA60A2A7A2D790042D27C /* jpush-ios-5.0.2.xcframework */,
 				EBB7618B2A61204900E28FAE /* SwiftUIBasic */,
 				FC82E5CF2A60E07D0080B928 /* Manager */,
 				FCEFC4E22A5FF9B30015EF4E /* Common */,
@@ -832,7 +847,6 @@
 		FCEFC49A2A5FF7EC0015EF4E /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				EB7410772A668306004ECFD3 /* NavVC.swift */,
 				FCEFC49B2A5FF7EC0015EF4E /* QZSCBaseController.swift */,
 				FCEFC49C2A5FF7EC0015EF4E /* QZSCWebController.swift */,
 				A26F54BE2A6794570080417F /* QZSCBaseVC.h */,
@@ -966,6 +980,7 @@
 				FCEFC4232A5FF6D80015EF4E /* Frameworks */,
 				FCEFC4242A5FF6D80015EF4E /* Resources */,
 				5DAF0618346A380C7BB0B78A /* [CP] Copy Pods Resources */,
+				B0BD933361140AD6358ED2FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1069,6 +1084,7 @@
 			files = (
 				FCEFC4362A5FF6D90015EF4E /* LaunchScreen.storyboard in Resources */,
 				A26F54B82A6784080080417F /* city.plist in Resources */,
+				EB6AA61A2A7A4E410042D27C /* PKGModule.bundle in Resources */,
 				FCEFC4332A5FF6D90015EF4E /* Assets.xcassets in Resources */,
 				FCEFC4312A5FF6D80015EF4E /* Main.storyboard in Resources */,
 			);
@@ -1128,6 +1144,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QZSC/Pods-QZSC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0BD933361140AD6358ED2FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QZSC/Pods-QZSC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QZSC/Pods-QZSC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QZSC/Pods-QZSC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1238,7 +1271,6 @@
 				EB6769F72A651DC000440541 /* UITextView+Chain.swift in Sources */,
 				FCEFC52E2A5FF9B30015EF4E /* QZSCRspBody.swift in Sources */,
 				EB6769EA2A651DC000440541 /* Associate.swift in Sources */,
-				EB7410782A668306004ECFD3 /* NavVC.swift in Sources */,
 				A26F54CA2A6799F40080417F /* UIDevice+Addition.m in Sources */,
 				EB6769F62A651DC000440541 /* UIScrollView+Chain.swift in Sources */,
 				FCE23EDF2A66886000102760 /* QZSCChenkInUploadImageCell.m in Sources */,
@@ -1454,10 +1486,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = QZSC/QZSC.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6475J8L3PC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QZSC",
+				);
 				GCC_PREFIX_HEADER = QZSC/Common/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
@@ -1474,7 +1511,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ToyMegaMart.debug;
 				PRODUCT_MODULE_NAME = QZSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1497,11 +1534,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = QZSC/QZSC.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CGVJGC8H6Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QZSC",
+				);
 				GCC_PREFIX_HEADER = QZSC/Common/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QZSC/Info.plist;
@@ -1518,7 +1560,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ToyMegaMart;
 				PRODUCT_MODULE_NAME = QZSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";

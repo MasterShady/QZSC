@@ -1,0 +1,6 @@
+framework module DFRiskSDK {
+  umbrella header "DFRiskSDK.h"
+
+  export *
+  module * { export * }
+}

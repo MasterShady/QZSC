@@ -1,4 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-QZSC/Pods-QZSC-resources.sh
-${PODS_CONFIGURATION_BUILD_DIR}/CLImagePickerTool/CLImagePickerTool.bundle
-${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle
-${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
+${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/DFFaceNeteasySource.bundle
+${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/DFFacePublicSource.bundle
+${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/face-tracker-v001.bundle
+${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/TencentCloudHuiyanSDKFace.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/DFGameAutoLoginLib/DFToGameLibBundle.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/DFGameAutoLoginLib/HaiMaSDK_Bundle_iOS.bundle
+${PODS_ROOT}/NTESLiveDetect/Assets/NTESLiveDetectBundle.bundle

@@ -1,5 +1,6 @@
 PODS:
   - ActiveLabel (1.1.0)
+  - AEAlertView (2.3.6)
   - AFNetworking (4.0.1):
     - AFNetworking/NSURLSession (= 4.0.1)
     - AFNetworking/Reachability (= 4.0.1)
@@ -18,7 +19,32 @@ PODS:
   - Alamofire (5.2.2)
   - Cache (6.0.0)
   - CLImagePickerTool (3.1.3)
+  - CocoaAsyncSocket (7.6.5)
+  - DFFaceVerifyLib (2.0.1):
+    - DFOCBaseLib (~> 1.1.0)
+    - Masonry (~> 1.1.0)
+    - NTESLiveDetect (~> 3.0.3)
+  - DFGameAutoLoginLib (1.0.1):
+    - AFNetworking
+    - CocoaAsyncSocket (~> 7.6.5)
+    - lottie-ios (~> 3.2.1)
+    - Masonry
+    - MBProgressHUD
+    - SDCycleScrollView
+    - SocketRocket
+    - YYModel
+  - DFOCBaseLib (1.1.0):
+    - DFOCBaseLib/crypt (= 1.1.0)
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+  - DFOCBaseLib/crypt (1.1.0):
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+  - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.3.0)
+  - JCore (4.2.1)
   - JXPagingView (2.1.2):
     - JXPagingView/Pager (= 2.1.2)
     - JXPagingView/Paging (= 2.1.2)
@@ -26,29 +52,63 @@ PODS:
   - JXPagingView/Paging (2.1.2)
   - JXSegmentedView (1.3.0)
   - Kingfisher (7.8.1)
+  - lottie-ios (3.2.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.7.5)
+  - NTESBaseComponent (1.8)
+  - NTESLiveDetect (3.0.9):
+    - NTESBaseComponent
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
   - SnapKit (5.6.0)
+  - SocketRocket (0.7.0)
   - SwiftUIIntrospect (0.10.0)
+  - ThinkingSDK (2.8.3.2):
+    - ThinkingSDK/Main (= 2.8.3.2)
+  - ThinkingSDK/Base (2.8.3.2):
+    - ThinkingSDK/Core
+    - ThinkingSDK/Extension
+    - ThinkingSDK/Util
+  - ThinkingSDK/Core (2.8.3.2)
+  - ThinkingSDK/Extension (2.8.3.2):
+    - ThinkingSDK/Core
+  - ThinkingSDK/iOS (2.8.3.2):
+    - ThinkingSDK/Base
+  - ThinkingSDK/Main (2.8.3.2):
+    - ThinkingSDK/iOS
+    - ThinkingSDK/OSX
+  - ThinkingSDK/Util (2.8.3.2):
+    - ThinkingSDK/Core
   - YYModel (1.0.4)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - ActiveLabel (~> 1.1.0)
+  - AEAlertView (~> 2.3.5)
   - AFNetworking (~> 4.0.1)
-  - Alamofire (~> 5.2.0)
+  - Alamofire (~> 5.2.2)
   - Cache (~> 6.0.0)
   - CLImagePickerTool
+  - DFFaceVerifyLib (~> 2.0.1)
+  - DFGameAutoLoginLib (= 1.0.1)
+  - DFOCBaseLib (~> 1.1.0)
+  - HandyJSON (~> 5.0.2)
   - IQKeyboardManagerSwift (= 6.3.0)
+  - JCore
   - JXPagingView (~> 2.1.2)
   - JXSegmentedView (~> 1.3.0)
   - Kingfisher (~> 7.8.1)
+  - lottie-ios (~> 3.2.3)
   - Masonry (~> 1.1.0)
   - MBProgressHUD (= 1.1.0)
   - MJRefresh (~> 3.7.5)
@@ -56,49 +116,82 @@ DEPENDENCIES:
   - RxSwift (~> 6.5.0)
   - SnapKit (~> 5.6.0)
   - SwiftUIIntrospect
+  - ThinkingSDK (= 2.8.3.2)
   - YYModel (~> 1.0.4)
+  - ZipArchive (~> 1.4.0)
 
 SPEC REPOS:
+  http://git.zhw.com/mengke/Specs.git:
+    - DFFaceVerifyLib
+    - DFGameAutoLoginLib
+    - DFOCBaseLib
   https://github.com/CocoaPods/Specs.git:
     - ActiveLabel
+    - AEAlertView
     - AFNetworking
     - Alamofire
     - Cache
     - CLImagePickerTool
+    - CocoaAsyncSocket
+    - HandyJSON
     - IQKeyboardManagerSwift
+    - JCore
     - JXPagingView
     - JXSegmentedView
     - Kingfisher
+    - lottie-ios
     - Masonry
     - MBProgressHUD
     - MJRefresh
+    - NTESBaseComponent
+    - NTESLiveDetect
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SDCycleScrollView
+    - SDWebImage
     - SnapKit
+    - SocketRocket
     - SwiftUIIntrospect
+    - ThinkingSDK
     - YYModel
+    - ZipArchive
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  AEAlertView: 2761cbb49de1494ebacc832c295730f61e579ded
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   CLImagePickerTool: 2ef59c6524efd493571a0ee2bc42f445b4c5b2cb
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  DFFaceVerifyLib: fcdc0c5d70cbf7d33d0578e6d286966425718cb9
+  DFGameAutoLoginLib: bca3b3eb0cb2b76fe4f23f19639317b540147775
+  DFOCBaseLib: 96ef395a130adfb9fb906d2782c69bcfca0ac9eb
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  JCore: d994e32edb50add8a33135473acca799d882c5fa
   JXPagingView: 90924b364a2ff7e94db534fad1fa50925ff69ee4
   JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
   Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  NTESBaseComponent: 7b310e7e80bb6c27183176188b98356d200dbbc5
+  NTESLiveDetect: 43c26fd2bcfe66b7ae7f3e6245c6686ad4e4f74b
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   SwiftUIIntrospect: 6e17d518778c28c8fad15e15572be841d300af52
+  ThinkingSDK: 9ab775360006d73e87a1a760b087e44d19a8b2e8
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: bf3642355fd364ad9859651a86ad814c442b0f87
+PODFILE CHECKSUM: 602f49ba8516da1bd6cb1172b799f6a06aea7d3b
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

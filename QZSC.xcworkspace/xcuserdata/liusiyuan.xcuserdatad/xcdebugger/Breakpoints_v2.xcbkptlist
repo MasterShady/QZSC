@@ -130,5 +130,78 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "94B96407-A0BA-48EA-8A31-B588C50D6DA1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "pushViewController"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "94B96407-A0BA-48EA-8A31-B588C50D6DA1 - 55df32433b4a788b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PKGModule.NavVC.pushViewController(_: __C.UIViewController, animated: Swift.Bool) -&gt; ()"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/PKGModule/PKGModule/PKGModule/Classes/OFPKG/SHSupport/BaseNavVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "94B96407-A0BA-48EA-8A31-B588C50D6DA1 - 9a8df8ad4220416f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PKGModule.NavVC.pushViewController(_: __C.UIViewController, animated: Swift.Bool) -&gt; ()"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/PKGModule/PKGModule/Example/Pods/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "94B96407-A0BA-48EA-8A31-B588C50D6DA1 - 2a309ef13dd43fbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIX.CocoaNavigationView._Body.UIViewControllerType.pushViewController(_: __C.UIViewController, animated: Swift.Bool) -&gt; ()"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/Library/Developer/Xcode/DerivedData/QZSC-fnngvnrblaiywqgrhzejgcmfkzpp/SourcePackages/checkouts/SwiftUIX/Sources/Intramodular/Navigation/CocoaNavigationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "94B96407-A0BA-48EA-8A31-B588C50D6DA1 - 65ece8007a539909"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc SwiftUIX.CocoaNavigationView._Body.UIViewControllerType.pushViewController(_: __C.UIViewController, animated: Swift.Bool) -&gt; ()"
+                  moduleName = "QZSC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/Library/Developer/Xcode/DerivedData/QZSC-fnngvnrblaiywqgrhzejgcmfkzpp/SourcePackages/checkouts/SwiftUIX/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

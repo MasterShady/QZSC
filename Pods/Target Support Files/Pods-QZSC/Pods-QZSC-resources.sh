@@ -97,14 +97,22 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CLImagePickerTool/CLImagePickerTool.bundle"
-  install_resource "${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle"
-  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/DFFaceNeteasySource.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/DFFacePublicSource.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/face-tracker-v001.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/TencentCloudHuiyanSDKFace.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DFGameAutoLoginLib/DFToGameLibBundle.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DFGameAutoLoginLib/HaiMaSDK_Bundle_iOS.bundle"
+  install_resource "${PODS_ROOT}/NTESLiveDetect/Assets/NTESLiveDetectBundle.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CLImagePickerTool/CLImagePickerTool.bundle"
-  install_resource "${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle"
-  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/DFFaceNeteasySource.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/DFFacePublicSource.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/face-tracker-v001.bundle"
+  install_resource "${PODS_ROOT}/DFFaceVerifyLib/DFFaceVerifyLib/Assets/TencentCloudHuiyanSDKFace.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DFGameAutoLoginLib/DFToGameLibBundle.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DFGameAutoLoginLib/HaiMaSDK_Bundle_iOS.bundle"
+  install_resource "${PODS_ROOT}/NTESLiveDetect/Assets/NTESLiveDetectBundle.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

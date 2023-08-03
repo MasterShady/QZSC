@@ -21,3 +21,4 @@
 #import "NetWorkCommonObject.h"
 #import "NetWorkManager.h"
 #import "YYModel.h"
+#import "JPUSHService.h"

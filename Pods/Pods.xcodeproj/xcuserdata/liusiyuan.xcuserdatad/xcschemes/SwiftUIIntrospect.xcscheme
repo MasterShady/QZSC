@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FF94F6BC609DB21F0194205C23064AFC"
-               BuildableName = "libSwiftUIIntrospect.a"
+               BuildableName = "SwiftUIIntrospect.framework"
                BlueprintName = "SwiftUIIntrospect"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
